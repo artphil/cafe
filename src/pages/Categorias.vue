@@ -16,7 +16,8 @@ const modalMoagem = ref(null)
     <section class="hero wrap">
       <p class="eyebrow">Categorias</p>
       <h1>Grão, torra e moagem.</h1>
-      <p class="lede">[conteúdo aqui — parágrafo curto explicando que essas três variáveis juntas definem o sabor final do café]</p>
+      <p class="lede">O tipo de grão, o processamento, a torra e a moagem trabalham juntos na xícara. Entender o papel
+        de cada um ajuda a escolher cafés e ajustar o preparo ao sabor que você procura.</p>
     </section>
 
     <AdSlot />
@@ -24,27 +25,37 @@ const modalMoagem = ref(null)
     <section class="content-block wrap">
       <h2>Tipo de grão</h2>
       <AccordionItem title="Arábica" :open-by-default="true">
-        <p>[conteúdo aqui — características do arábica: mais doçura e acidez, cultivo em altitude]</p>
+        <p>É a espécie mais comum nos cafés especiais. Costuma ter mais doçura, acidez e aromas variados, como frutas,
+          flores, chocolate e caramelo. Geralmente é cultivado em regiões mais altas e de clima ameno, onde o fruto
+          amadurece mais devagar.</p>
       </AccordionItem>
       <AccordionItem title="Robusta (Conilon)">
-        <p>[conteúdo aqui — características do robusta: mais corpo e cafeína, cultivo em baixa altitude]</p>
+        <p>Robusta e Conilon são variedades da mesma espécie, <em>Coffea canephora</em>. Têm mais cafeína, corpo intenso
+          e sabor marcante, muitas vezes com notas de castanhas, cacau e especiarias. Adaptam-se bem a altitudes mais
+          baixas e entram tanto em blends quanto em cafés especiais de origem.</p>
       </AccordionItem>
 
       <h2 style="margin-top:36px;">Processamento</h2>
       <AccordionItem title="Natural">
-        <p>[conteúdo aqui — processamento natural]</p>
+        <p>Depois da colheita, o fruto seca inteiro, com a polpa ao redor do grão. Esse contato prolongado costuma dar
+          mais corpo, doçura e notas de frutas maduras. É um processo muito usado no Brasil e exige cuidado para a
+          secagem ocorrer de forma uniforme.</p>
       </AccordionItem>
       <AccordionItem title="Lavado">
-        <p>[conteúdo aqui — processamento lavado]</p>
+        <p>A polpa é removida antes da secagem e o grão passa por lavagem para retirar a mucilagem. O resultado tende a
+          ser uma xícara mais limpa, com acidez nítida e maior destaque para as características da origem do café.</p>
       </AccordionItem>
       <AccordionItem title="Cereja descascado / Honey">
-        <p>[conteúdo aqui — processamento honey]</p>
+        <p>No cereja descascado, a casca é retirada e parte da mucilagem permanece durante a secagem. O honey segue a
+          mesma ideia, com diferentes quantidades dessa camada açucarada. Fica entre o natural e o lavado: costuma unir
+          boa doçura, corpo médio e uma xícara mais limpa.</p>
       </AccordionItem>
     </section>
 
     <section class="content-block wrap">
       <h2>Torra</h2>
-      <p>[conteúdo aqui — parágrafo curto sobre o que a torra muda no sabor]</p>
+      <p>A torra transforma o grão verde em café e define como seus açúcares, ácidos e óleos aparecem na bebida. Não há
+        uma torra “melhor”: a escolha depende do grão e do perfil de sabor que você quer alcançar.</p>
 
       <!-- Selo de torra: elemento de assinatura visual do site -->
       <div class="roast-gauge">
@@ -54,13 +65,17 @@ const modalMoagem = ref(null)
       </div>
 
       <AccordionItem title="Torra clara">
-        <p>[conteúdo aqui — mais acidez, notas florais/frutadas, realça a origem do grão]</p>
+        <p>Preserva mais as características do grão e da origem. Geralmente apresenta acidez mais viva e notas florais,
+          cítricas ou frutadas. É uma boa escolha para métodos filtrados e para quem quer perceber nuances da bebida.</p>
       </AccordionItem>
       <AccordionItem title="Torra média">
-        <p>[conteúdo aqui — equilíbrio entre acidez e corpo, mais versátil]</p>
+        <p>Busca equilíbrio entre doçura, acidez e corpo. Pode trazer caramelo, chocolate, frutas e castanhas sem
+          esconder totalmente a identidade do grão. É a opção mais versátil para diferentes métodos de preparo.</p>
       </AccordionItem>
       <AccordionItem title="Torra escura">
-        <p>[conteúdo aqui — mais amargor e corpo, notas de chocolate/caramelizado]</p>
+        <p>Desenvolve mais corpo, amargor e notas de chocolate intenso, caramelo escuro e tostado. A origem aparece
+          menos, enquanto o sabor da própria torra ganha destaque. Combina com quem prefere uma bebida mais forte ou
+          costuma preparar café com leite.</p>
       </AccordionItem>
 
       <button class="detail-btn" type="button" @click="modalMoagem.open()">Ver tabela de moagem por método ↗</button>
@@ -68,7 +83,16 @@ const modalMoagem = ref(null)
   </main>
 
   <BaseModal ref="modalMoagem" title="Moagem ideal por método">
-    <p>[conteúdo aqui — tabela relacionando granulometria (fina/média/grossa) com cada método de preparo, com link pra página de métodos]</p>
+    <p>A moagem regula a velocidade com que a água extrai o café: quanto mais fina, mais rápida a extração. Use estas
+      referências como ponto de partida:</p>
+    <ul>
+      <li><strong>Fina:</strong> Aeropress e espresso. Parece areia fina.</li>
+      <li><strong>Média-fina:</strong> Moka. Um pouco mais grossa que a de espresso.</li>
+      <li><strong>Média:</strong> V60 e coador de pano. Lembra açúcar cristal fino.</li>
+      <li><strong>Grossa:</strong> prensa francesa e cold brew. Lembra sal grosso.</li>
+    </ul>
+    <p>Se o café ficar amargo ou demorar demais para passar, moa mais grosso. Se ficar aguado ou ácido demais, moa um
+      pouco mais fino.</p>
   </BaseModal>
 
   <SiteFooter />
