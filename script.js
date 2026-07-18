@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Troque SHEET_ID e ABA pelo ID da sua planilha e o nome da aba "publicada".
 // Usando o serviço gratuito opensheet.elk.sh, que transforma a planilha em JSON:
 // https://opensheet.elk.sh/SHEET_ID/ABA
-const CAFES_SHEET_URL = 'https://opensheet.elk.sh/2PACX-1vTyzP4TuiNs-o5c2O5T_GdeBijZzkJCTg2B3VyOX5VxtpDRzIGbLN5IyNtsqXNUCOL_wxci99O1Ty0l/cafeterias';
+const CAFES_SHEET_URL = 'https://opensheet.elk.sh/2PACX-1vTyzP4TuiNs-o5c2O5T_GdeBijZzkJCTg2B3VyOX5VxtpDRzIGbLN5IyNtsqXNUCOL_wxci99O1Ty0l/pub';
 https://docs.google.com/spreadsheets/d/e/2PACX-1vTyzP4TuiNs-o5c2O5T_GdeBijZzkJCTg2B3VyOX5VxtpDRzIGbLN5IyNtsqXNUCOL_wxci99O1Ty0l/pub?output=csv
 
 // Dados de exemplo — usados enquanto a planilha real não está configurada,
