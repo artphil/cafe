@@ -5,35 +5,41 @@
    elemento de assinatura visual.
    ========================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500;700;900&family=Karla:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@500;700;900&family=Karla:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap");
 
 :root {
-  --paper: #E9DFC7;
-  --paper-deep: #DCCFAC;
-  --ink: #26150B;
-  --roast: #A85F2C;
-  --roast-deep: #7C431C;
+  --paper: #e9dfc7;
+  --paper-deep: #dccfac;
+  --ink: #26150b;
+  --roast: #a85f2c;
+  --roast-deep: #7c431c;
   --leaf: #435940;
-  --cream: #F7F0DE;
+  --cream: #f7f0de;
   --line: rgba(38, 21, 11, 0.18);
 
-  --font-display: 'Bitter', Georgia, serif;
-  --font-body: 'Karla', -apple-system, sans-serif;
-  --font-mono: 'Space Mono', monospace;
+  --font-display: "Bitter", Georgia, serif;
+  --font-body: "Karla", -apple-system, sans-serif;
+  --font-mono: "Space Mono", monospace;
 
   --radius: 3px;
-  --shadow-stamp: 0 1px 0 rgba(38,21,11,0.4);
+  --shadow-stamp: 0 1px 0 rgba(38, 21, 11, 0.4);
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
   background-color: var(--paper);
-  background-image:
-    radial-gradient(rgba(38,21,11,0.05) 1px, transparent 1px);
+  background-image: radial-gradient(
+    rgba(38, 21, 11, 0.05) 1px,
+    transparent 1px
+  );
   background-size: 3px 3px;
   color: var(--ink);
   font-family: var(--font-body);
@@ -41,13 +47,21 @@ body {
   line-height: 1.55;
 }
 
-a { color: var(--roast-deep); }
-a:focus-visible, button:focus-visible, summary:focus-visible {
+a {
+  color: var(--roast-deep);
+  text-decoration: none;
+}
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
   outline: 3px solid var(--leaf);
   outline-offset: 2px;
 }
 
-img { max-width: 100%; display: block; }
+img {
+  max-width: 100%;
+  display: block;
+}
 
 .wrap {
   max-width: 880px;
@@ -132,7 +146,9 @@ nav.main-nav a {
   border-radius: var(--radius);
 }
 
-nav.main-nav a:hover { border-color: var(--line); }
+nav.main-nav a:hover {
+  border-color: var(--line);
+}
 
 nav.main-nav a[aria-current="page"] {
   border-color: var(--ink);
@@ -173,7 +189,7 @@ h2 {
 .lede {
   font-size: 1.1rem;
   max-width: 60ch;
-  color: rgba(38,21,11,0.85);
+  color: rgba(38, 21, 11, 0.85);
 }
 
 section.content-block {
@@ -213,7 +229,9 @@ section.content-block {
   margin: 6px 0 8px;
 }
 
-.spotlight p { margin: 0; }
+.spotlight p {
+  margin: 0;
+}
 
 .spotlight-refresh {
   margin-top: 16px;
@@ -229,7 +247,10 @@ section.content-block {
   cursor: pointer;
 }
 
-.spotlight-refresh:hover { background: var(--ink); color: var(--paper); }
+.spotlight-refresh:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
 
 /* ---------- Cards de navegação (home) ---------- */
 
@@ -248,7 +269,9 @@ section.content-block {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 18px;
-  transition: border-color 0.15s ease, transform 0.15s ease;
+  transition:
+    border-color 0.15s ease,
+    transform 0.15s ease;
 }
 
 .area-card:hover {
@@ -271,7 +294,7 @@ section.content-block {
 .area-card p {
   margin: 0;
   font-size: 0.92rem;
-  color: rgba(38,21,11,0.75);
+  color: rgba(38, 21, 11, 0.75);
 }
 
 /* ---------- Acordeão ---------- */
@@ -297,17 +320,21 @@ section.content-block {
   gap: 10px;
 }
 
-.accordion-item summary::-webkit-details-marker { display: none; }
+.accordion-item summary::-webkit-details-marker {
+  display: none;
+}
 
 .accordion-item summary::after {
-  content: '+';
+  content: "+";
   font-family: var(--font-mono);
   font-size: 1.2rem;
   color: var(--roast-deep);
   flex-shrink: 0;
 }
 
-.accordion-item[open] summary::after { content: '–'; }
+.accordion-item[open] summary::after {
+  content: "–";
+}
 
 .accordion-item .accordion-body {
   padding: 0 18px 18px;
@@ -315,7 +342,9 @@ section.content-block {
   padding-top: 14px;
 }
 
-.accordion-item .accordion-body p:first-child { margin-top: 0; }
+.accordion-item .accordion-body p:first-child {
+  margin-top: 0;
+}
 
 .tag-row {
   display: flex;
@@ -334,8 +363,14 @@ section.content-block {
   padding: 3px 10px;
 }
 
-.tag.leaf { border-color: var(--leaf); color: var(--leaf); }
-.tag.roast { border-color: var(--roast-deep); color: var(--roast-deep); }
+.tag.leaf {
+  border-color: var(--leaf);
+  color: var(--leaf);
+}
+.tag.roast {
+  border-color: var(--roast-deep);
+  color: var(--roast-deep);
+}
 
 .detail-btn {
   margin-top: 12px;
@@ -351,7 +386,9 @@ section.content-block {
   cursor: pointer;
 }
 
-.detail-btn:hover { background: var(--roast-deep); }
+.detail-btn:hover {
+  background: var(--roast-deep);
+}
 
 /* ---------- Modal ---------- */
 
@@ -366,10 +403,12 @@ dialog.modal {
 }
 
 dialog.modal::backdrop {
-  background: rgba(38,21,11,0.55);
+  background: rgba(38, 21, 11, 0.55);
 }
 
-.modal-inner { padding: 24px; }
+.modal-inner {
+  padding: 24px;
+}
 
 .modal-inner h3 {
   font-family: var(--font-display);
@@ -414,9 +453,17 @@ dialog.modal::backdrop {
   flex-shrink: 0;
 }
 
-.roast-dial.clara { background: #E6C79A; }
-.roast-dial.media { background: #B9803F; color: var(--paper); }
-.roast-dial.escura { background: #4A2A14; color: var(--paper); }
+.roast-dial.clara {
+  background: #e6c79a;
+}
+.roast-dial.media {
+  background: #b9803f;
+  color: var(--paper);
+}
+.roast-dial.escura {
+  background: #4a2a14;
+  color: var(--paper);
+}
 
 /* ---------- Cards de cafeteria ---------- */
 
@@ -448,7 +495,10 @@ dialog.modal::backdrop {
   margin: 0 0 8px;
 }
 
-.cafe-card p.desc { margin: 0 0 10px; font-size: 0.94rem; }
+.cafe-card p.desc {
+  margin: 0 0 10px;
+  font-size: 0.94rem;
+}
 
 .cafe-card a.site-link {
   font-family: var(--font-mono);
@@ -473,7 +523,9 @@ dialog.modal::backdrop {
   background: var(--cream);
 }
 
-.form-embed h2 { margin-top: 0; }
+.form-embed h2 {
+  margin-top: 0;
+}
 
 .form-embed iframe {
   width: 100%;
@@ -499,7 +551,9 @@ dialog.modal::backdrop {
   background: rgba(168, 95, 44, 0.06);
 }
 
-.ad-slot.ad-footer { margin: 0; }
+.ad-slot.ad-footer {
+  margin: 0;
+}
 
 /* ---------- Rodapé ---------- */
 
@@ -511,7 +565,9 @@ footer.site-footer {
   margin-top: 20px;
 }
 
-footer.site-footer a { color: var(--paper); }
+footer.site-footer a {
+  color: var(--paper);
+}
 
 .footer-top {
   display: flex;
@@ -528,14 +584,30 @@ footer.site-footer a { color: var(--paper); }
   max-width: 42ch;
 }
 
+.footer-author {
+  margin-top: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  opacity: 0.75;
+}
+
 /* ---------- Responsivo ---------- */
 
 @media (max-width: 640px) {
-  .site-header .wrap { flex-direction: column; align-items: flex-start; }
-  nav.main-nav ul { gap: 2px; }
+  .site-header .wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav.main-nav ul {
+    gap: 2px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .area-card { transition: none; }
+  html {
+    scroll-behavior: auto;
+  }
+  .area-card {
+    transition: none;
+  }
 }
