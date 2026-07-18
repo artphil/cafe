@@ -8,135 +8,26 @@
       name="description"
       content="Métodos de preparo, tipos de grão, torras e as melhores cafeterias de Belo Horizonte, em um guia direto ao ponto."
     />
-    <link rel="stylesheet" href="style.css" />
 
-    <!-- Google Analytics -->
+    <script type="module">
+      const id = import.meta.env.VITE_ANALYTICS_ID;
 
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-4FG7L1FTV0"
-    ></script>
-    <script>
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
+      document.head.appendChild(script);
+
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
+      window.gtag = gtag;
       gtag("js", new Date());
-      gtag("config", "G-4FG7L1FTV0");
+      gtag("config", id);
     </script>
   </head>
   <body>
-    <header class="site-header">
-      <div class="wrap">
-        <a class="brand" href="index.html">
-          <span class="brand-mark">GC</span>
-          <span>
-            <span class="brand-name">Grão Café</span>
-            <span class="brand-tag">guia de café · BH</span>
-          </span>
-        </a>
-        <nav class="main-nav" aria-label="Navegação principal">
-          <ul>
-            <li><a href="index.html" aria-current="page">Início</a></li>
-            <li><a href="historia.html">História</a></li>
-            <li><a href="metodos.html">Métodos</a></li>
-            <li><a href="categorias.html">Categorias</a></li>
-            <li><a href="cafeterias.html">Cafeterias BH</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <section class="hero wrap">
-        <p class="eyebrow">Bem-vindo</p>
-        <h1>Café, sem enrolação.</h1>
-        <p class="lede">
-          [conteúdo aqui — parágrafo curto de abertura explicando a proposta do
-          site: guia prático de café pra quem tá começando ou quer aprofundar,
-          com destaque pras cafeterias de BH]
-        </p>
-
-        <!-- Destaque aleatório, sorteado via script.js -->
-        <div class="spotlight" id="spotlight" data-kind="Método">
-          <h3>Carregando destaque…</h3>
-          <p>—</p>
-          <a class="spotlight-link" href="#">Ver página completa →</a>
-          <br />
-          <button class="spotlight-refresh" type="button">
-            Sortear outro ↻
-          </button>
-        </div>
-      </section>
-
-      <!-- Anúncio no conteúdo estático -->
-      <div class="wrap">
-        <div class="ad-slot">Espaço de anúncio AdSense (in-content)</div>
-      </div>
-
-      <section class="content-block wrap">
-        <h2>Explore por área</h2>
-        <div class="area-grid">
-          <a class="area-card" href="historia.html">
-            <span class="num">01</span>
-            <h3>História</h3>
-            <p>De onde vem o café e como ele chegou até a sua xícara.</p>
-          </a>
-          <a class="area-card" href="metodos.html">
-            <span class="num">02</span>
-            <h3>Métodos de preparo</h3>
-            <p>
-              V60, prensa francesa, aeropress e outros, com proporção e dicas.
-            </p>
-          </a>
-          <a class="area-card" href="categorias.html">
-            <span class="num">03</span>
-            <h3>Categorias</h3>
-            <p>Tipo de grão, torra e moagem — o que muda no sabor.</p>
-          </a>
-          <a class="area-card" href="cafeterias.html">
-            <span class="num">04</span>
-            <h3>Cafeterias em BH</h3>
-            <p>Recomendações e um espaço pra você sugerir novas.</p>
-          </a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="wrap">
-        <div class="footer-top">
-          <div>
-            <span class="brand-name" style="font-size: 1.1rem">Grão Café</span>
-            <p class="footer-note">
-              [conteúdo aqui — nota curta de rodapé, ex: guia independente sobre
-              café, feito em Belo Horizonte]
-            </p>
-          </div>
-          <nav aria-label="Navegação do rodapé">
-            <ul
-              style="
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                font-family: var(--font-mono);
-                font-size: 0.8rem;
-                line-height: 2;
-              "
-            >
-              <li><a href="historia.html">História</a></li>
-              <li><a href="metodos.html">Métodos</a></li>
-              <li><a href="categorias.html">Categorias</a></li>
-              <li><a href="cafeterias.html">Cafeterias BH</a></li>
-            </ul>
-          </nav>
-        </div>
-
-        <!-- Anúncio fixo do rodapé -->
-        <div class="ad-slot ad-footer">Espaço de anúncio AdSense (rodapé)</div>
-      </div>
-    </footer>
-
-    <script src="script.js"></script>
+    <div id="app"></div>
+    <script type="module" src="/src/main-home.js"></script>
   </body>
 </html>

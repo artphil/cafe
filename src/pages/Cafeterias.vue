@@ -1,0 +1,38 @@
+<script setup>
+import SiteHeader from '../components/SiteHeader.vue'
+import SiteFooter from '../components/SiteFooter.vue'
+import CafeGrid from '../components/CafeGrid.vue'
+</script>
+
+<template>
+  <SiteHeader current="cafeterias" />
+
+  <main>
+    <section class="hero wrap">
+      <p class="eyebrow">Cafeterias</p>
+      <h1>Café bom em Belo Horizonte.</h1>
+      <p class="lede">[conteúdo aqui — parágrafo curto explicando o critério de curadoria: lugares conhecidos pessoalmente ou recomendados, mais sugestões da comunidade revisadas antes de entrar na lista]</p>
+    </section>
+
+    <!-- Sem anúncio no meio do conteúdo aqui, conforme definido no spec —
+         só o do rodapé, presente em todas as páginas -->
+
+    <section class="content-block wrap">
+      <h2>Recomendadas</h2>
+      <CafeGrid />
+
+      <div class="form-embed">
+        <h2>Conhece um lugar bom?</h2>
+        <p>[conteúdo aqui — nota curta explicando que a sugestão passa por revisão antes de entrar na lista]</p>
+        <!-- Troque o src abaixo pelo link de incorporação (embed) do seu Google Forms -->
+        <iframe
+          src="https://docs.google.com/forms/d/e/SEU_FORM_ID/viewform?embedded=true"
+          title="Formulário de sugestão de cafeteria"
+          loading="lazy"
+        >Carregando formulário…</iframe>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</template>

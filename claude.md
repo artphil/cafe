@@ -1,49 +1,66 @@
-# Grão Café — esqueleto do projeto
+# Grão Café — projeto Vite + Vue (multi-página)
 
-Estrutura inicial do site, em HTML puro, pronta pra receber conteúdo real e ser publicada no GitHub Pages.
+Mesma estrutura de 5 páginas de antes, agora sem duplicação de código: cabeçalho, rodapé, acordeão, modal e outros pedaços repetidos viraram componentes Vue reaproveitados. No build, cada página continua virando um **arquivo `.html` real e separado** — sem SPA, sem router — então a decisão de priorizar AdSense/indexação continua valendo.
 
-## Arquivos
+## Estrutura
 
-- `index.html`, `historia.html`, `metodos.html`, `categorias.html`, `cafeterias.html` — as 5 páginas
-- `style.css` — visual do site (identidade "etiqueta de saca de café")
-- `script.js` — acordeão/modal, destaque aleatório da home, busca de cafeterias na planilha
-- `planilha-modelo-cafeterias.csv` — modelo de planilha pra importar no Google Sheets
+```
+index.html          → entrada da Home
+historia.html        → entrada da página História
+metodos.html          → entrada da página Métodos
+categorias.html        → entrada da página Categorias
+cafeterias.html          → entrada da página Cafeterias
 
-Todo texto marcado como `[conteúdo aqui — ...]` é placeholder e deve ser substituído pelo conteúdo real.
+src/
+  style.css                  → visual do site (igual ao da versão HTML puro)
+  main-home.js, main-historia.js, ...   → um arquivo de entrada por página
+  pages/
+    Home.vue, Historia.vue, Metodos.vue, Categorias.vue, Cafeterias.vue
+  components/
+    SiteHeader.vue     → cabeçalho + navegação (usado nas 5 páginas)
+    SiteFooter.vue      → rodapé + anúncio fixo (usado nas 5 páginas)
+    AdSlot.vue           → bloco de anúncio in-content
+    AccordionItem.vue     → item de acordeão reutilizável
+    BaseModal.vue          → modal reutilizável
+    Spotlight.vue            → destaque aleatório da home
+    CafeGrid.vue               → grid de cafeterias (busca a planilha)
+  data/
+    destaques.js   → itens sorteáveis no destaque da home
+    cafes.js         → URL da planilha + dados de exemplo (fallback)
+```
 
-## Passo a passo pra colocar no ar
+Textos marcados como `[conteúdo aqui — ...]` continuam sendo placeholder.
 
-**1. Publicar no GitHub Pages**
-- Crie um repositório novo, suba estes arquivos na raiz (ou numa pasta `docs/`)
-- Em Settings → Pages, ative o GitHub Pages apontando pra branch/pasta certa
-- O site fica em `https://seu-usuario.github.io/nome-do-repositorio/`
+## Como rodar
 
-**2. Configurar a planilha de cafeterias**
-- Crie uma planilha no Google Sheets e importe o `planilha-modelo-cafeterias.csv`
-- Crie duas abas: `publicada` (o que aparece no site) e `pendente` (sugestões recebidas pelo formulário, antes de você revisar)
-- Preencha os dados reais nas colunas: `nome`, `endereco`, `bairro`, `site`, `descricao`, `categoria`, `status`
-- Pegue o ID da planilha (fica na URL, entre `/d/` e `/edit`)
-- Em `script.js`, troque `SEU_SHEET_ID` na constante `CAFES_SHEET_URL` pelo ID real:
-  ```
-  const CAFES_SHEET_URL = 'https://opensheet.elk.sh/SEU_SHEET_ID/publicada';
-  ```
-- A planilha precisa estar com compartilhamento "qualquer pessoa com o link pode visualizar"
+Precisa ter o [Node.js](https://nodejs.org) instalado (versão 18 ou mais recente).
 
-**3. Configurar o formulário de sugestão**
-- Crie um Google Forms com os campos que quiser coletar (nome do lugar, endereço, site, descrição, quem indicou)
-- Vincule as respostas à aba `pendente` da mesma planilha (Respostas → ícone do Sheets)
-- Em Forms → Enviar → aba `< >` (Incorporar), copie o link do `iframe`
-- Cole esse link no `src` do iframe em `cafeterias.html`, no lugar de `SEU_FORM_ID`
+```bash
+npm install       # instala Vite, Vue e as dependências
+npm run dev       # roda localmente em http://localhost:5173 (com recarregamento automático)
+npm run build     # gera a versão final na pasta dist/ (isso é o que vai pro GitHub Pages)
+npm run preview   # visualiza a pasta dist/ localmente, pra conferir antes de publicar
+```
 
-**4. Configurar o AdSense**
-- Depois que o site estiver publicado com conteúdo real (não só placeholders), submeta a URL do GitHub Pages pra revisão no AdSense
-- Quando aprovado, troque cada `<div class="ad-slot">...</div>` pelo snippet real do bloco de anúncio correspondente
-- O snippet principal (`adsbygoogle.js`) entra uma vez no `<head>` de cada página
+Sempre que editar um `.vue`, `.js` ou `.css`, rode `npm run build` de novo antes de publicar — é a pasta **`dist/`** (gerada pelo build) que deve subir pro GitHub Pages, não a pasta `src/`.
 
-**5. Configurar o Google Analytics**
-- Crie uma propriedade no Google Analytics (GA4)
-- Troque `G-XXXXXXXXXX` pelo seu ID de medição no bloco comentado do `<head>` de cada página, e remova os comentários `<!-- -->` pra ativar
+## Publicar no GitHub Pages
 
-**6. Escrever o conteúdo**
-- Substitua os textos `[conteúdo aqui — ...]` com apoio de IA, mantendo o tom casual definido no spec
-- Ao adicionar métodos/categorias/itens de história novos, também vale atualizar o array `DESTAQUES` em `script.js` pra entrarem no sorteio da home
+1. Em `vite.config.js`, ajuste a linha `base:`:
+   - Se o repositório se chama, por exemplo, `grao-cafe`, o site fica em `usuario.github.io/grao-cafe/` → troque `base: './'` por `base: '/grao-cafe/'`
+2. Rode `npm run build` — isso gera a pasta `dist/` com os 5 HTMLs finais, prontos, sem Vue "aparente" (é HTML/CSS/JS puro no resultado)
+3. Suba o conteúdo de `dist/` pro repositório (direto, ou via GitHub Actions automatizando o build a cada push — posso montar esse workflow se quiser)
+4. Ative o GitHub Pages apontando pra pasta/branch onde `dist/` foi publicada
+
+## Cafeterias, formulário, AdSense e Analytics
+
+Mesma configuração de antes, só que os arquivos mudaram de lugar:
+
+- **Planilha**: edite a constante `CAFES_SHEET_URL` em `src/data/cafes.js` com o ID real da sua planilha
+- **Formulário**: troque o `src` do `<iframe>` em `src/pages/Cafeterias.vue` pelo link de incorporação do seu Google Forms
+- **AdSense**: depois de aprovado, troque cada `<div class="ad-slot">` (em `AdSlot.vue` e `SiteFooter.vue`) pelo snippet real do bloco de anúncio, e adicione o script principal (`adsbygoogle.js`) no `<head>` de cada um dos 5 arquivos `.html` da raiz
+- **Analytics**: já tem um bloco comentado no `<head>` do `index.html` — copie o mesmo bloco pros outros 4 HTMLs de entrada e troque `G-XXXXXXXXXX` pelo seu ID
+
+## Escrever o conteúdo
+
+Edite diretamente os arquivos em `src/pages/*.vue`, substituindo os textos `[conteúdo aqui — ...]`. Ao adicionar itens novos de método/categoria/história, também vale atualizar `src/data/destaques.js` pra entrarem no sorteio da home.
