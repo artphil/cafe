@@ -16,8 +16,8 @@ const modalComparativo = ref(null)
     <section class="hero wrap">
       <p class="eyebrow">Métodos de preparo</p>
       <h1>Escolha o método certo pra você.</h1>
-      <p class="lede">[conteúdo aqui — parágrafo curto: cada método muda o corpo, acidez e praticidade do café. Toque em
-        cada um pra ver o passo a passo, e no botão "Comparar" pra ver as diferenças lado a lado]</p>
+      <p class="lede">O mesmo grão pode render xícaras bem diferentes. O método muda o corpo, a acidez e a praticidade
+        do preparo — abra cada guia para encontrar uma receita de partida e ajustar ao seu gosto.</p>
     </section>
 
     <AdSlot />
@@ -113,43 +113,108 @@ const modalComparativo = ref(null)
       </AccordionItem>
 
       <AccordionItem title="Aeropress">
-        <p>[conteúdo aqui — passo a passo do Aeropress]</p>
         <div class="tag-row">
           <span class="tag roast">Proporção 1:14</span>
           <span class="tag leaf">Moagem fina</span>
         </div>
+        <p><strong>Indicado para:</strong> quem busca uma xícara limpa, doce e rápida, com bastante margem para testar.</p>
+        <p><strong>Passo a passo:</strong></p>
+        <ol>
+          <li>Coloque o filtro na tampa, enxágue com água quente e encaixe na Aeropress.</li>
+          <li>Adicione 15g de café e 210ml de água a cerca de 85–90°C.</li>
+          <li>Mexa por 10 segundos, deixe em infusão por 1 minuto e 30 segundos.</li>
+          <li>Rosqueie a tampa, vire sobre a xícara e pressione devagar por 20–30 segundos.</li>
+        </ol>
+        <p><strong>Dicas:</strong></p>
+        <ul>
+          <li>Pare quando ouvir o chiado para evitar amargor.</li>
+          <li>Use papel para mais limpeza; filtro metálico deixa mais corpo.</li>
+          <li>Se ficar intenso, dilua com um pouco de água quente após a prensa.</li>
+        </ul>
       </AccordionItem>
 
       <AccordionItem title="Prensa francesa">
-        <p>[conteúdo aqui — passo a passo da prensa francesa]</p>
         <div class="tag-row">
           <span class="tag roast">Proporção 1:12</span>
           <span class="tag leaf">Moagem grossa</span>
         </div>
+        <p><strong>Indicado para:</strong> quem gosta de café mais encorpado, com textura e poucos equipamentos.</p>
+        <p><strong>Passo a passo:</strong></p>
+        <ol>
+          <li>Adicione 30g de café moído grosseiramente à prensa.</li>
+          <li>Despeje 360ml de água entre 90–95°C, cobrindo todo o café.</li>
+          <li>Mexa uma vez, coloque a tampa sem abaixar o êmbolo e aguarde 4 minutos.</li>
+          <li>Pressione o êmbolo lentamente e sirva em seguida.</li>
+        </ol>
+        <p><strong>Dicas:</strong></p>
+        <ul>
+          <li>Transfira o restante para outra jarra: o café continua extraindo dentro da prensa.</li>
+          <li>Se houver muita borra na xícara, moa mais grosso ou pressione com menos força.</li>
+          <li>Funciona muito bem com cafés de notas achocolatadas e caramelizadas.</li>
+        </ul>
       </AccordionItem>
 
       <AccordionItem title="Coador de pano">
-        <p>[conteúdo aqui — passo a passo do coador de pano]</p>
         <div class="tag-row">
           <span class="tag roast">Proporção 1:12</span>
           <span class="tag leaf">Moagem média</span>
         </div>
+        <p><strong>Indicado para:</strong> uma xícara afetiva, encorpada e sem o sabor residual do filtro de papel.</p>
+        <p><strong>Passo a passo:</strong></p>
+        <ol>
+          <li>Escalde o coador de pano e a garrafa com água quente.</li>
+          <li>Coloque 25g de café e faça um bloom com cerca de 60ml de água por 30 segundos.</li>
+          <li>Despeje os 240ml restantes em movimentos lentos e circulares.</li>
+          <li>Espere terminar de coar e sirva.</li>
+        </ol>
+        <p><strong>Dicas:</strong></p>
+        <ul>
+          <li>Lave somente com água, sem sabão, e guarde úmido na geladeira em recipiente fechado.</li>
+          <li>Não deixe borra no pano depois do preparo.</li>
+          <li>Um fluxo muito lento pede moagem mais grossa; muito rápido, moagem mais fina.</li>
+        </ul>
       </AccordionItem>
 
       <AccordionItem title="Moka (cafeteira italiana)">
-        <p>[conteúdo aqui — passo a passo da moka]</p>
         <div class="tag-row">
           <span class="tag roast">Sem proporção fixa — enche o reservatório</span>
           <span class="tag leaf">Moagem média-fina</span>
         </div>
+        <p><strong>Indicado para:</strong> quem prefere uma bebida intensa, de bastante corpo, para tomar pura ou com leite.</p>
+        <p><strong>Passo a passo:</strong></p>
+        <ol>
+          <li>Encha a base com água já quente até abaixo da válvula de segurança.</li>
+          <li>Preencha o funil com café sem compactar e nivele a superfície.</li>
+          <li>Monte a cafeteira e leve ao fogo baixo, com a tampa aberta.</li>
+          <li>Quando o fluxo clarear e começar a borbulhar, retire do fogo e sirva.</li>
+        </ol>
+        <p><strong>Dicas:</strong></p>
+        <ul>
+          <li>Não compacte o pó: isso dificulta a passagem da água e pode amargar.</li>
+          <li>Fogo alto queima o café e deixa a extração agressiva.</li>
+          <li>Resfrie a base sob água corrente ao final para interromper a extração.</li>
+        </ul>
       </AccordionItem>
 
       <AccordionItem title="Cold brew">
-        <p>[conteúdo aqui — passo a passo do cold brew]</p>
         <div class="tag-row">
           <span class="tag roast">Proporção 1:8 (concentrado)</span>
           <span class="tag leaf">Moagem grossa · infusão 12-24h</span>
         </div>
+        <p><strong>Indicado para:</strong> dias quentes e para quem procura baixa percepção de acidez e muito refresco.</p>
+        <p><strong>Passo a passo:</strong></p>
+        <ol>
+          <li>Misture 100g de café moído grosso com 800ml de água filtrada em uma jarra.</li>
+          <li>Tampe e deixe em infusão na geladeira por 12–18 horas.</li>
+          <li>Coe lentamente em filtro de papel, pano ou peneira bem fina.</li>
+          <li>Sirva com gelo. Para um copo mais leve, dilua uma parte do concentrado em uma parte de água ou leite.</li>
+        </ol>
+        <p><strong>Dicas:</strong></p>
+        <ul>
+          <li>Infusões longas demais tendem a deixar o resultado amadeirado.</li>
+          <li>Guarde o concentrado tampado na geladeira por até 5 dias.</li>
+          <li>Para beber sem diluir, comece com a proporção 1:12.</li>
+        </ul>
       </AccordionItem>
 
       <button class="detail-btn" type="button" @click="modalComparativo.open()">Comparar métodos ↗</button>
@@ -157,8 +222,15 @@ const modalComparativo = ref(null)
   </main>
 
   <BaseModal ref="modalComparativo" title="Qual método combina com você">
-    <p>[conteúdo aqui — tabela ou lista curta comparando rapidez, equipamento necessário e perfil de sabor de cada
-      método, pra ajudar a escolher]</p>
+    <p>Use este atalho para escolher o ponto de partida — o grão, a água e a moagem ainda fazem toda a diferença.</p>
+    <ul>
+      <li><strong>V60:</strong> xícara limpa e aromática; ideal para explorar acidez e notas do grão.</li>
+      <li><strong>Aeropress:</strong> rápida, portátil e versátil; entrega doçura e boa limpeza.</li>
+      <li><strong>Prensa francesa:</strong> simples e encorpada; preserva mais óleos do café.</li>
+      <li><strong>Coador de pano:</strong> corpo médio e perfil tradicional; pede cuidado na limpeza.</li>
+      <li><strong>Moka:</strong> intensa e concentrada; ótima para leite ou para quem gosta de café forte.</li>
+      <li><strong>Cold brew:</strong> preparo antecipado e servido gelado; suave e pouco ácido na percepção.</li>
+    </ul>
   </BaseModal>
 
   <SiteFooter />
