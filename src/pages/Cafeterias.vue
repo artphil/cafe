@@ -11,7 +11,8 @@ import CafeGrid from '../components/CafeGrid.vue'
     <section class="hero wrap">
       <p class="eyebrow">Cafeterias</p>
       <h1>Café bom em Belo Horizonte.</h1>
-      <p class="lede">[conteúdo aqui — parágrafo curto explicando o critério de curadoria: lugares conhecidos pessoalmente ou recomendados, mais sugestões da comunidade revisadas antes de entrar na lista]</p>
+      <p class="lede">Uma seleção de lugares conhecidos e recomendações da comunidade, escolhidos pela qualidade do café,
+        cuidado no preparo e vontade de voltar.</p>
     </section>
 
     <!-- Sem anúncio no meio do conteúdo aqui, conforme definido no spec —

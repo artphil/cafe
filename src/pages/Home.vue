@@ -12,7 +12,8 @@ import Spotlight from '../components/Spotlight.vue'
     <section class="hero wrap">
       <p class="eyebrow">Bem-vindo</p>
       <h1>Café, sem enrolação.</h1>
-      <p class="lede">[conteúdo aqui — parágrafo curto de abertura explicando a proposta do site: guia prático de café pra quem tá começando ou quer aprofundar, com destaque pras cafeterias de BH]</p>
+      <p class="lede">Um guia prático para entender café, preparar melhor em casa e descobrir boas cafeterias em Belo
+        Horizonte — do primeiro gole às novas obsessões.</p>
 
       <Spotlight />
     </section>
