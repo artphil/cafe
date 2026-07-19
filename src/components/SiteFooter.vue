@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import AdSlot from './AdSlot.vue';
+
+</script>
+
 <template>
   <footer class="site-footer">
     <div class="wrap">
@@ -20,6 +25,7 @@
 
       <!-- Anúncio fixo do rodapé — presente em todas as páginas -->
       <div class="ad-slot ad-footer">Espaço de anúncio AdSense (rodapé)</div>
+      <!-- <AdSlot slot="1234567890" format="auto" fullWidthResponsive :slotClass="'ad-footer'" /> -->
       <div class="footer-author">
         by <a href="https://artphil.github.io" target="_blank" rel="noopener">Artphil</a>
       </div>
