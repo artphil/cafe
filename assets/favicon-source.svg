@@ -1,0 +1,13 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- fundo circular, no tom "cream" do site -->
+  <circle cx="32" cy="32" r="30" fill="#F7F0DE"/>
+  <circle cx="32" cy="32" r="30" fill="none" stroke="#26150B" stroke-width="2.5"/>
+
+  <!-- corpo do grão de café -->
+  <g transform="rotate(-20 32 32)">
+    <ellipse cx="32" cy="32" rx="16" ry="22" fill="#A85F2C" stroke="#26150B" stroke-width="2.5"/>
+    <!-- fenda central característica do grão -->
+    <path d="M32 12 C 26 20, 26 26, 32 32 C 38 38, 38 44, 32 52"
+          fill="none" stroke="#26150B" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>
