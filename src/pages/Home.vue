@@ -18,7 +18,7 @@ import Spotlight from '../components/Spotlight.vue'
       <Spotlight />
     </section>
 
-    <AdSlot />
+    <AdSlot slot="3522108887" format="auto" fullWidthResponsive />
 
     <section class="content-block wrap">
       <h2>Explore por área</h2>

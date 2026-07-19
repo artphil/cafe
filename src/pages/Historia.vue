@@ -21,7 +21,7 @@ import AccordionItem from '../components/AccordionItem.vue'
       </p>
     </section>
 
-    <AdSlot />
+    <AdSlot slot="4895588662" format="auto" fullWidthResponsive />
 
     <section class="content-block wrap">
       <h2>Linha do tempo</h2>

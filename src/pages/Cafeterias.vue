@@ -11,12 +11,10 @@ import CafeGrid from '../components/CafeGrid.vue'
     <section class="hero wrap">
       <p class="eyebrow">Cafeterias</p>
       <h1>Café bom em Belo Horizonte.</h1>
-      <p class="lede">Uma seleção de lugares conhecidos e recomendações da comunidade, escolhidos pela qualidade do café,
+      <p class="lede">Uma seleção de lugares conhecidos e recomendações da comunidade, escolhidos pela qualidade do
+        café,
         cuidado no preparo e vontade de voltar.</p>
     </section>
-
-    <!-- Sem anúncio no meio do conteúdo aqui, conforme definido no spec —
-         só o do rodapé, presente em todas as páginas -->
 
     <section class="content-block wrap">
       <h2>Recomendadas</h2>
@@ -26,11 +24,8 @@ import CafeGrid from '../components/CafeGrid.vue'
         <h2>Conhece um lugar bom?</h2>
         <p>[conteúdo aqui — nota curta explicando que a sugestão passa por revisão antes de entrar na lista]</p>
         <!-- Troque o src abaixo pelo link de incorporação (embed) do seu Google Forms -->
-        <iframe
-          src="https://docs.google.com/forms/d/e/SEU_FORM_ID/viewform?embedded=true"
-          title="Formulário de sugestão de cafeteria"
-          loading="lazy"
-        >Carregando formulário…</iframe>
+        <iframe src="https://docs.google.com/forms/d/e/SEU_FORM_ID/viewform?embedded=true"
+          title="Formulário de sugestão de cafeteria" loading="lazy">Carregando formulário…</iframe>
       </div>
     </section>
   </main>

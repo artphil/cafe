@@ -20,7 +20,7 @@ const modalMoagem = ref(null)
         de cada um ajuda a escolher cafés e ajustar o preparo ao sabor que você procura.</p>
     </section>
 
-    <AdSlot />
+    <AdSlot slot="9895945544" format="auto" fullWidthResponsive />
 
     <section class="content-block wrap">
       <h2>Tipo de grão</h2>
@@ -66,7 +66,8 @@ const modalMoagem = ref(null)
 
       <AccordionItem title="Torra clara">
         <p>Preserva mais as características do grão e da origem. Geralmente apresenta acidez mais viva e notas florais,
-          cítricas ou frutadas. É uma boa escolha para métodos filtrados e para quem quer perceber nuances da bebida.</p>
+          cítricas ou frutadas. É uma boa escolha para métodos filtrados e para quem quer perceber nuances da bebida.
+        </p>
       </AccordionItem>
       <AccordionItem title="Torra média">
         <p>Busca equilíbrio entre doçura, acidez e corpo. Pode trazer caramelo, chocolate, frutas e castanhas sem

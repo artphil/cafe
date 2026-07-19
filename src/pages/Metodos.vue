@@ -20,7 +20,7 @@ const modalComparativo = ref(null)
         do preparo — abra cada guia para encontrar uma receita de partida e ajustar ao seu gosto.</p>
     </section>
 
-    <AdSlot />
+    <AdSlot slot="9213419261" format="auto" fullWidthResponsive />
 
     <section class="content-block wrap">
       <h2>Guias por método</h2>
@@ -117,7 +117,8 @@ const modalComparativo = ref(null)
           <span class="tag roast">Proporção 1:14</span>
           <span class="tag leaf">Moagem fina</span>
         </div>
-        <p><strong>Indicado para:</strong> quem busca uma xícara limpa, doce e rápida, com bastante margem para testar.</p>
+        <p><strong>Indicado para:</strong> quem busca uma xícara limpa, doce e rápida, com bastante margem para testar.
+        </p>
         <p><strong>Passo a passo:</strong></p>
         <ol>
           <li>Coloque o filtro na tampa, enxágue com água quente e encaixe na Aeropress.</li>
@@ -180,7 +181,8 @@ const modalComparativo = ref(null)
           <span class="tag roast">Sem proporção fixa — enche o reservatório</span>
           <span class="tag leaf">Moagem média-fina</span>
         </div>
-        <p><strong>Indicado para:</strong> quem prefere uma bebida intensa, de bastante corpo, para tomar pura ou com leite.</p>
+        <p><strong>Indicado para:</strong> quem prefere uma bebida intensa, de bastante corpo, para tomar pura ou com
+          leite.</p>
         <p><strong>Passo a passo:</strong></p>
         <ol>
           <li>Encha a base com água já quente até abaixo da válvula de segurança.</li>
@@ -201,7 +203,8 @@ const modalComparativo = ref(null)
           <span class="tag roast">Proporção 1:8 (concentrado)</span>
           <span class="tag leaf">Moagem grossa · infusão 12-24h</span>
         </div>
-        <p><strong>Indicado para:</strong> dias quentes e para quem procura baixa percepção de acidez e muito refresco.</p>
+        <p><strong>Indicado para:</strong> dias quentes e para quem procura baixa percepção de acidez e muito refresco.
+        </p>
         <p><strong>Passo a passo:</strong></p>
         <ol>
           <li>Misture 100g de café moído grosso com 800ml de água filtrada em uma jarra.</li>
