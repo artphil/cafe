@@ -1,13 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>História do café — Grão Café</title>
-<meta name="description" content="A origem do café, sua chegada ao Brasil e a formação da cultura cafeeira em Minas Gerais.">
-</head>
-<body>
-  <div id="app"></div>
-  <script type="module" src="/src/main-historia.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>História do café — Grão Café</title>
+    <meta
+      name="description"
+      content="A origem do café, sua chegada ao Brasil e a formação da cultura cafeeira em Minas Gerais."
+    />
+
+    <!-- Google block init -->
+    <meta name="google-adsense-account" content="%VITE_ADSENSE_PUBLISHER_ID%" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=%VITE_ADSENSE_PUBLISHER_ID%"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=%VITE_ANALYTICS_ID%"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      window.gtag = gtag;
+      gtag("js", new Date());
+      gtag("config", "%VITE_ANALYTICS_ID%");
+    </script>
+    <!-- Google block end -->
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main-historia.js"></script>
+  </body>
 </html>

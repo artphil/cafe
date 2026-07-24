@@ -12,7 +12,7 @@ const props = defineProps({
   // ID do publisher (ca-pub-XXXXXXXXXXXXXXXX)
   client: {
     type: String,
-    default: 'ca-pub-3457074300532342'
+    default: import.meta.env.VITE_ADSENSE_PUBLISHER_ID
   },
   // ID do bloco de anúncio (data-ad-slot)
   slot: {
