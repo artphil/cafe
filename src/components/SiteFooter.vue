@@ -9,8 +9,7 @@ import AdSlot from './AdSlot.vue';
       <div class="footer-top">
         <div>
           <span class="brand-name" style="font-size:1.1rem;">Grão Café</span>
-          <p class="footer-note">[conteúdo aqui — nota curta de rodapé, ex: guia independente sobre café, feito em Belo
-            Horizonte]</p>
+          <p class="footer-note">Um guia prático para conhecer melhor o café.</p>
         </div>
         <nav aria-label="Navegação do rodapé">
           <ul
