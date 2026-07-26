@@ -24,7 +24,7 @@ import { CAFES_FORM_URL } from '../data/cafes.js'
 
       <div class="form-embed">
         <h2>Conhece um lugar bom?</h2>
-        <p>[conteúdo aqui — nota curta explicando que a sugestão passa por revisão antes de entrar na lista]</p>
+        <p>Coloque aqui sua sugestão de cafeteria para enriquecer nossa lista</p>
         <iframe :src="CAFES_FORM_URL" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0"
           title="Formulário de sugestão de cafeteria" loading="lazy">Carregando formulário…</iframe>
       </div>
