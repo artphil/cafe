@@ -2,6 +2,8 @@
 import SiteHeader from '../components/SiteHeader.vue'
 import SiteFooter from '../components/SiteFooter.vue'
 import CafeGrid from '../components/CafeGrid.vue'
+import { CAFES_FORM_URL } from '../data/cafes.js'
+
 </script>
 
 <template>
@@ -23,8 +25,7 @@ import CafeGrid from '../components/CafeGrid.vue'
       <div class="form-embed">
         <h2>Conhece um lugar bom?</h2>
         <p>[conteúdo aqui — nota curta explicando que a sugestão passa por revisão antes de entrar na lista]</p>
-        <!-- Troque o src abaixo pelo link de incorporação (embed) do seu Google Forms -->
-        <iframe src="https://docs.google.com/forms/d/e/SEU_FORM_ID/viewform?embedded=true"
+        <iframe :src="CAFES_FORM_URL" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0"
           title="Formulário de sugestão de cafeteria" loading="lazy">Carregando formulário…</iframe>
       </div>
     </section>
