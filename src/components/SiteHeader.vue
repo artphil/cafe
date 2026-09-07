@@ -22,7 +22,8 @@ defineProps({
           <li><a href="./historia.html" :aria-current="current === 'historia' ? 'page' : null">História</a></li>
           <li><a href="./metodos.html" :aria-current="current === 'metodos' ? 'page' : null">Métodos</a></li>
           <li><a href="./categorias.html" :aria-current="current === 'categorias' ? 'page' : null">Categorias</a></li>
-          <li><a href="./cafeterias.html" :aria-current="current === 'cafeterias' ? 'page' : null">Cafeterias BH</a></li>
+          <li><a href="./cafeterias.html" :aria-current="current === 'cafeterias' ? 'page' : null">Cafeterias BH</a>
+          </li>
         </ul>
       </nav>
     </div>
