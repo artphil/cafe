@@ -10,24 +10,28 @@ export const CAFES_FALLBACK = [
   {
     nome: "Oop Café",
     endereco: "[endereço aqui]",
+    regiao: "região aqui",
     site: "#",
     descricao: "[conteúdo aqui — breve descrição do Oop Café]",
   },
   {
     nome: "Cheirin Bão",
     endereco: "[endereço aqui]",
+    regiao: "região aqui",
     site: "#",
     descricao: "[conteúdo aqui — breve descrição do Cheirin Bão]",
   },
   {
     nome: "Belô Café",
     endereco: "[endereço aqui]",
+    regiao: "região aqui",
     site: "#",
     descricao: "[conteúdo aqui — breve descrição do Belô Café]",
   },
   {
     nome: "Ô Café",
     endereco: "[endereço aqui]",
+    regiao: "região aqui",
     site: "#",
     descricao: "[conteúdo aqui — breve descrição do Ô Café]",
   },

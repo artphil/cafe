@@ -11,7 +11,7 @@ async function carregar() {
     if (!res.ok) throw new Error(`Planilha indisponível (status ${res.status})`)
     const dados = await res.json()
     if (!Array.isArray(dados) || dados.length === 0) throw new Error('Sem dados na planilha')
-    // Espera colunas: nome, endereco, site, descricao 
+    // Espera colunas: nome, endereco, regiao, site, descricao, insta
     cafes.value = dados
     origem.value = 'planilha'
   } catch (err) {
@@ -41,7 +41,7 @@ onMounted(() => {
       <p class="desc">{{ c.descricao }}</p>
       <a v-if="c.site" class="site-link" :href="c.site" target="_blank" rel="noopener">Site</a>
       <span v-if="c.site && c.insta">/</span>
-      <a v-if="c.insta" class="site-link" :href="c.instagram" target="_blank" rel="noopener">Instagram</a>
+      <a v-if="c.insta" class="site-link" :href="c.insta" target="_blank" rel="noopener">Instagram</a>
     </article>
   </div>
 </template>
