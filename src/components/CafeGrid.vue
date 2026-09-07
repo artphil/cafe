@@ -37,8 +37,11 @@ onMounted(() => {
     <article class="cafe-card" v-for="c in cafes" :key="c.nome">
       <h3>{{ c.nome }}</h3>
       <p class="addr">{{ c.endereco }}</p>
+      <p class="addr">{{ c.regiao }}</p>
       <p class="desc">{{ c.descricao }}</p>
-      <a class="site-link" :href="c.site" target="_blank" rel="noopener">Site / Instagram →</a>
+      <a v-if="c.site" class="site-link" :href="c.site" target="_blank" rel="noopener">Site</a>
+      <span v-if="c.site && c.insta">/</span>
+      <a v-if="c.insta" class="site-link" :href="c.instagram" target="_blank" rel="noopener">Instagram</a>
     </article>
   </div>
 </template>
