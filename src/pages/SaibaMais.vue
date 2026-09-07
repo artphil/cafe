@@ -14,7 +14,7 @@ const modalMoagem = ref(null)
 
   <main>
     <section class="hero wrap">
-      <p class="eyebrow">Categorias</p>
+      <p class="eyebrow">Saiba mais</p>
       <h1>Grão, torra e moagem.</h1>
       <p class="lede">O tipo de grão, o processamento, a torra e a moagem trabalham juntos na xícara. Entender o papel
         de cada um ajuda a escolher cafés e ajustar o preparo ao sabor que você procura.</p>

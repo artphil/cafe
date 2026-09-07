@@ -33,9 +33,9 @@ import Spotlight from '../components/Spotlight.vue'
           <h3>Métodos de preparo</h3>
           <p>V60, prensa francesa, aeropress e outros, com proporção e dicas.</p>
         </a>
-        <a class="area-card" href="./categorias.html">
+        <a class="area-card" href="./saiba-mais.html">
           <span class="num">03</span>
-          <h3>Categorias</h3>
+          <h3>Saiba mais</h3>
           <p>Tipo de grão, torra e moagem — o que muda no sabor.</p>
         </a>
         <a class="area-card" href="./cafeterias.html">

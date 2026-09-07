@@ -85,7 +85,7 @@ Site estático sobre café, cobrindo métodos de preparo, tipos de grãos e cafe
 - [x] Áreas confirmadas para a v1:
   1. **História do café**
   2. **Métodos de preparo**
-  3. **Categorias**: tipo de grão, tipo de torra, moagens
+  3. **Saiba mais**: tipo de grão, tipo de torra, moagens
   4. **Cafeterias em BH** (com formulário para sugestão de novas cafeterias)
 - [x] Menu principal: sem modelo de "blog"/posts — conteúdo organizado como páginas fixas por seção (não por data de publicação)
 - [x] Página inicial: destaque **aleatório** a cada carregamento, sorteado entre: um método de preparo, um item de categoria (grão/torra/moagem) ou uma curiosidade da seção história. Implementável em JS puro (array de itens + `Math.random()`), sem precisar de dado externo
@@ -93,7 +93,7 @@ Site estático sobre café, cobrindo métodos de preparo, tipos de grãos e cafe
 **Conteúdo**
 
 - [x] Quem escreve: **você, com apoio de IA**
-- [x] Quantas páginas na v1: **5** (Home + História, Métodos de preparo, Categorias, Cafeterias em BH)
+- [x] Quantas páginas na v1: **5** (Home + História, Métodos de preparo, Saiba mais, Cafeterias em BH)
 - [x] Não há conteúdo pronto ainda — será criado do zero
 - [x] Imagens: buscadas/criadas conforme necessidade (banco a definir na hora — stock gratuito ou geração de imagem)
 
@@ -122,7 +122,7 @@ Site estático sobre café, cobrindo métodos de preparo, tipos de grãos e cafe
 - [x] Onde hospedar: **GitHub Pages**
 - [x] Arquitetura: **multi-página (páginas HTML reais)** — decisão trocada de SPA para priorizar AdSense/indexação
 - [x] Anúncios AdSense: presentes no **conteúdo estático** (história, métodos, categorias) + **rodapé fixo** em todas as páginas. A página de **cafeterias em BH** só tem o anúncio do rodapé (sem anúncio no meio do conteúdo)
-- [x] Gerador: **HTML puro**, 5 páginas (Home + 4 de conteúdo: História, Métodos de preparo, Categorias, Cafeterias em BH)
+- [x] Gerador: **HTML puro**, 5 páginas (Home + 4 de conteúdo: História, Métodos de preparo, Saiba mais, Cafeterias em BH)
 - [x] Padrão de UI: **acordeão e modal** para evitar excesso de informação visível de uma vez
 - [x] Busca interna: **não**, por enquanto
 - [x] Analytics: **sim**, incluir Google Analytics junto com o AdSense

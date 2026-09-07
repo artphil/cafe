@@ -49,56 +49,56 @@ export const DESTAQUES = [
     titulo: "Arábica",
     texto:
       "É a espécie mais comum nos cafés especiais, conhecida por doçura, acidez e aromas que podem variar de frutas a chocolate.",
-    link: "./categorias.html",
+    link: "./saiba-mais.html",
   },
   {
     tipo: "Categoria",
     titulo: "Robusta (Conilon)",
     texto:
       "Tem mais cafeína, corpo intenso e sabor marcante. Aparece em blends e também em cafés especiais de origem.",
-    link: "./categorias.html",
+    link: "./saiba-mais.html",
   },
   {
     tipo: "Categoria",
     titulo: "Torra média",
     texto:
       "Equilibra doçura, acidez e corpo, com notas que podem lembrar caramelo, chocolate, frutas e castanhas. É bastante versátil.",
-    link: "./categorias.html",
+    link: "./saiba-mais.html",
   },
   {
     tipo: "Categoria",
     titulo: "Processo natural",
     texto:
       "O café seca dentro do fruto após a colheita. O contato com a polpa costuma criar uma bebida mais doce, encorpada e frutada.",
-    link: "./categorias.html",
+    link: "./saiba-mais.html",
   },
   {
     tipo: "Categoria",
     titulo: "Processo lavado",
     texto:
       "A polpa e a mucilagem são removidas antes da secagem, favorecendo uma xícara limpa, de acidez nítida e origem bem definida.",
-    link: "./categorias.html",
+    link: "./saiba-mais.html",
   },
   {
     tipo: "Categoria",
     titulo: "Cereja descascado / Honey",
     texto:
       "Parte da mucilagem permanece no grão durante a secagem. O resultado fica entre o natural e o lavado: doce, equilibrado e limpo.",
-    link: "./categorias.html",
+    link: "./saiba-mais.html",
   },
   {
     tipo: "Categoria",
     titulo: "Torra clara",
     texto:
       "Realça a origem do grão, com acidez viva e notas florais, cítricas ou frutadas. É uma favorita dos métodos filtrados.",
-    link: "./categorias.html",
+    link: "./saiba-mais.html",
   },
   {
     tipo: "Categoria",
     titulo: "Torra escura",
     texto:
       "Entrega mais corpo e amargor, com notas tostadas, de chocolate intenso e caramelo escuro. Combina bem com leite.",
-    link: "./categorias.html",
+    link: "./saiba-mais.html",
   },
   {
     tipo: "Curiosidade",

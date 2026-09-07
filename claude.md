@@ -8,14 +8,14 @@ Mesma estrutura de 5 páginas de antes, agora sem duplicação de código: cabe�
 index.html          → entrada da Home
 historia.html        → entrada da página História
 metodos.html          → entrada da página Métodos
-categorias.html        → entrada da página Categorias
+saiba-mais.html        → entrada da página Saiba mais
 cafeterias.html          → entrada da página Cafeterias
 
 src/
   style.css                  → visual do site (igual ao da versão HTML puro)
   main-home.js, main-historia.js, ...   → um arquivo de entrada por página
   pages/
-    Home.vue, Historia.vue, Metodos.vue, Categorias.vue, Cafeterias.vue
+    Home.vue, Historia.vue, Metodos.vue, Categorias.vue, Cafeterias.vue (Categorias.vue mostra como "Saiba mais")
   components/
     SiteHeader.vue     → cabeçalho + navegação (usado nas 5 páginas)
     SiteFooter.vue      → rodapé + anúncio fixo (usado nas 5 páginas)

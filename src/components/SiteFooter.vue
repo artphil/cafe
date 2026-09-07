@@ -16,7 +16,7 @@ import AdSlot from './AdSlot.vue';
             style="list-style:none; padding:0; margin:0; font-family: var(--font-mono); font-size:0.8rem; line-height:2;">
             <li><a href="./historia.html">História</a></li>
             <li><a href="./metodos.html">Métodos</a></li>
-            <li><a href="./categorias.html">Categorias</a></li>
+            <li><a href="./saiba-mais.html">Saiba mais</a></li>
             <li><a href="./cafeterias.html">Cafeterias BH</a></li>
           </ul>
         </nav>
