@@ -121,7 +121,7 @@ Site estático sobre café, cobrindo métodos de preparo, tipos de grãos e cafe
 
 - [x] Onde hospedar: **GitHub Pages**
 - [x] Arquitetura: **multi-página (páginas HTML reais)** — decisão trocada de SPA para priorizar AdSense/indexação
-- [x] Anúncios AdSense: presentes no **conteúdo estático** (história, métodos, categorias) + **rodapé fixo** em todas as páginas. A página de **cafeterias em BH** só tem o anúncio do rodapé (sem anúncio no meio do conteúdo)
+- [x] Anúncios AdSense: presentes no **conteúdo estático** (história, métodos, saiba mais) + **rodapé fixo** em todas as páginas. A página de **cafeterias em BH** só tem o anúncio do rodapé (sem anúncio no meio do conteúdo)
 - [x] Gerador: **HTML puro**, 5 páginas (Home + 4 de conteúdo: História, Métodos de preparo, Saiba mais, Cafeterias em BH)
 - [x] Padrão de UI: **acordeão e modal** para evitar excesso de informação visível de uma vez
 - [x] Busca interna: **não**, por enquanto

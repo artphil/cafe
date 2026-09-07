@@ -15,7 +15,7 @@ src/
   style.css                  → visual do site (igual ao da versão HTML puro)
   main-home.js, main-historia.js, ...   → um arquivo de entrada por página
   pages/
-    Home.vue, Historia.vue, Metodos.vue, Categorias.vue, Cafeterias.vue (Categorias.vue mostra como "Saiba mais")
+    Home.vue, Historia.vue, Metodos.vue, SaibaMais.vue, Cafeterias.vue (SaibaMais.vue mostra como "Saiba mais")
   components/
     SiteHeader.vue     → cabeçalho + navegação (usado nas 5 páginas)
     SiteFooter.vue      → rodapé + anúncio fixo (usado nas 5 páginas)

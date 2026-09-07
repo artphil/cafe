@@ -1,33 +1,36 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import { CAFES_SHEET_URL, CAFES_FALLBACK } from '../data/cafes.js'
+import { CAFES_API_URL, CAFES_FALLBACK } from '../data/cafes.js'
 
 const cafes = ref([])
 const origem = ref('carregando') // 'carregando' | 'planilha' | 'fallback'
 
 async function carregar() {
   try {
-    const res = await fetch(CAFES_SHEET_URL)
-    if (!res.ok) throw new Error('Planilha indisponível')
+    const res = await fetch(CAFES_API_URL)
+    if (!res.ok) throw new Error(`Planilha indisponível (status ${res.status})`)
     const dados = await res.json()
-    if (!Array.isArray(dados) || dados.length === 0) throw new Error('Sem dados')
-    // Espera colunas: nome, endereco, site, descricao (ajuste os nomes conforme a planilha)
+    if (!Array.isArray(dados) || dados.length === 0) throw new Error('Sem dados na planilha')
+    // Espera colunas: nome, endereco, site, descricao 
     cafes.value = dados
     origem.value = 'planilha'
   } catch (err) {
+    console.warn('[CafeGrid] usando dados de exemplo — motivo:', err)
     cafes.value = CAFES_FALLBACK
     origem.value = 'fallback'
   }
 }
 
-onMounted(carregar)
+onMounted(() => {
+  carregar().catch((err) => console.error('[CafeGrid] erro inesperado:', err))
+})
 </script>
 
 <template>
   <p class="cafe-state">
     <template v-if="origem === 'carregando'">Carregando cafeterias…</template>
-    <template v-else-if="origem === 'planilha'">{{ cafes.length }} cafeterias para você conhecer.</template>
-    <template v-else>Mostrando dados de exemplo (planilha ainda não configurada ou indisponível).</template>
+    <template v-else-if="origem === 'planilha'">{{ cafes.length }} cafeterias carregadas da planilha.</template>
+    <template v-else>Mostrando dados de exemplo (planilha indisponível).</template>
   </p>
 
   <div class="cafe-grid">

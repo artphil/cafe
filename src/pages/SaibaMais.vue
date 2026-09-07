@@ -10,7 +10,7 @@ const modalMoagem = ref(null)
 </script>
 
 <template>
-  <SiteHeader current="categorias" />
+  <SiteHeader current="saiba-mais" />
 
   <main>
     <section class="hero wrap">
