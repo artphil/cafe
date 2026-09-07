@@ -1,4 +1,4 @@
-# Grão Café — projeto Vite + Vue (multi-página)
+# Café BH — projeto Vite + Vue (multi-página)
 
 Mesma estrutura de 5 páginas de antes, agora sem duplicação de código: cabeçalho, rodapé, acordeão, modal e outros pedaços repetidos viraram componentes Vue reaproveitados. No build, cada página continua virando um **arquivo `.html` real e separado** — sem SPA, sem router — então a decisão de priorizar AdSense/indexação continua valendo.
 

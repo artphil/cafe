@@ -67,7 +67,7 @@ Site estático sobre café, cobrindo métodos de preparo, tipos de grãos e cafe
 ## 6. Informações necessárias antes de começar a desenvolver
 
 **Identidade do site**
-- [x] Nome do site/marca: **Grão Café**
+- [x] Nome do site/marca: **Café BH**
 - [x] Domínio: sem domínio próprio por enquanto — usar subdomínio do GitHub Pages (`usuario.github.io/grao-cafe` ou similar)
 - [x] Tom de voz: **casual**
 - [x] Público-alvo: **iniciantes e entusiastas** de café

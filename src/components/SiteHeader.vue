@@ -10,9 +10,9 @@ defineProps({
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="./index.html">
-        <span class="brand-mark">GC</span>
+        <span class="brand-mark">CB</span>
         <span>
-          <span class="brand-name">Grão Café</span>
+          <span class="brand-name">Café BH</span>
           <span class="brand-tag">guia de café · BH</span>
         </span>
       </a>
