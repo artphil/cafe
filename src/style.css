@@ -7,6 +7,15 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Bitter:wght@500;700;900&family=Karla:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap");
 
+/* Design system (artphil-design-system >= 2.0.0).
+   O entrypoint carrega tokens + theme + components e, desde a 2.0, já deixa
+   base/reset.css de fora — que é o que este projeto precisa: o
+   `* { margin: 0 }` do reset zeraria a margem de fluxo dos parágrafos de
+   conteúdo, que dependem do default do navegador (ver .accordion-body
+   p:first-child mais abaixo). Nada aqui precisa disputar especificidade com
+   a lib: todo CSS dela vive em @layer, e CSS fora de camada sempre vence. */
+@import "artphil-design-system";
+
 :root {
   --paper: #e9dfc7;
   --paper-deep: #dccfac;
@@ -23,6 +32,38 @@
 
   --radius: 3px;
   --shadow-stamp: 0 1px 0 rgba(38, 21, 11, 0.4);
+
+  /* Ponte com o design system: a DS define o contrato de nomes, o projeto
+     fornece a paleta e a escala da marca. Qualquer componente .ap-* passa a
+     falar "etiqueta de saca de café" sem precisar de fork da lib.
+
+     A DS resolve cor com light-dark() e segue o SO por padrão. Este site é
+     claro por construção — a paleta papel/tinta não tem contraparte escura —
+     então fixamos o esquema em light. Sem isso, num SO em modo escuro os
+     tokens não sobrescritos abaixo (border, muted, semânticas) virariam suas
+     variantes escuras sobre um fundo claro, e o navegador pintaria a barra de
+     rolagem e os controles nativos em escuro. Fixado o esquema, sobrescrever
+     o alias sem par -light/-dark é suficiente. */
+  color-scheme: light;
+
+  --ap-color-primary: var(--roast-deep);
+  --ap-color-secondary: var(--leaf);
+  --ap-color-accent: var(--roast);
+
+  --ap-color-text: var(--ink);
+  --ap-color-text-contrast: var(--paper);
+
+  --ap-color-surface: var(--cream);
+  --ap-color-surface-elevated: var(--paper);
+  --ap-color-surface-sunken: var(--paper-deep);
+
+  --ap-color-divider: var(--line);
+  --ap-color-border: var(--ink); /* limite de controle: precisa de 3:1 */
+
+  --ap-border-radius: var(--radius);
+  --ap-font-family: var(--font-body);
+  --ap-font-size-md: 17px; /* a DS deriva xs/sm/lg/xl a partir daqui */
+  --ap-line-height: 1.55; /* mesma entrelinha do body */
 }
 
 * {
@@ -96,7 +137,7 @@ img {
 .brand-mark {
   width: 46px;
   height: 46px;
-  border-radius: 50%;
+  border-radius: var(--ap-border-radius-circle);
   border: 2.5px solid var(--ink);
   display: flex;
   align-items: center;
@@ -233,20 +274,27 @@ section.content-block {
   margin: 0;
 }
 
+/* Botões "carimbo" — ver bloco .ap-button do design system.
+   Estrutura (padding, radius, cor, estados, transição) vem da DS; aqui só
+   fica o que ela ainda não sabe expressar: família mono, uppercase e
+   letter-spacing. Ver .detail-btn abaixo para o par preenchido.
+   Marcação: .ap-button + .ap-button--outlined / .ap-button--filled. */
 .spotlight-refresh {
-  margin-top: 16px;
-  background: none;
-  border: 1.5px solid var(--ink);
-  color: var(--ink);
+  --ap-btn-bg: var(--ink);
+  --ap-btn-text: var(--paper);
+  --ap-btn-size: var(--ap-spacing-sm) 14px;
+
+  margin-top: var(--ap-spacing-md);
+  border-width: 1.5px;
   font-family: var(--font-mono);
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  padding: 8px 14px;
-  border-radius: var(--radius);
-  cursor: pointer;
 }
 
+/* hover invertido; o .ap-button--outlined da DS só aplica um tint de 15%.
+   Não precisa de prefixo .ap-button para ganhar: a regra da lib está em
+   @layer components e esta está fora de camada. */
 .spotlight-refresh:hover {
   background: var(--ink);
   color: var(--paper);
@@ -359,7 +407,7 @@ section.content-block {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   border: 1px solid var(--ink);
-  border-radius: 999px;
+  border-radius: var(--ap-border-radius-pill);
   padding: 3px 10px;
 }
 
@@ -373,21 +421,23 @@ section.content-block {
 }
 
 .detail-btn {
+  --ap-btn-bg: var(--ink);
+  --ap-btn-text: var(--paper);
+  --ap-btn-size: var(--ap-spacing-sm) 14px;
+
   margin-top: 12px;
-  background: var(--ink);
-  color: var(--paper);
-  border: none;
+  border-width: 0; /* preserva a caixa original, que não tinha borda */
   font-family: var(--font-mono);
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  padding: 8px 14px;
-  border-radius: var(--radius);
-  cursor: pointer;
 }
 
+/* hover troca a cor da tinta; o .ap-button--filled da DS só escurece com
+   filter, que precisa ser anulado explicitamente (propriedade diferente) */
 .detail-btn:hover {
   background: var(--roast-deep);
+  filter: none;
 }
 
 /* ---------- Modal ---------- */
@@ -420,7 +470,7 @@ dialog.modal::backdrop {
   float: right;
   background: none;
   border: 1.5px solid var(--ink);
-  border-radius: 50%;
+  border-radius: var(--ap-border-radius-circle);
   width: 30px;
   height: 30px;
   font-family: var(--font-mono);
@@ -440,7 +490,7 @@ dialog.modal::backdrop {
 .roast-dial {
   width: 96px;
   height: 96px;
-  border-radius: 50%;
+  border-radius: var(--ap-border-radius-circle);
   border: 3px solid var(--ink);
   display: flex;
   align-items: center;

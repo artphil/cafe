@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "artphil-design-system": "^1.4.0",
+    "artphil-design-system": "^2.0.0",
     "vue": "^3.4.0"
   },
   "devDependencies": {

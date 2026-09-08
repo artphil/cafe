@@ -79,7 +79,7 @@ const modalMoagem = ref(null)
           costuma preparar café com leite.</p>
       </AccordionItem>
 
-      <button class="detail-btn" type="button" @click="modalMoagem.open()">Ver tabela de moagem por método ↗</button>
+      <button class="ap-button ap-button--filled detail-btn" type="button" @click="modalMoagem.open()">Ver tabela de moagem por método ↗</button>
     </section>
   </main>
 

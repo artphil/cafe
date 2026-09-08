@@ -220,7 +220,7 @@ const modalComparativo = ref(null)
         </ul>
       </AccordionItem>
 
-      <button class="detail-btn" type="button" @click="modalComparativo.open()">Comparar métodos ↗</button>
+      <button class="ap-button ap-button--filled detail-btn" type="button" @click="modalComparativo.open()">Comparar métodos ↗</button>
     </section>
   </main>
 

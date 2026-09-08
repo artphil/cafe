@@ -19,6 +19,6 @@ function sortearOutro() {
     <p>{{ atual.texto }}</p>
     <a class="spotlight-link" :href="atual.link">Ver página completa →</a>
     <br>
-    <button class="spotlight-refresh" type="button" @click="sortearOutro">Sortear outro ↻</button>
+    <button class="ap-button ap-button--outlined spotlight-refresh" type="button" @click="sortearOutro">Sortear outro ↻</button>
   </div>
 </template>
