@@ -74,4 +74,8 @@ Edite diretamente os arquivos em `src/pages/*.vue`, substituindo os textos `[con
 2. Crie `src/artigos/<slug>.vue` com o texto dentro de `<template>`.
 3. Reinicie `npm run dev` (a lista é lida na inicialização) e rode `npm run build` para gerar e pré-renderizar a página.
 
+Se o artigo substitui um item de acordeão (Preparo, Saiba mais, História), acrescente `artigo="<slug>"` nesse `<AccordionItem>`: ele some quando o artigo existe. O artigo precisa cobrir todos os subitens desse acordeão, senão o conteúdo some do site.
+
+O card do artigo aparece sozinho no índice da seção (`IndiceArtigos.vue`, nas páginas Preparo e Saiba mais) e em "Leia também" dos outros artigos.
+
 O HTML da página não existe como arquivo: `scripts/vite-plugin-artigos.js` o gera no build e o serve no dev.

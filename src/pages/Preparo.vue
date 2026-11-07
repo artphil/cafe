@@ -5,6 +5,7 @@ import SiteFooter from '../components/SiteFooter.vue'
 import AdSlot from '../components/AdSlot.vue'
 import AccordionItem from '../components/AccordionItem.vue'
 import BaseModal from '../components/BaseModal.vue'
+import IndiceArtigos from '../components/IndiceArtigos.vue'
 
 const modalComparativo = ref(null)
 </script>
@@ -22,10 +23,12 @@ const modalComparativo = ref(null)
 
     <AdSlot slot="9213419261" format="auto" fullWidthResponsive />
 
+    <IndiceArtigos secao="preparo" titulo="Guias completos" />
+
     <section class="content-block wrap">
       <h2>Guias por método</h2>
 
-      <AccordionItem title="V60">
+      <AccordionItem title="V60" artigo="v60">
         <div class="tag-row">
           <span class="tag roast">Proporção 1:15~1:17</span>
           <span class="tag leaf">Moagem média</span>
@@ -112,7 +115,7 @@ const modalComparativo = ref(null)
 
       </AccordionItem>
 
-      <AccordionItem title="Aeropress">
+      <AccordionItem title="Aeropress" artigo="aeropress">
         <div class="tag-row">
           <span class="tag roast">Proporção 1:14</span>
           <span class="tag leaf">Moagem fina</span>
@@ -134,7 +137,7 @@ const modalComparativo = ref(null)
         </ul>
       </AccordionItem>
 
-      <AccordionItem title="Prensa francesa">
+      <AccordionItem title="Prensa francesa" artigo="prensa-francesa">
         <div class="tag-row">
           <span class="tag roast">Proporção 1:12</span>
           <span class="tag leaf">Moagem grossa</span>
@@ -155,7 +158,7 @@ const modalComparativo = ref(null)
         </ul>
       </AccordionItem>
 
-      <AccordionItem title="Coador de pano">
+      <AccordionItem title="Coador de pano" artigo="coador-de-pano">
         <div class="tag-row">
           <span class="tag roast">Proporção 1:12</span>
           <span class="tag leaf">Moagem média</span>
@@ -176,7 +179,7 @@ const modalComparativo = ref(null)
         </ul>
       </AccordionItem>
 
-      <AccordionItem title="Moka (cafeteira italiana)">
+      <AccordionItem title="Moka (cafeteira italiana)" artigo="moka">
         <div class="tag-row">
           <span class="tag roast">Sem proporção fixa — enche o reservatório</span>
           <span class="tag leaf">Moagem média-fina</span>
@@ -198,7 +201,7 @@ const modalComparativo = ref(null)
         </ul>
       </AccordionItem>
 
-      <AccordionItem title="Cold brew">
+      <AccordionItem title="Cold brew" artigo="cold-brew">
         <div class="tag-row">
           <span class="tag roast">Proporção 1:8 (concentrado)</span>
           <span class="tag leaf">Moagem grossa · infusão 12-24h</span>

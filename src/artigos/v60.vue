@@ -54,6 +54,20 @@
     <li><strong>Deixe escorrer</strong> até o fim. Dê uma mexidinha na jarra e sirva.</li>
   </ol>
 
+  <h2>Variações da receita</h2>
+  <p>
+    O passo a passo acima é o clássico, equilibrado e bom para o dia a dia. Quando ele já estiver redondo, vale testar
+    outras formas de despejar a água. Em todas, o bloom é o mesmo; muda o que vem depois.
+  </p>
+  <ul>
+    <li><a href="./v60-pour-continuo.html">Pour contínuo</a>: despejo lento e sem parar, para um café mais doce e com
+      mais corpo.</li>
+    <li><a href="./v60-pulse-pour.html">Pulse pour</a>: água dividida em etapas, para destacar acidez e notas
+      frutadas.</li>
+    <li><a href="./v60-metodo-4-6.html">Método 4:6</a>: criado por Tetsu Kasuya, para ajustar doçura, acidez e corpo
+      com mais precisão.</li>
+  </ul>
+
   <h2>Como acertar o gosto</h2>
   <p>
     Provou e ficou estranho? Quase sempre a solução é mexer em uma coisa de cada vez.

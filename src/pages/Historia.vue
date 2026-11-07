@@ -3,6 +3,7 @@ import SiteHeader from '../components/SiteHeader.vue'
 import SiteFooter from '../components/SiteFooter.vue'
 import AdSlot from '../components/AdSlot.vue'
 import AccordionItem from '../components/AccordionItem.vue'
+import IndiceArtigos from '../components/IndiceArtigos.vue'
 </script>
 
 <template>
@@ -22,6 +23,8 @@ import AccordionItem from '../components/AccordionItem.vue'
     </section>
 
     <AdSlot slot="4895588662" format="auto" fullWidthResponsive />
+
+    <IndiceArtigos secao="historia" titulo="Aprofunde-se" />
 
     <section class="content-block wrap">
       <h2>Linha do tempo</h2>

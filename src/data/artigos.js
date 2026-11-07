@@ -13,7 +13,7 @@
 //   slug      → nome do arquivo gerado, em minúsculas e com hífens (não pode
 //               repetir o de uma página existente, ex.: `preparo`)
 //   titulo    → h1 e <title>
-//   secao     → 'preparo' | 'saiba-mais' (define o menu destacado e o índice)
+//   secao     → 'historia' | 'preparo' | 'saiba-mais' (define o menu destacado e o índice)
 //   descricao → 1 a 2 frases; vira o lede, a meta description e o card do índice
 //   imagem    → { src, alt, credito, creditoUrl?, legenda? } (opcional). Arquivo em
 //               `public/img/artigos/`, com src `./img/artigos/<slug>.jpg`;
@@ -22,6 +22,7 @@
 //   relacionados → slugs de "Leia também" (opcional; sem isso, até 3 da mesma seção)
 
 export const SECOES = {
+  historia: { rotulo: 'História', pagina: './historia.html' },
   preparo: { rotulo: 'Preparo', pagina: './preparo.html' },
   'saiba-mais': { rotulo: 'Saiba mais', pagina: './saiba-mais.html' },
 }
@@ -39,6 +40,31 @@ export const ARTIGOS = [
       credito: 'pairhandmade / Vecteezy',
       creditoUrl: 'https://www.vecteezy.com/members/pairhandmade',
     },
+    relacionados: ['v60-pour-continuo', 'v60-pulse-pour', 'v60-metodo-4-6'],
+  },
+  {
+    slug: 'v60-pour-continuo',
+    titulo: 'V60 com pour contínuo: café mais doce',
+    secao: 'preparo',
+    descricao:
+      'Como fazer o pour contínuo no V60: receita, controle do fluxo e ajustes para um café mais doce e encorpado.',
+    relacionados: ['v60', 'v60-pulse-pour', 'v60-metodo-4-6'],
+  },
+  {
+    slug: 'v60-pulse-pour',
+    titulo: 'V60 com pulse pour: mais acidez e notas frutadas',
+    secao: 'preparo',
+    descricao:
+      'Como fazer o pulse pour no V60: receita em etapas, intervalos e ajustes para destacar acidez e notas frutadas.',
+    relacionados: ['v60', 'v60-pour-continuo', 'v60-metodo-4-6'],
+  },
+  {
+    slug: 'v60-metodo-4-6',
+    titulo: 'Método 4:6 no V60 (Tetsu Kasuya)',
+    secao: 'preparo',
+    descricao:
+      'Como usar o método 4:6 no V60: receita de partida e como ajustar doçura, acidez e corpo com duas decisões.',
+    relacionados: ['v60', 'v60-pour-continuo', 'v60-pulse-pour'],
   },
 ]
 
