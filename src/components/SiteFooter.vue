@@ -18,6 +18,9 @@ import AdSlot from './AdSlot.vue';
             <li><a href="./metodos.html">Métodos</a></li>
             <li><a href="./saiba-mais.html">Saiba mais</a></li>
             <li><a href="./cafeterias.html">Cafeterias BH</a></li>
+            <li><a href="./sobre.html">Sobre</a></li>
+            <li><a href="./contato.html">Contato</a></li>
+            <li><a href="./privacidade.html">Política de Privacidade</a></li>
           </ul>
         </nav>
       </div>

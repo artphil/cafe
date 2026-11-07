@@ -1,6 +1,6 @@
 <script setup>
 // `current` indica qual item do menu recebe aria-current="page".
-// Valores possíveis: 'home' | 'historia' | 'metodos' | 'saiba-mais' | 'cafeterias' | 'sobre' | 'contato'
+// Valores possíveis: 'home' | 'historia' | 'metodos' | 'saiba-mais' | 'cafeterias' | 'sobre' | 'contato' | 'privacidade'
 defineProps({
   current: { type: String, required: true }
 })

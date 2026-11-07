@@ -22,6 +22,7 @@ export default defineConfig({
         cafeterias: resolve(__dirname, 'cafeterias.html'),
         sobre: resolve(__dirname, 'sobre.html'),
         contato: resolve(__dirname, 'contato.html'),
+        privacidade: resolve(__dirname, 'privacidade.html'),
       }
     }
   }
