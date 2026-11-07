@@ -33,6 +33,7 @@ O Google reprovou o site por conteúdo de baixo valor.
   - Termos em `src/data/glossario.js` (`termo`, `definicao`, `veja_tambem` opcional), exibidos em ordem alfabética com índice A a Z no topo e data de última atualização
   - Cada termo tem âncora (`./glossario.html#bloom`) para os outros artigos linkarem
   - Sem páginas por termo (ficariam curtas demais para o AdSense); dividir em 2 ou 3 artigos por tema só se passar de ~80 a 100 termos
+- Foto de Chemex guardada em `assets/photos/v60-serejkakovalev.jpg` (serejkakovalev / Vecteezy, https://www.vecteezy.com/members/serejkakovalev) para um possível artigo de Chemex, que não está na lista dos 23
 - Regra: o artigo deve cobrir todos os subitens do acordeão que substitui (ex.: o V60 tinha Clássico, Pour contínuo, Pulse Pour e Método 4:6); senão o conteúdo some do site ao esconder o acordeão. Conferir os subitens antes de escrever cada artigo
 - Slugs já ligados nos acordeões: `v60`, `aeropress`, `prensa-francesa`, `coador-de-pano`, `moka`, `cold-brew` (Preparo); `arabica-x-robusta`, `processamento`, `torras` (Saiba mais). Ao escrever um desses artigos, use exatamente esse slug
 - História segue o mesmo padrão (seção `historia` nos artigos, bloco "Aprofunde-se"); ainda não há artigos de História na lista de 20
