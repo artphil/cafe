@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(python3 -c ' *)",
+      "Bash(ls -la /home/artphil/projects/artphil-design-system/ 2>&1 | head -30)",
+      "Read(//home/artphil/projects/artphil-design-system/**)",
+      "Bash(cd /home/artphil/projects/artphil-design-system && find docs components tokens base theme -type f | sort && echo \"=== README ===\" && cat README.md)",
+      "Bash(grep -n \"^#\\\\{1,4\\\\} \\\\|^| \\\\[SPEC\" specs.md)"
+    ],
+    "additionalDirectories": [
+      "/home/artphil/projects/artphil-design-system"
+    ]
+  }
+}
