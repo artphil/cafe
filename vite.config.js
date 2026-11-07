@@ -20,6 +20,7 @@ export default defineConfig({
         metodos: resolve(__dirname, 'metodos.html'),
         'saiba-mais': resolve(__dirname, 'saiba-mais.html'),
         cafeterias: resolve(__dirname, 'cafeterias.html'),
+        sobre: resolve(__dirname, 'sobre.html'),
       }
     }
   }
