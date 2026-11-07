@@ -1,0 +1,91 @@
+<template>
+  <p>
+    O V60 tem fama de ser "coisa de barista", mas é um dos jeitos mais simples de fazer um café coado de verdade.
+    Você precisa de poucos itens, de uma receita fácil de repetir e de um pouco de atenção. Em troca, ganha uma xícara
+    limpa, aromática e com sabores bem definidos. Este guia leva você do zero até a primeira xícara.
+  </p>
+
+  <h2>O que é o V60</h2>
+  <p>
+    É um coador cônico criado pela marca japonesa Hario. O nome vem do formato em "V" e do ângulo de 60 graus das
+    paredes. Ele tem nervuras em espiral por dentro e um furo grande no fundo, então quem controla a velocidade da
+    extração é você: o tipo de moagem e a forma de despejar a água mudam bastante o resultado.
+  </p>
+  <p>
+    Por isso o V60 é tão querido por quem gosta de explorar. Com o mesmo café, dá para deixar a xícara mais doce,
+    mais ácida ou mais encorpada só mexendo na receita.
+  </p>
+
+  <h2>O que você vai precisar</h2>
+  <ul>
+    <li><strong>Coador V60</strong> (plástico, cerâmica, vidro ou metal) e filtros de papel no tamanho certo. O 02
+      atende de 1 a 4 xícaras.</li>
+    <li><strong>Balança</strong> com cronômetro. Medir em gramas dá muito mais consistência que colher.</li>
+    <li><strong>Chaleira</strong>, de preferência com bico fino, para despejar a água com calma.</li>
+    <li><strong>Moedor</strong>. Café moído na hora faz diferença, e o ideal é um moedor que dê uma moagem uniforme.</li>
+    <li><strong>Jarra ou caneca</strong> para receber o café.</li>
+  </ul>
+
+  <h2>A receita de partida</h2>
+  <p>
+    Esta é uma base equilibrada, boa para o dia a dia. Depois de acertar, você ajusta ao seu gosto.
+  </p>
+  <ul>
+    <li><strong>Café:</strong> 15 g</li>
+    <li><strong>Água:</strong> 250 g, cerca de 1 parte de café para 16 de água</li>
+    <li><strong>Temperatura:</strong> entre 90 e 96 °C (use a mais alta para torras claras e a mais baixa para torras
+      escuras)</li>
+    <li><strong>Moagem:</strong> média, parecida com areia grossa</li>
+    <li><strong>Tempo total:</strong> de 2:30 a 3:30</li>
+  </ul>
+
+  <h2>Passo a passo</h2>
+  <ol>
+    <li><strong>Esquente a água</strong> e dobre o filtro de papel no coador.</li>
+    <li><strong>Enxágue o filtro</strong> com água quente. Isso tira o gosto de papel e aquece o coador e a jarra.
+      Descarte essa água.</li>
+    <li><strong>Coloque o café moído</strong> e dê uma balançada leve para nivelar. Zere a balança.</li>
+    <li><strong>Faça o bloom:</strong> inicie o cronômetro e despeje cerca de 40 g de água, molhando todo o pó. Espere
+      de 30 a 45 segundos. O café vai inchar e soltar gás, é normal.</li>
+    <li><strong>Primeira etapa:</strong> despeje em movimentos circulares, do centro para fora e de volta, até chegar
+      perto de 150 g.</li>
+    <li><strong>Segunda etapa:</strong> complete até 250 g com o mesmo cuidado, sem despejar direto nas paredes do
+      filtro.</li>
+    <li><strong>Deixe escorrer</strong> até o fim. Dê uma mexidinha na jarra e sirva.</li>
+  </ol>
+
+  <h2>Como acertar o gosto</h2>
+  <p>
+    Provou e ficou estranho? Quase sempre a solução é mexer em uma coisa de cada vez.
+  </p>
+  <h3>Café amargo, seco ou "pesado"</h3>
+  <p>
+    Isso indica extração demais. Deixe a moagem um pouco mais grossa, use água um pouco mais fria ou reduza o tempo
+    total.
+  </p>
+  <h3>Café ácido demais, azedo ou aguado</h3>
+  <p>
+    Aqui faltou extração. Moa mais fino, use água mais quente ou despeje com um pouco mais de calma para alongar o
+    tempo.
+  </p>
+  <h3>Escorreu muito rápido ou muito devagar</h3>
+  <p>
+    Se acabou em menos de 2 minutos, a moagem está grossa. Se passou de 4, está fina demais ou o pó entupiu o filtro.
+    Ajuste a moagem aos poucos.
+  </p>
+
+  <h2>Erros comuns de quem está começando</h2>
+  <ul>
+    <li>Pular o enxágue do filtro de papel.</li>
+    <li>Despejar a água de uma vez só, sem controle.</li>
+    <li>Trocar várias variáveis ao mesmo tempo e não saber o que melhorou.</li>
+    <li>Usar café moído há muito tempo, que já perdeu aroma.</li>
+  </ul>
+
+  <h2>Vale a pena?</h2>
+  <p>
+    Se você gosta de sentir as notas do café, vale muito. O V60 pede um pouco mais de atenção que uma prensa francesa,
+    mas devolve uma xícara mais clara e cheia de detalhes. Anote a receita que funcionou e repita. Com poucas
+    tentativas, o café fica melhor e mais constante.
+  </p>
+</template>

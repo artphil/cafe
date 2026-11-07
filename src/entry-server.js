@@ -8,6 +8,9 @@ import Cafeterias from './pages/Cafeterias.vue'
 import Sobre from './pages/Sobre.vue'
 import Contato from './pages/Contato.vue'
 import Privacidade from './pages/Privacidade.vue'
+import Artigo from './pages/Artigo.vue'
+import { ARTIGOS } from './data/artigos.js'
+import { carregarCorpo } from './artigo-corpo.js'
 
 export { CAFES_API_URL } from './data/cafes.js'
 
@@ -23,10 +26,13 @@ const PAGES = {
   privacidade: Privacidade,
 }
 
-export const PAGE_NAMES = Object.keys(PAGES)
+export const PAGE_NAMES = [...Object.keys(PAGES), ...ARTIGOS.map((a) => a.slug)]
 
-export function render(page, { cafes } = {}) {
-  const app = createSSRApp(PAGES[page])
+export async function render(page, { cafes } = {}) {
+  const artigo = ARTIGOS.find((a) => a.slug === page)
+  const app = artigo
+    ? createSSRApp(Artigo, { artigo, corpo: await carregarCorpo(page) })
+    : createSSRApp(PAGES[page])
   if (cafes) app.provide('cafesIniciais', cafes)
   return renderToString(app)
 }

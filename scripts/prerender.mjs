@@ -31,12 +31,12 @@ try {
     console.warn(`[prerender] cafeterias não pré-renderizadas (${err.message})`)
   }
 
-  const MARCA = '<div id="app"></div>'
+  const MARCA = /(<div id="app"[^>]*>)<\/div>/
 
   for (const page of PAGE_NAMES) {
     const file = resolve(distDir, `${page}.html`)
     const html = await readFile(file, 'utf8')
-    if (!html.includes(MARCA)) throw new Error(`${page}.html: ${MARCA} não encontrado`)
+    if (!MARCA.test(html)) throw new Error(`${page}.html: <div id="app"> não encontrado`)
 
     const comCafes = page === 'cafeterias' && cafes
     const corpo = await render(page, comCafes ? { cafes } : {})
@@ -44,7 +44,7 @@ try {
       ? `<script type="application/json" id="cafes-data">${JSON.stringify(cafes).replace(/</g, '\\u003c')}</script>`
       : ''
 
-    await writeFile(file, html.replace(MARCA, () => `<div id="app">${corpo}</div>${dados}`))
+    await writeFile(file, html.replace(MARCA, (_, abertura) => `${abertura}${corpo}</div>${dados}`))
     console.log(`[prerender] ${page}.html`)
   }
 } finally {

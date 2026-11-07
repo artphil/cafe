@@ -35,8 +35,8 @@ Cada tarefa cabe numa sessão. As de discussão vêm primeiro porque destravam a
 - [x] 1. **Discutir** temas e meta (ver Decisões)
 - [x] 2. **Discutir** autoria e imagens (ver Decisões)
 - [x] 3. **Discutir** navegação (ver Decisões)
-- [ ] 4. **Desenvolver** infraestrutura de artigo: uma lista única de páginas (título, slug, seção, descrição) alimenta `vite.config.js`, `entry-server.js` e os HTMLs, com um componente de artigo. Pronto quando: acrescentar um item à lista gera a página pré-renderizada no `dist/`, sem criar 5 arquivos à mão
-- [ ] 5. **Desenvolver** componentes de artigo: imagem de topo com legenda e crédito, "leia também" (sem assinatura de autor, ver Decisões). Pronto quando: aparecem no artigo piloto
+- [x] 4. **Desenvolver** infraestrutura de artigo: uma lista única de páginas (título, slug, seção, descrição) alimenta `vite.config.js`, `entry-server.js` e os HTMLs, com um componente de artigo. Pronto quando: acrescentar um item à lista gera a página pré-renderizada no `dist/`, sem criar 5 arquivos à mão
+- [ ] 5. **Desenvolver** componentes de artigo: imagem de topo com legenda e crédito, "leia também" (sem assinatura de autor, ver Decisões). Pronto quando: aparecem no artigo piloto (código escrito em `ArtigoImagem.vue`, `LeiaTambem.vue` e `Artigo.vue`; falta validar com a tarefa 8)
 - [x] 6. **Desenvolver** renomeação de Métodos para Preparo: `metodos.html` vira `preparo.html` (HTML, `main-*.js`, `Page.vue`, `vite.config.js`, `entry-server.js`), com rótulo atualizado no header, rodapé, home, destaques e nos links de outras páginas. Pronto quando: `grep` por `metodos` em `src/` e nos HTMLs da raiz não acha nada e `dist/preparo.html` existe
 - [ ] 7. **Desenvolver** índices de Preparo e Saiba mais: cada um lista seus artigos em cards (título, descrição curta, imagem) lidos da lista única da tarefa 4. Pronto quando: um item novo na lista aparece no índice da seção sem edição manual
 - [ ] 8. **Escrever** artigo piloto (~600+ palavras, com foto) para validar template e tom. Pronto quando: publicado no `dist/` e aprovado pelo autor

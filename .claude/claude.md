@@ -24,7 +24,10 @@ src/
     BaseModal.vue          → modal reutilizável
     Spotlight.vue            → destaque aleatório da home
     CafeGrid.vue               → grid de cafeterias (busca a planilha)
+  artigos/            → corpo de cada artigo (<slug>.vue, só o <template>)
+  artigo-corpo.js, main-artigo.js, pages/Artigo.vue  → página de artigo (layout e entrada únicos)
   data/
+    artigos.js   → lista única dos artigos (cada item vira /<slug>.html)
     destaques.js   → itens sorteáveis no destaque da home
     cafes.js         → URL da planilha + dados de exemplo (fallback)
 ```
@@ -64,3 +67,11 @@ Mesma configuração de antes, só que os arquivos mudaram de lugar:
 ## Escrever o conteúdo
 
 Edite diretamente os arquivos em `src/pages/*.vue`, substituindo os textos `[conteúdo aqui — ...]`. Ao adicionar itens novos de método/categoria/história, também vale atualizar `src/data/destaques.js` pra entrarem no sorteio da home.
+
+## Criar um artigo
+
+1. Acrescente um item em `src/data/artigos.js` (slug, titulo, secao, descricao e, se houver, `imagem` com arquivo em `public/img/artigos/`).
+2. Crie `src/artigos/<slug>.vue` com o texto dentro de `<template>`.
+3. Reinicie `npm run dev` (a lista é lida na inicialização) e rode `npm run build` para gerar e pré-renderizar a página.
+
+O HTML da página não existe como arquivo: `scripts/vite-plugin-artigos.js` o gera no build e o serve no dev.

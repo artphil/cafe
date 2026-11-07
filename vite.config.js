@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
+import { artigosHtml, entradasArtigos } from './scripts/vite-plugin-artigos.js'
 
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue(), artigosHtml(__dirname)],
 
   // Importante para GitHub Pages: se o site ficar em
   // https://seu-usuario.github.io/nome-do-repositorio/
@@ -23,6 +24,8 @@ export default defineConfig({
         sobre: resolve(__dirname, 'sobre.html'),
         contato: resolve(__dirname, 'contato.html'),
         privacidade: resolve(__dirname, 'privacidade.html'),
+        // Artigos: páginas geradas a partir de src/data/artigos.js
+        ...entradasArtigos(__dirname),
       }
     }
   }
