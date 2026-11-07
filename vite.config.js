@@ -21,6 +21,7 @@ export default defineConfig({
         'saiba-mais': resolve(__dirname, 'saiba-mais.html'),
         cafeterias: resolve(__dirname, 'cafeterias.html'),
         sobre: resolve(__dirname, 'sobre.html'),
+        contato: resolve(__dirname, 'contato.html'),
       }
     }
   }
