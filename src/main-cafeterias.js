@@ -1,5 +1,5 @@
-import { createApp } from 'vue'
 import './style.css'
+import { mountPage } from './mount.js'
 import Cafeterias from './pages/Cafeterias.vue'
 
-createApp(Cafeterias).mount('#app')
+mountPage(Cafeterias)

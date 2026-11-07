@@ -1,9 +1,12 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, inject, onMounted } from 'vue'
 import { CAFES_API_URL, CAFES_FALLBACK } from '../data/cafes.js'
 
-const cafes = ref([])
-const origem = ref('carregando') // 'carregando' | 'planilha' | 'fallback'
+// Lista buscada na planilha durante o build (pré-renderização), se houver.
+const iniciais = inject('cafesIniciais', null)
+
+const cafes = ref(iniciais ?? [])
+const origem = ref(iniciais ? 'planilha' : 'carregando') // 'carregando' | 'planilha' | 'fallback'
 
 async function carregar() {
   try {
@@ -15,6 +18,10 @@ async function carregar() {
     cafes.value = dados
     origem.value = 'planilha'
   } catch (err) {
+    if (iniciais) {
+      console.warn('[CafeGrid] mantendo a lista do build — motivo:', err)
+      return
+    }
     console.warn('[CafeGrid] usando dados de exemplo — motivo:', err)
     cafes.value = CAFES_FALLBACK
     origem.value = 'fallback'

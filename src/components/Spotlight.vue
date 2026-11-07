@@ -1,12 +1,18 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { DESTAQUES } from '../data/destaques.js'
 
 function sortear() {
   return DESTAQUES[Math.floor(Math.random() * DESTAQUES.length)]
 }
 
-const atual = ref(sortear())
+// O HTML pré-renderizado usa o primeiro destaque (igual no servidor e no
+// cliente, evitando erro de hidratação); o sorteio acontece ao montar.
+const atual = ref(DESTAQUES[0])
+
+onMounted(() => {
+  atual.value = sortear()
+})
 
 function sortearOutro() {
   atual.value = sortear()

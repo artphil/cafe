@@ -1,5 +1,5 @@
-import { createApp } from "vue";
-import "./style.css";
-import Historia from "./pages/Historia.vue";
+import './style.css'
+import { mountPage } from './mount.js'
+import Historia from './pages/Historia.vue'
 
-createApp(Historia).mount("#app");
+mountPage(Historia)

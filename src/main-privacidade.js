@@ -1,5 +1,5 @@
-import { createApp } from "vue";
-import "./style.css";
-import Privacidade from "./pages/Privacidade.vue";
+import './style.css'
+import { mountPage } from './mount.js'
+import Privacidade from './pages/Privacidade.vue'
 
-createApp(Privacidade).mount("#app");
+mountPage(Privacidade)

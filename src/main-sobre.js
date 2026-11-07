@@ -1,5 +1,5 @@
-import { createApp } from "vue";
-import "./style.css";
-import Sobre from "./pages/Sobre.vue";
+import './style.css'
+import { mountPage } from './mount.js'
+import Sobre from './pages/Sobre.vue'
 
-createApp(Sobre).mount("#app");
+mountPage(Sobre)

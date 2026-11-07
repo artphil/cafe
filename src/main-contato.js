@@ -1,5 +1,5 @@
-import { createApp } from "vue";
-import "./style.css";
-import Contato from "./pages/Contato.vue";
+import './style.css'
+import { mountPage } from './mount.js'
+import Contato from './pages/Contato.vue'
 
-createApp(Contato).mount("#app");
+mountPage(Contato)

@@ -1,5 +1,5 @@
-import { createApp } from "vue";
-import "./style.css";
-import SaibaMais from "./pages/SaibaMais.vue";
+import './style.css'
+import { mountPage } from './mount.js'
+import SaibaMais from './pages/SaibaMais.vue'
 
-createApp(SaibaMais).mount("#app");
+mountPage(SaibaMais)
