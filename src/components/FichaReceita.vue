@@ -2,9 +2,11 @@
 // Ficha técnica padrão de um método de preparo. Todos os campos são texto já
 // formatado e opcionais (ex.: a moka não tem proporção fixa). Padrão de escrita:
 // "20 g", "300 g" (água sempre em gramas), "1:15", "90 a 96 °C", "2:30 a 3:30".
+// `rendimento` é a bebida que sai (ex.: espresso, concentrado do cold brew).
 defineProps({
   cafe: { type: String, default: '' },
   agua: { type: String, default: '' },
+  rendimento: { type: String, default: '' },
   proporcao: { type: String, default: '' },
   temperatura: { type: String, default: '' },
   moagem: { type: String, default: '' },
@@ -18,6 +20,7 @@ defineProps({
     <dl>
       <div v-if="cafe"><dt>Café</dt><dd>{{ cafe }}</dd></div>
       <div v-if="agua"><dt>Água</dt><dd>{{ agua }}</dd></div>
+      <div v-if="rendimento"><dt>Rendimento</dt><dd>{{ rendimento }}</dd></div>
       <div v-if="proporcao"><dt>Proporção</dt><dd>{{ proporcao }}</dd></div>
       <div v-if="temperatura"><dt>Temperatura</dt><dd>{{ temperatura }}</dd></div>
       <div v-if="moagem"><dt>Moagem</dt><dd>{{ moagem }}</dd></div>

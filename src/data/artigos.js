@@ -29,6 +29,14 @@ export const SECOES = {
 
 export const ARTIGOS = [
   {
+    slug: 'comparativo-de-metodos',
+    titulo: 'Comparativo de métodos de preparo: qual escolher',
+    secao: 'preparo',
+    descricao:
+      'Compare V60, café coado, Aeropress, prensa francesa, moka e cold brew em proporção, moagem, tempo, sabor e dificuldade.',
+    relacionados: ['v60', 'cafe-coado', 'aeropress'],
+  },
+  {
     slug: 'v60',
     titulo: 'Como fazer café no V60',
     secao: 'preparo',
@@ -83,6 +91,78 @@ export const ARTIGOS = [
       creditoUrl: 'https://www.vecteezy.com/members/nai-rmtango249756',
     },
     relacionados: ['v60', 'v60-pour-continuo', 'v60-pulse-pour'],
+  },
+  {
+    slug: 'aeropress',
+    titulo: 'Como fazer café na Aeropress',
+    secao: 'preparo',
+    descricao:
+      'Passo a passo da Aeropress para iniciantes: receita, equipamento, ajustes de gosto e erros comuns.',
+    imagem: {
+      src: './img/artigos/aeropress.jpg',
+      alt: 'Pessoa despejando água de uma chaleira de bico de ganso em um aparelho cilíndrico preto de preparo manual, apoiado em um suporte, ao lado de um moedor e de embalagens de café',
+      credito: 'Suwinai Sukanant / Vecteezy',
+      creditoUrl: 'https://www.vecteezy.com/members/nai-rmtango249756',
+    },
+    relacionados: ['v60', 'prensa-francesa', 'moka'],
+  },
+  {
+    slug: 'prensa-francesa',
+    titulo: 'Como fazer café na prensa francesa',
+    secao: 'preparo',
+    descricao:
+      'Passo a passo da prensa francesa para iniciantes: receita, moagem, tempo de infusão e como evitar borra e amargor.',
+    imagem: {
+      src: './img/artigos/prensa-francesa.jpg',
+      alt: 'Prensa francesa de vidro com café pronto ao lado de uma xícara branca, sobre uma mesa de madeira',
+      credito: 'Siraphol Siricharattakul / Vecteezy',
+      creditoUrl: 'https://www.vecteezy.com/members/siraphol-siricharattakul',
+    },
+    relacionados: ['aeropress', 'coador-de-pano', 'moka'],
+  },
+  {
+    slug: 'moka',
+    titulo: 'Como fazer café na moka (cafeteira italiana)',
+    secao: 'preparo',
+    descricao:
+      'Passo a passo da moka para iniciantes: como encher, o ponto do fogo, quando retirar e como evitar café amargo.',
+    imagem: {
+      src: './img/artigos/moka.jpg',
+      alt: 'Funil de uma moka vermelha cheio de café moído, ao lado da parte superior da cafeteira aberta, sobre uma mesa de madeira',
+      credito: 'kasarp Techawongtham / Vecteezy',
+      creditoUrl: 'https://www.vecteezy.com/members/kasarp1968533984',
+    },
+    relacionados: ['prensa-francesa', 'aeropress', 'cold-brew'],
+  },
+  {
+    slug: 'cold-brew',
+    titulo: 'Como fazer cold brew',
+    secao: 'preparo',
+    descricao:
+      'Passo a passo do cold brew para iniciantes: concentrado, tempo de infusão, moagem e como servir.',
+    relacionados: ['prensa-francesa', 'aeropress', 'moka'],
+  },
+  {
+    slug: 'cafe-coado',
+    titulo: 'Café coado: pano e papel (Melitta)',
+    secao: 'preparo',
+    descricao:
+      'Como fazer café coado no pano ou no filtro de papel: receita, cuidados com o coador e ajustes para o seu gosto.',
+    relacionados: ['v60', 'prensa-francesa', 'cold-brew'],
+  },
+  {
+    slug: 'espresso',
+    titulo: 'Espresso: o que é e como ajustar a extração',
+    secao: 'preparo',
+    descricao:
+      'Guia geral do espresso: dose, rendimento, tempo e moagem, como saber se a extração está certa e variações como ristretto e lungo.',
+    imagem: {
+      src: './img/artigos/espresso.jpg',
+      alt: 'Espresso saindo do porta-filtro de uma máquina e caindo em um copo de vidro, com a bebida escura e cremosa em camadas',
+      credito: 'René Pollock / Vecteezy',
+      creditoUrl: 'https://www.vecteezy.com/members/109660095489604631044',
+    },
+    relacionados: ['moka', 'aeropress', 'v60'],
   },
 ]
 

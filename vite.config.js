@@ -11,6 +11,10 @@ export default defineConfig({
   // troque './' por '/nome-do-repositorio/'
   base: './',
 
+  // Permite abrir o `npm run dev` por um túnel (cloudflared, localtunnel);
+  // sem isso o Vite bloqueia o nome de host desconhecido.
+  server: { allowedHosts: ['.trycloudflare.com', '.loca.lt'] },
+
   build: {
     rollupOptions: {
       // Cada chave vira um HTML real e separado no build (pasta dist/),
