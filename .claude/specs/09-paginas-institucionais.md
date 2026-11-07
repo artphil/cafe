@@ -1,6 +1,6 @@
 # Spec 09: Páginas institucionais
 
-**Status:** em andamento
+**Status:** concluído
 
 ## Decisões
 - Formato: páginas Vue com header/rodapé do site (inclusive a Privacidade, que sai de `public/`)
@@ -17,6 +17,8 @@
 - [x] 5. Atualizar o texto da Política de Privacidade: domínio atual (cita `artphil.github.io/cafe`), e-mail real na seção de contato, data revisada, mantendo cookies, AdSense, Analytics e LGPD
 - [x] 6. Migrar a Privacidade para o layout do site (`privacidade.html` na raiz, entrada no `vite.config.js`, remover de `public/`)
 - [x] 7. Linkar Sobre, Contato e Privacidade no `SiteFooter.vue`
-- [ ] 8. Ativar a mensagem de consentimento no AdSense e citar o aviso de cookies na Privacidade (depende da 5)
-- [ ] 9. Verificar no `dist/`: sem links quebrados e sem placeholders nas páginas institucionais
+- [x] 8. Ativar a mensagem de consentimento no AdSense e citar o aviso de cookies na Privacidade
+  - [x] Texto da Privacidade cita a mensagem de consentimento
+  - [x] Criar e publicar a mensagem no painel do AdSense (feito pelo autor)
+- [x] 9. Verificar no `dist/`: sem links quebrados e sem placeholders nas páginas institucionais
 

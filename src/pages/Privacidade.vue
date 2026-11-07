@@ -36,6 +36,9 @@ import SiteFooter from '../components/SiteFooter.vue'
         (Google Analytics e Google AdSense) para melhorar a experiência de navegação e exibir anúncios relevantes.
         Você pode configurar seu navegador para recusar cookies, mas isso pode afetar algumas funcionalidades do
         site.</p>
+      <p>Ao acessar o site, você pode ver uma mensagem de consentimento fornecida pelo Google, na qual é possível
+        aceitar, recusar ou ajustar o uso de cookies para anúncios. Você pode mudar sua escolha depois, pelo mesmo
+        aviso ou apagando os cookies do navegador.</p>
 
       <h2>4. Compartilhamento de dados</h2>
       <p>Não vendemos, alugamos ou compartilhamos suas informações pessoais com terceiros, exceto conforme necessário
