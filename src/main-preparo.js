@@ -1,5 +1,5 @@
 import './style.css'
 import { mountPage } from './mount.js'
-import Metodos from './pages/Metodos.vue'
+import Preparo from './pages/Preparo.vue'
 
-mountPage(Metodos)
+mountPage(Preparo)

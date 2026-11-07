@@ -7,42 +7,42 @@ export const DESTAQUES = [
     titulo: "V60",
     texto:
       "Um método filtrado de xícara limpa e aromática. Com a proporção e os pours certos, você regula corpo, doçura e acidez.",
-    link: "./metodos.html",
+    link: "./preparo.html",
   },
   {
     tipo: "Método",
     titulo: "Prensa francesa",
     texto:
       "Simples e encorpada, preserva mais dos óleos do café. É ótima para quem busca textura e poucos equipamentos.",
-    link: "./metodos.html",
+    link: "./preparo.html",
   },
   {
     tipo: "Método",
     titulo: "Aeropress",
     texto:
       "Rápida, portátil e versátil, prepara uma xícara limpa e doce. Pequenos ajustes de tempo e moagem rendem muitas receitas.",
-    link: "./metodos.html",
+    link: "./preparo.html",
   },
   {
     tipo: "Método",
     titulo: "Coador de pano",
     texto:
       "Entrega um café encorpado e com perfil tradicional, sem o sabor residual do papel. O segredo está em cuidar bem do pano.",
-    link: "./metodos.html",
+    link: "./preparo.html",
   },
   {
     tipo: "Método",
     titulo: "Moka",
     texto:
       "A cafeteira italiana prepara uma bebida intensa e concentrada. Vai muito bem pura ou como base para café com leite.",
-    link: "./metodos.html",
+    link: "./preparo.html",
   },
   {
     tipo: "Método",
     titulo: "Cold brew",
     texto:
       "Infusionado a frio por horas, produz um concentrado refrescante, suave e de baixa percepção de acidez.",
-    link: "./metodos.html",
+    link: "./preparo.html",
   },
   {
     tipo: "Categoria",

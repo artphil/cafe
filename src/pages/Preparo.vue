@@ -10,11 +10,11 @@ const modalComparativo = ref(null)
 </script>
 
 <template>
-  <SiteHeader current="metodos" />
+  <SiteHeader current="preparo" />
 
   <main>
     <section class="hero wrap">
-      <p class="eyebrow">Métodos de preparo</p>
+      <p class="eyebrow">Preparo</p>
       <h1>Escolha o método certo pra você.</h1>
       <p class="lede">O mesmo grão pode render xícaras bem diferentes. O método muda o corpo, a acidez e a praticidade
         do preparo — abra cada guia para encontrar uma receita de partida e ajustar ao seu gosto.</p>

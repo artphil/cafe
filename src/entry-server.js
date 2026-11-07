@@ -2,7 +2,7 @@ import { createSSRApp } from 'vue'
 import { renderToString } from 'vue/server-renderer'
 import Home from './pages/Home.vue'
 import Historia from './pages/Historia.vue'
-import Metodos from './pages/Metodos.vue'
+import Preparo from './pages/Preparo.vue'
 import SaibaMais from './pages/SaibaMais.vue'
 import Cafeterias from './pages/Cafeterias.vue'
 import Sobre from './pages/Sobre.vue'
@@ -15,7 +15,7 @@ export { CAFES_API_URL } from './data/cafes.js'
 const PAGES = {
   index: Home,
   historia: Historia,
-  metodos: Metodos,
+  preparo: Preparo,
   'saiba-mais': SaibaMais,
   cafeterias: Cafeterias,
   sobre: Sobre,

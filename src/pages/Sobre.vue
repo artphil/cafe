@@ -33,7 +33,7 @@ import SiteFooter from '../components/SiteFooter.vue'
       <h2>O que você encontra por aqui</h2>
       <ul>
         <li><a href="./historia.html">História</a>: da Etiópia até as montanhas de Minas.</li>
-        <li><a href="./metodos.html">Métodos</a>: como preparar café de formas diferentes, com o que você tiver em
+        <li><a href="./preparo.html">Preparo</a>: como preparar café de formas diferentes, com o que você tiver em
           casa.</li>
         <li><a href="./saiba-mais.html">Saiba mais</a>: tipos de grão, torras e moagens.</li>
         <li><a href="./cafeterias.html">Cafeterias BH</a>: uma lista de lugares para tomar café na cidade.</li>

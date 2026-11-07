@@ -17,7 +17,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         historia: resolve(__dirname, 'historia.html'),
-        metodos: resolve(__dirname, 'metodos.html'),
+        preparo: resolve(__dirname, 'preparo.html'),
         'saiba-mais': resolve(__dirname, 'saiba-mais.html'),
         cafeterias: resolve(__dirname, 'cafeterias.html'),
         sobre: resolve(__dirname, 'sobre.html'),

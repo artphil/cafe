@@ -28,9 +28,9 @@ import Spotlight from '../components/Spotlight.vue'
           <h3>História</h3>
           <p>De onde vem o café e como ele chegou até a sua xícara.</p>
         </a>
-        <a class="area-card" href="./metodos.html">
+        <a class="area-card" href="./preparo.html">
           <span class="num">02</span>
-          <h3>Métodos de preparo</h3>
+          <h3>Preparo</h3>
           <p>V60, prensa francesa, aeropress e outros, com proporção e dicas.</p>
         </a>
         <a class="area-card" href="./saiba-mais.html">
