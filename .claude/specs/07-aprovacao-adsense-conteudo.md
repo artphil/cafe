@@ -36,13 +36,13 @@ Cada tarefa cabe numa sessão. As de discussão vêm primeiro porque destravam a
 - [x] 2. **Discutir** autoria e imagens (ver Decisões)
 - [x] 3. **Discutir** navegação (ver Decisões)
 - [x] 4. **Desenvolver** infraestrutura de artigo: uma lista única de páginas (título, slug, seção, descrição) alimenta `vite.config.js`, `entry-server.js` e os HTMLs, com um componente de artigo. Pronto quando: acrescentar um item à lista gera a página pré-renderizada no `dist/`, sem criar 5 arquivos à mão
-- [ ] 5. **Desenvolver** componentes de artigo: imagem de topo com legenda e crédito, "leia também" (sem assinatura de autor, ver Decisões). Pronto quando: aparecem no artigo piloto (código escrito em `ArtigoImagem.vue`, `LeiaTambem.vue` e `Artigo.vue`; falta validar com a tarefa 8)
+- [x] 5. **Desenvolver** componentes de artigo: imagem de topo com legenda e crédito, "leia também" (sem assinatura de autor, ver Decisões). Pronto quando: aparecem no artigo piloto
 - [x] 6. **Desenvolver** renomeação de Métodos para Preparo: `metodos.html` vira `preparo.html` (HTML, `main-*.js`, `Page.vue`, `vite.config.js`, `entry-server.js`), com rótulo atualizado no header, rodapé, home, destaques e nos links de outras páginas. Pronto quando: `grep` por `metodos` em `src/` e nos HTMLs da raiz não acha nada e `dist/preparo.html` existe
 - [ ] 7. **Desenvolver** índices de Preparo e Saiba mais: cada um lista seus artigos em cards (título, descrição curta, imagem) lidos da lista única da tarefa 4. Pronto quando: um item novo na lista aparece no índice da seção sem edição manual
-- [ ] 8. **Escrever** artigo piloto (~600+ palavras, com foto) para validar template e tom. Pronto quando: publicado no `dist/` e aprovado pelo autor
-- [ ] 9. **Escrever** texto editorial da home (~300 palavras além dos links). Pronto quando: sem texto placeholder e com links para as seções
+- [x] 8. **Escrever** artigo piloto (~600+ palavras, com foto) para validar template e tom. Pronto quando: publicado no `dist/` e aprovado pelo autor
+- [x] 9. **Escrever** texto editorial da home (~300 palavras além dos links). Pronto quando: sem texto placeholder e com links para as seções
 - [ ] 10. **Coletar** dados reais das 4 cafeterias (endereço, bairro, site/Instagram, descrição de 1 a 2 frases). Pronto quando: tabela com os 4 preenchidos (depende do autor)
-- [ ] 11. **Desenvolver** limpeza das cafeterias: preencher a planilha e remover os placeholders do fallback em `src/data/cafes.js`. Pronto quando: `grep` por `aqui` e `"#"` em `cafes.js` não acha nada e os 4 aparecem no `dist/cafeterias.html` (depende de 10)
+- [x] 11. **Desenvolver** limpeza das cafeterias: preencher a planilha e remover os placeholders do fallback em `src/data/cafes.js`. Pronto quando: `grep` por `aqui` e `"#"` em `cafes.js` não acha nada e os 4 aparecem no `dist/cafeterias.html` (depende de 10)
 - [ ] 12. **Escrever** lote A, métodos: V60, Aeropress, Prensa francesa, Moka, Espresso (~600+ palavras cada). Pronto quando: 5 páginas publicadas e linkadas (depende de 4, 5, 7 e 8)
 - [ ] 13. **Escrever** lote B, preparo: Coador de pano, Cold brew, Comparativo de métodos, Moagem × método, Proporção água/café. Pronto quando: 5 páginas publicadas e linkadas
 - [ ] 14. **Escrever** lote C, grãos: Arábica × Robusta, Regiões produtoras, Torras, Processamento, Glossário sensorial. Pronto quando: 5 páginas publicadas e linkadas
