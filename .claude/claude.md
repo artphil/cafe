@@ -79,3 +79,18 @@ Se o artigo substitui um item de acordeão (Preparo, Saiba mais, História), acr
 O card do artigo aparece sozinho no índice da seção (`IndiceArtigos.vue`, nas páginas Preparo e Saiba mais) e em "Leia também" dos outros artigos.
 
 O HTML da página não existe como arquivo: `scripts/vite-plugin-artigos.js` o gera no build e o serve no dev.
+
+## Molde dos artigos de método de preparo
+
+Todo artigo de método (V60, Aeropress, prensa francesa etc.) segue a mesma ordem de seções `h2`:
+
+1. Introdução (1 a 2 parágrafos: o que é, para quem serve, link para o clássico quando for variação)
+2. **Receita de partida**, com o componente `FichaReceita` (café, água, proporção, temperatura, moagem, tempo total, "indicado para")
+3. **O que você vai precisar**
+4. **Passo a passo** (lista numerada, sem listas aninhadas)
+5. **Como ajustar o gosto** (subtítulos `h3`: amargo, ácido, tempo/fluxo, corpo)
+6. **Erros comuns**
+
+Só o artigo-base de um método tem as seções extras "O que é ..." (antes da receita) e "Variações da receita" (no fim). O "Leia também" já vem do componente, então não repetir links no fim.
+
+Padrão de escrita: gramas com espaço ("20 g"), água sempre em gramas (a receita pede balança), proporção "1:15", temperatura "90 a 96 °C", tempo "2:30 a 3:30". Dose de referência das variações do V60: 20 g de café e 300 g de água (1:15), para duas xícaras; os demais métodos usam a dose que fizer sentido para eles, sempre na ficha.

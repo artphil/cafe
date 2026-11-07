@@ -1,3 +1,7 @@
+<script setup>
+import FichaReceita from '../components/FichaReceita.vue'
+</script>
+
 <template>
   <p>
     O método 4:6 foi criado pelo barista japonês Tetsu Kasuya e ficou famoso por permitir que você ajuste o sabor do
@@ -5,23 +9,22 @@
     entre doçura e acidez, e os 60% restantes definem a força e o corpo da xícara. Com poucas regras, dá para
     "desenhar" o café que você quer.
   </p>
-
-  <h2>Quando vale a pena usar</h2>
-  <ul>
-    <li>Quando você quer entender o que cada etapa do preparo faz no sabor.</li>
-    <li>Quando quer ajustar doçura, acidez e corpo sem mexer em moedor ou temperatura.</li>
-    <li>Quando já domina o <a href="./v60.html">V60 clássico</a> e procura mais controle.</li>
-  </ul>
+  <p>
+    Vale a pena quando você quer entender o que cada etapa do preparo faz no sabor, ajustar doçura, acidez e corpo sem
+    mexer em moedor ou temperatura, e já domina o <a href="./v60.html">V60 clássico</a>.
+  </p>
 
   <h2>Receita de partida</h2>
-  <ul>
-    <li><strong>Café:</strong> 20 g</li>
-    <li><strong>Água:</strong> 300 g</li>
-    <li><strong>Temperatura:</strong> entre 90 e 96 °C</li>
-    <li><strong>Moagem:</strong> mais grossa que a do clássico</li>
-    <li><strong>Pours:</strong> 5 de 60 g, a cada 45 segundos</li>
-    <li><strong>Tempo total:</strong> por volta de 3:30</li>
-  </ul>
+  <p>Para duas xícaras, com 5 pours de 60 g a cada 45 segundos.</p>
+  <FichaReceita cafe="20 g" agua="300 g" proporcao="1:15" temperatura="90 a 96 °C"
+    moagem="Mais grossa que a do clássico" tempo="Cerca de 3:30" indicado="controle avançado de sabor" />
+
+  <h2>O que você vai precisar</h2>
+  <p>
+    Os mesmos itens do <a href="./v60.html">V60 clássico</a>: coador, filtro de papel, chaleira de bico fino e moedor.
+    A balança com cronômetro é indispensável, porque o método depende de medidas e tempos e fica difícil de repetir sem
+    isso.
+  </p>
 
   <h2>Passo a passo</h2>
   <ol>
@@ -37,7 +40,7 @@
 
   <h2>Como ajustar o gosto</h2>
   <p>
-    A graça do 4:6 está em mexer em um lado de cada vez.
+    A graça do 4:6 está em mexer em um lado de cada vez. Primeiro acerte doçura e acidez; depois ajuste o corpo.
   </p>
 
   <h3>Nos primeiros 40%: doçura e acidez</h3>
@@ -54,15 +57,10 @@
     <li><strong>Três pours iguais</strong> (como na receita de partida) ficam no meio-termo.</li>
   </ul>
 
-  <h2>Dicas</h2>
-  <ul>
-    <li>Use balança com cronômetro. O método depende de medidas e tempos, e fica difícil de repetir sem isso.</li>
-    <li>Não deixe o café secar completamente entre os pours. Se o nível baixar rápido demais, moa um pouco mais fino.
-    </li>
-    <li>Anote qual combinação você usou. Como são só duas decisões (40% e 60%), é fácil comparar uma xícara com a
-      outra.</li>
-    <li>Troque apenas um lado por vez: primeiro acerte doçura e acidez, depois ajuste o corpo.</li>
-  </ul>
+  <h3>Se o café secar entre os pours</h3>
+  <p>
+    Não deixe o café secar completamente entre os pours. Se o nível baixar rápido demais, moa um pouco mais fino.
+  </p>
 
   <h2>Erros comuns</h2>
   <ul>
@@ -71,11 +69,7 @@
     <li>Mudar os dois lados da receita ao mesmo tempo e não saber o que causou a mudança.</li>
     <li>Perder o ritmo dos pours e atrasar ou adiantar o cronômetro.</li>
     <li>Começar por ele sem conhecer o clássico. Dominar o básico primeiro ajuda a entender o que está mudando.</li>
+    <li>Não anotar a combinação usada. Como são só duas decisões (40% e 60%), é fácil comparar uma xícara com a
+      outra, se você registrar.</li>
   </ul>
-
-  <h2>Quando preferir outra variação</h2>
-  <p>
-    Se você quer algo mais direto e doce, o <a href="./v60-pour-continuo.html">pour contínuo</a> é mais simples. Para
-    destacar notas frutadas, vale testar o <a href="./v60-pulse-pour.html">pulse pour</a>.
-  </p>
 </template>

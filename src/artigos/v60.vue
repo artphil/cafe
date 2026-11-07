@@ -1,3 +1,7 @@
+<script setup>
+import FichaReceita from '../components/FichaReceita.vue'
+</script>
+
 <template>
   <p>
     O V60 tem fama de ser "coisa de barista", mas é um dos jeitos mais simples de fazer um café coado de verdade.
@@ -9,11 +13,20 @@
   <p>
     É um coador cônico criado pela marca japonesa Hario. O nome vem do formato em "V" e do ângulo de 60 graus das
     paredes. Ele tem nervuras em espiral por dentro e um furo grande no fundo, então quem controla a velocidade da
-    extração é você: o tipo de moagem e a forma de despejar a água mudam bastante o resultado.
+    extração é você: a moagem e a forma de despejar a água mudam bastante o resultado. Por isso é tão querido por quem
+    gosta de explorar: com o mesmo café, dá para deixar a xícara mais doce, mais ácida ou mais encorpada só mexendo na
+    receita.
   </p>
+
+  <h2>Receita de partida</h2>
   <p>
-    Por isso o V60 é tão querido por quem gosta de explorar. Com o mesmo café, dá para deixar a xícara mais doce,
-    mais ácida ou mais encorpada só mexendo na receita.
+    Base equilibrada para duas xícaras, boa para o dia a dia. Depois de acertar, você ajusta ao seu gosto.
+  </p>
+  <FichaReceita cafe="20 g" agua="300 g" proporcao="1:15" temperatura="90 a 96 °C" moagem="Média (areia grossa)"
+    tempo="2:30 a 3:30" indicado="uso diário, com equilíbrio entre acidez e corpo" />
+  <p>
+    Use a temperatura mais alta para torras claras e a mais baixa para torras escuras. Para uma xícara mais leve, vá
+    para 1:16 ou 1:17; para mais corpo, 1:14.
   </p>
 
   <h2>O que você vai precisar</h2>
@@ -26,49 +39,22 @@
     <li><strong>Jarra ou caneca</strong> para receber o café.</li>
   </ul>
 
-  <h2>A receita de partida</h2>
-  <p>
-    Esta é uma base equilibrada, boa para o dia a dia. Depois de acertar, você ajusta ao seu gosto.
-  </p>
-  <ul>
-    <li><strong>Café:</strong> 15 g</li>
-    <li><strong>Água:</strong> 250 g, cerca de 1 parte de café para 16 de água</li>
-    <li><strong>Temperatura:</strong> entre 90 e 96 °C (use a mais alta para torras claras e a mais baixa para torras
-      escuras)</li>
-    <li><strong>Moagem:</strong> média, parecida com areia grossa</li>
-    <li><strong>Tempo total:</strong> de 2:30 a 3:30</li>
-  </ul>
-
   <h2>Passo a passo</h2>
   <ol>
     <li><strong>Esquente a água</strong> e dobre o filtro de papel no coador.</li>
     <li><strong>Enxágue o filtro</strong> com água quente. Isso tira o gosto de papel e aquece o coador e a jarra.
       Descarte essa água.</li>
     <li><strong>Coloque o café moído</strong> e dê uma balançada leve para nivelar. Zere a balança.</li>
-    <li><strong>Faça o bloom:</strong> inicie o cronômetro e despeje cerca de 40 g de água, molhando todo o pó. Espere
-      de 30 a 45 segundos. O café vai inchar e soltar gás, é normal.</li>
-    <li><strong>Primeira etapa:</strong> despeje em movimentos circulares, do centro para fora e de volta, até chegar
-      perto de 150 g.</li>
-    <li><strong>Segunda etapa:</strong> complete até 250 g com o mesmo cuidado, sem despejar direto nas paredes do
+    <li><strong>Faça o bloom:</strong> inicie o cronômetro e despeje 60 g de água, molhando todo o pó. Espere de 30 a
+      45 segundos. O café vai inchar e soltar gás, é normal.</li>
+    <li><strong>Primeira etapa:</strong> despeje em movimentos circulares, do centro para fora e de volta, até chegar a
+      180 g (cerca de 60% da água).</li>
+    <li><strong>Segunda etapa:</strong> complete até 300 g com o mesmo cuidado, sem despejar direto nas paredes do
       filtro.</li>
     <li><strong>Deixe escorrer</strong> até o fim. Dê uma mexidinha na jarra e sirva.</li>
   </ol>
 
-  <h2>Variações da receita</h2>
-  <p>
-    O passo a passo acima é o clássico, equilibrado e bom para o dia a dia. Quando ele já estiver redondo, vale testar
-    outras formas de despejar a água. Em todas, o bloom é o mesmo; muda o que vem depois.
-  </p>
-  <ul>
-    <li><a href="./v60-pour-continuo.html">Pour contínuo</a>: despejo lento e sem parar, para um café mais doce e com
-      mais corpo.</li>
-    <li><a href="./v60-pulse-pour.html">Pulse pour</a>: água dividida em etapas, para destacar acidez e notas
-      frutadas.</li>
-    <li><a href="./v60-metodo-4-6.html">Método 4:6</a>: criado por Tetsu Kasuya, para ajustar doçura, acidez e corpo
-      com mais precisão.</li>
-  </ul>
-
-  <h2>Como acertar o gosto</h2>
+  <h2>Como ajustar o gosto</h2>
   <p>
     Provou e ficou estranho? Quase sempre a solução é mexer em uma coisa de cada vez.
   </p>
@@ -88,7 +74,7 @@
     Ajuste a moagem aos poucos.
   </p>
 
-  <h2>Erros comuns de quem está começando</h2>
+  <h2>Erros comuns</h2>
   <ul>
     <li>Pular o enxágue do filtro de papel.</li>
     <li>Despejar a água de uma vez só, sem controle.</li>
@@ -96,10 +82,17 @@
     <li>Usar café moído há muito tempo, que já perdeu aroma.</li>
   </ul>
 
-  <h2>Vale a pena?</h2>
+  <h2>Variações da receita</h2>
   <p>
-    Se você gosta de sentir as notas do café, vale muito. O V60 pede um pouco mais de atenção que uma prensa francesa,
-    mas devolve uma xícara mais clara e cheia de detalhes. Anote a receita que funcionou e repita. Com poucas
-    tentativas, o café fica melhor e mais constante.
+    O passo a passo acima é o clássico. Quando ele já estiver redondo, vale testar outras formas de despejar a água. Em
+    todas, o bloom é o mesmo; muda o que vem depois.
   </p>
+  <ul>
+    <li><a href="./v60-pour-continuo.html">Pour contínuo</a>: despejo lento e sem parar, para um café mais doce e com
+      mais corpo.</li>
+    <li><a href="./v60-pulse-pour.html">Pulse pour</a>: água dividida em etapas, para destacar acidez e notas
+      frutadas.</li>
+    <li><a href="./v60-metodo-4-6.html">Método 4:6</a>: criado por Tetsu Kasuya, para ajustar doçura, acidez e corpo
+      com mais precisão.</li>
+  </ul>
 </template>

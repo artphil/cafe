@@ -1,29 +1,29 @@
+<script setup>
+import FichaReceita from '../components/FichaReceita.vue'
+</script>
+
 <template>
   <p>
     No pulse pour, você divide a água do V60 em várias etapas curtas, esperando o nível baixar entre uma e outra. É uma
     variação popular para destacar acidez e notas frutadas, e dá mais controle sobre cada fase da extração. Se o
     despejo contínuo é uma corrida de fundo, o pulse pour é um passo de cada vez.
   </p>
-
-  <h2>Quando vale a pena usar</h2>
-  <ul>
-    <li>Com cafés frutados, florais ou de acidez viva, comuns em torras claras.</li>
-    <li>Quando você quer mais controle sobre o ritmo do preparo e gosta de ajustar etapa por etapa.</li>
-    <li>Quando o clássico está bom, mas você quer uma xícara mais brilhante e com mais definição de notas.</li>
-  </ul>
   <p>
-    É um bom segundo passo depois do <a href="./v60.html">V60 clássico</a>, porque usa os mesmos itens e a mesma
-    técnica de despejo em círculos.
+    Funciona bem com cafés frutados, florais ou de acidez viva, comuns em torras claras, e quando o clássico está bom,
+    mas você quer uma xícara mais brilhante e com mais definição de notas. É um bom segundo passo depois do
+    <a href="./v60.html">V60 clássico</a>.
   </p>
 
-  <h2>Receita de partida (para duas xícaras)</h2>
-  <ul>
-    <li><strong>Café:</strong> 20 g</li>
-    <li><strong>Água:</strong> 300 g, na proporção de 1 para 15</li>
-    <li><strong>Temperatura:</strong> entre 90 e 96 °C; para torras claras, vá mais perto de 96 °C</li>
-    <li><strong>Moagem:</strong> média</li>
-    <li><strong>Tempo total:</strong> de 3:00 a 3:30</li>
-  </ul>
+  <h2>Receita de partida</h2>
+  <p>Para duas xícaras, na mesma base das outras variações do V60. Para torras claras, vá mais perto de 96 °C.</p>
+  <FichaReceita cafe="20 g" agua="300 g" proporcao="1:15" temperatura="90 a 96 °C" moagem="Média"
+    tempo="3:00 a 3:30" indicado="cafés frutados e ácidos" />
+
+  <h2>O que você vai precisar</h2>
+  <p>
+    Os mesmos itens do <a href="./v60.html">V60 clássico</a>: coador, filtro de papel, balança com cronômetro, chaleira
+    de bico fino e moedor. O cronômetro é essencial para respeitar os intervalos.
+  </p>
 
   <h2>Passo a passo</h2>
   <ol>
@@ -39,10 +39,8 @@
   </ol>
   <p>
     O número de pulsos é flexível: de 3 a 5 funciona bem. Com menos pulsos, cada despejo é maior e a receita se
-    aproxima do clássico; com mais pulsos, ela fica mais picotada.
+    aproxima do clássico; com mais pulsos, ela fica mais picotada. O que observar durante o preparo:
   </p>
-
-  <h2>O que observar durante o preparo</h2>
   <ul>
     <li><strong>O intervalo:</strong> espere o nível da água baixar, mas sem deixar o leito de café secar por
       completo.</li>
@@ -74,10 +72,4 @@
     <li>Fazer pulsos de tamanhos muito diferentes sem uma razão, o que dificulta repetir a receita.</li>
     <li>Mudar mais de uma variável por vez e não saber o que mexeu no sabor.</li>
   </ul>
-
-  <h2>Quando preferir outra variação</h2>
-  <p>
-    Para um café mais doce e encorpado, vá de <a href="./v60-pour-continuo.html">pour contínuo</a>. Para controlar
-    doçura, acidez e força com mais precisão, conheça o <a href="./v60-metodo-4-6.html">método 4:6</a>.
-  </p>
 </template>
