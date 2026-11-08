@@ -214,6 +214,54 @@ export const ARTIGOS = [
       'Tabela de moagem por método (espresso, Aeropress, moka, V60, café coado, prensa e cold brew) e como ajustar o moedor.',
     relacionados: ['arabica-x-robusta', 'processamento', 'torras'],
   },
+  {
+    slug: 'origem-do-cafe-na-etiopia',
+    titulo: 'A origem do café na Etiópia: a lenda de Kaldi',
+    secao: 'historia',
+    descricao:
+      'A lenda do pastor Kaldi e das cabras agitadas, e como o café saiu da Etiópia para o mundo.',
+    relacionados: ['cafe-no-mundo-arabe', 'cafe-na-europa', 'cafe-no-brasil'],
+  },
+  {
+    slug: 'cafe-no-mundo-arabe',
+    titulo: 'O café no mundo árabe: do Iêmen às primeiras cafeterias',
+    secao: 'historia',
+    descricao:
+      'Como o café chegou ao Iêmen, virou plantação, deu origem às primeiras cafeterias e quase foi proibido em Meca.',
+    relacionados: ['origem-do-cafe-na-etiopia', 'cafe-na-europa', 'cafe-no-brasil'],
+  },
+  {
+    slug: 'cafe-na-europa',
+    titulo: 'O café chega à Europa: do Papa às cafeterias',
+    secao: 'historia',
+    descricao:
+      'A desconfiança inicial, a história do Papa Clemente VIII e as cafeterias que viraram universidades de um centavo.',
+    relacionados: ['cafe-no-mundo-arabe', 'cafe-no-brasil', 'origem-do-cafe-na-etiopia'],
+  },
+  {
+    slug: 'cafe-no-brasil',
+    titulo: 'Como o café chegou ao Brasil: a missão de Palheta',
+    secao: 'historia',
+    descricao:
+      'A viagem de Francisco de Melo Palheta à Guiana Francesa em 1727 e como o café virou a maior riqueza do país.',
+    relacionados: ['cafe-na-europa', 'cafe-em-minas-gerais', 'onda-do-cafe-especial'],
+  },
+  {
+    slug: 'cafe-em-minas-gerais',
+    titulo: 'O café em Minas Gerais: história e regiões produtoras',
+    secao: 'historia',
+    descricao:
+      'A chegada do café a Minas, a República do Café com Leite e as regiões do Sul de Minas, Cerrado, Matas de Minas e Chapada.',
+    relacionados: ['cafe-no-brasil', 'onda-do-cafe-especial', 'processamento'],
+  },
+  {
+    slug: 'onda-do-cafe-especial',
+    titulo: 'A terceira onda do café: o café especial em Minas',
+    secao: 'historia',
+    descricao:
+      'O que é a terceira onda, o que muda no processo do café especial e os perfis de sabor de cada região de Minas.',
+    relacionados: ['cafe-em-minas-gerais', 'torras', 'processamento'],
+  },
 ]
 
 export function relacionadosDe(artigo, todos = ARTIGOS) {
