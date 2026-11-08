@@ -1,30 +1,33 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import { DESTAQUES } from '../data/destaques.js'
+import { ARTIGOS, SECOES } from '../data/artigos.js'
 
-function sortear() {
-  return DESTAQUES[Math.floor(Math.random() * DESTAQUES.length)]
+// Sorteia um artigo qualquer (evitando repetir o atual, quando há mais de um).
+function sortear(atual) {
+  const opcoes = ARTIGOS.length > 1 ? ARTIGOS.filter((a) => a !== atual) : ARTIGOS
+  return opcoes[Math.floor(Math.random() * opcoes.length)]
 }
 
-// O HTML pré-renderizado usa o primeiro destaque (igual no servidor e no
+// O HTML pré-renderizado usa o primeiro artigo (igual no servidor e no
 // cliente, evitando erro de hidratação); o sorteio acontece ao montar.
-const atual = ref(DESTAQUES[0])
+const atual = ref(ARTIGOS[0])
 
 onMounted(() => {
-  atual.value = sortear()
+  atual.value = sortear(atual.value)
 })
 
 function sortearOutro() {
-  atual.value = sortear()
+  atual.value = sortear(atual.value)
 }
 </script>
 
 <template>
-  <div class="spotlight" :data-kind="atual.tipo">
+  <div v-if="atual" class="spotlight" :data-kind="SECOES[atual.secao].rotulo">
     <h3>{{ atual.titulo }}</h3>
-    <p>{{ atual.texto }}</p>
-    <a class="spotlight-link" :href="atual.link">Ver página completa →</a>
-    <br>
-    <button class="ap-button ap-button--outlined spotlight-refresh" type="button" @click="sortearOutro">Sortear outro ↻</button>
+    <p>{{ atual.descricao }}</p>
+    <div class="spotlight-acoes">
+      <a class="ap-button ap-button--filled spotlight-ler" :href="`./${atual.slug}.html`">Ler o artigo →</a>
+      <button class="ap-button ap-button--outlined spotlight-refresh" type="button" @click="sortearOutro">Sortear outro ↻</button>
+    </div>
   </div>
 </template>

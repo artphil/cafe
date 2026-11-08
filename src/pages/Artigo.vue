@@ -4,6 +4,7 @@ import SiteFooter from '../components/SiteFooter.vue'
 import AdSlot from '../components/AdSlot.vue'
 import ArtigoImagem from '../components/ArtigoImagem.vue'
 import LeiaTambem from '../components/LeiaTambem.vue'
+import CompartilharArtigo from '../components/CompartilharArtigo.vue'
 import { SECOES, relacionadosDe } from '../data/artigos.js'
 
 const props = defineProps({
@@ -33,6 +34,8 @@ const relacionados = relacionadosDe(props.artigo)
     <section class="content-block wrap">
       <component :is="corpo" />
     </section>
+
+    <CompartilharArtigo :titulo="artigo.titulo" :descricao="artigo.descricao" />
 
     <LeiaTambem :artigos="relacionados" />
   </main>

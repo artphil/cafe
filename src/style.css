@@ -11,8 +11,7 @@
    O entrypoint carrega tokens + theme + components e, desde a 2.0, já deixa
    base/reset.css de fora — que é o que este projeto precisa: o
    `* { margin: 0 }` do reset zeraria a margem de fluxo dos parágrafos de
-   conteúdo, que dependem do default do navegador (ver .accordion-body
-   p:first-child mais abaixo). Nada aqui precisa disputar especificidade com
+   conteúdo, que dependem do default do navegador. Nada aqui precisa disputar especificidade com
    a lib: todo CSS dela vive em @layer, e CSS fora de camada sempre vence. */
 @import "artphil-design-system";
 
@@ -234,6 +233,13 @@ h2 {
   color: rgba(38, 21, 11, 0.85);
 }
 
+section.content-block blockquote {
+  margin: 22px 0;
+  padding: 12px 20px;
+  background: var(--cream);
+  border-left: 5px solid var(--roast-deep);
+  font-style: italic;
+}
 section.content-block {
   padding-block: 40px;
   border-bottom: 1px solid var(--line);
@@ -278,26 +284,53 @@ section.content-block {
 /* Botões "carimbo" — ver bloco .ap-button do design system.
    Estrutura (padding, radius, cor, estados, transição) vem da DS; aqui só
    fica o que ela ainda não sabe expressar: família mono, uppercase e
-   letter-spacing. Ver .detail-btn abaixo para o par preenchido.
+   letter-spacing.
    Marcação: .ap-button + .ap-button--outlined / .ap-button--filled. */
-.spotlight-refresh {
+.spotlight-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: var(--ap-spacing-md);
+}
+
+/* Ação principal: ler o artigo (botão cheio). */
+.spotlight-ler {
   --ap-btn-bg: var(--ink);
   --ap-btn-text: var(--paper);
-  --ap-btn-size: var(--ap-spacing-sm) 14px;
+  --ap-btn-size: var(--ap-spacing-sm) 16px;
 
-  margin-top: var(--ap-spacing-md);
-  border-width: 1.5px;
+  border-width: 0;
+  /* a regra global de links (a { color }) vence a cor do botão da DS */
+  color: var(--paper);
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+}
+
+.spotlight-ler:hover {
+  background: var(--roast-deep);
+  color: var(--paper);
+  filter: none;
+}
+
+/* Ação secundária: sortear outro (discreta, sem borda, só texto em cor de apoio). */
+.spotlight-refresh {
+  --ap-btn-bg: var(--roast-deep);
+  --ap-btn-text: var(--roast-deep);
+  --ap-btn-size: var(--ap-spacing-xs) 10px;
+
+  border: 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
 
-/* hover invertido; o .ap-button--outlined da DS só aplica um tint de 15%.
-   Não precisa de prefixo .ap-button para ganhar: a regra da lib está em
-   @layer components e esta está fora de camada. */
 .spotlight-refresh:hover {
-  background: var(--ink);
+  background: var(--roast-deep);
   color: var(--paper);
 }
 
@@ -346,55 +379,6 @@ section.content-block {
   color: rgba(38, 21, 11, 0.75);
 }
 
-/* ---------- Acordeão ---------- */
-
-.accordion-item {
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  margin-bottom: 10px;
-  background: var(--cream);
-  overflow: hidden;
-}
-
-.accordion-item summary {
-  cursor: pointer;
-  list-style: none;
-  padding: 16px 18px;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.05rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.accordion-item summary::-webkit-details-marker {
-  display: none;
-}
-
-.accordion-item summary::after {
-  content: "+";
-  font-family: var(--font-mono);
-  font-size: 1.2rem;
-  color: var(--roast-deep);
-  flex-shrink: 0;
-}
-
-.accordion-item[open] summary::after {
-  content: "–";
-}
-
-.accordion-item .accordion-body {
-  padding: 0 18px 18px;
-  border-top: 1px solid var(--line);
-  padding-top: 14px;
-}
-
-.accordion-item .accordion-body p:first-child {
-  margin-top: 0;
-}
-
 .tag-row {
   display: flex;
   flex-wrap: wrap;
@@ -419,63 +403,6 @@ section.content-block {
 .tag.roast {
   border-color: var(--roast-deep);
   color: var(--roast-deep);
-}
-
-.detail-btn {
-  --ap-btn-bg: var(--ink);
-  --ap-btn-text: var(--paper);
-  --ap-btn-size: var(--ap-spacing-sm) 14px;
-
-  margin-top: 12px;
-  border-width: 0; /* preserva a caixa original, que não tinha borda */
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-/* hover troca a cor da tinta; o .ap-button--filled da DS só escurece com
-   filter, que precisa ser anulado explicitamente (propriedade diferente) */
-.detail-btn:hover {
-  background: var(--roast-deep);
-  filter: none;
-}
-
-/* ---------- Modal ---------- */
-
-dialog.modal {
-  border: none;
-  border-radius: var(--radius);
-  padding: 0;
-  max-width: 520px;
-  width: calc(100% - 40px);
-  border: 2px solid var(--ink);
-  background: var(--paper);
-}
-
-dialog.modal::backdrop {
-  background: rgba(38, 21, 11, 0.55);
-}
-
-.modal-inner {
-  padding: 24px;
-}
-
-.modal-inner h3 {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  margin: 0 0 12px;
-}
-
-.modal-close {
-  float: right;
-  background: none;
-  border: 1.5px solid var(--ink);
-  border-radius: var(--ap-border-radius-circle);
-  width: 30px;
-  height: 30px;
-  font-family: var(--font-mono);
-  cursor: pointer;
 }
 
 /* ---------- Selo de torra (assinatura visual) ---------- */
