@@ -17,7 +17,7 @@ O Google reprovou o site por conteúdo de baixo valor.
 - Reenvio ao AdSense só depois do conteúdo publicado (2 a 4 semanas)
 
 ## Decisões
-- Meta: 24 páginas novas (20 planejadas mais 3 variações do V60 e 1 espresso extra), em lotes, sem data fixa (cada lote fica pronto quando ficar)
+- Meta: 30 páginas novas (20 planejadas mais 3 variações do V60, 1 espresso extra e 6 de História), em lotes, sem data fixa (cada lote fica pronto quando ficar)
 - Lista final (ordem de prioridade):
   - Lote A, métodos: V60 (com 3 variações), Aeropress, Prensa francesa, Moka, Espresso
   - Lote B, preparo: Coador de pano, Cold brew, Comparativo de métodos, Moagem × método, Proporção água/café
@@ -37,7 +37,9 @@ O Google reprovou o site por conteúdo de baixo valor.
 - Fotos guardadas em `assets/photos/` para artigos ainda não escritos: `espresso-pollock.jpeg` (espresso saindo do porta-filtro) e `roster-pollock.jpeg` (tambor de torrador, para Torras), ambas de René Pollock / Vecteezy (https://www.vecteezy.com/members/109660095489604631044)
 - Remoção do acordeão de Preparo (e do modal "Comparar métodos"): só depois de cobrir todos os itens. Já cobertos: V60 (com 3 variações), Aeropress, Prensa francesa, Moka, Cold brew e Café coado (`cafe-coado`, pano e Melitta num artigo só; o acordeão do coador de pano aponta para esse slug). Comparativo de métodos (`comparativo-de-metodos`) já escrito, só dos métodos tradicionais (sem espresso; as variações do espresso ficam para depois). Com isso o acordeão e o modal de Preparo podem ser removidos (tarefa 15b), depois da revisão do autor. Espresso não tem acordeão
 - Comparativo de métodos é um artigo introdutório de Preparo (`comparativo-de-metodos`): o que são os grupos de método (imersão, filtro, pressão), tabela comparando tempo, equipamento, custo, dificuldade e perfil de sabor, e "qual escolher" por perfil de quem bebe, com link para cada artigo de método. Deve ser o primeiro card do índice (ficar no início da lista em `artigos.js`) e ser linkado no texto de abertura de Preparo
-- Pendência do autor: baixar em 2026-11-08 a foto do cold brew (https://www.vecteezy.com/photo/60568139-glass-of-iced-americano-coffee-or-cold-brew-on-a-table), crédito "whoopie whoops / Vecteezy" (https://www.vecteezy.com/members/whoopiewhoops); depois registrar em `artigos.js` e `public/img/artigos/cold-brew.jpg`
+- Fotos do cold brew (whoopie whoops) e das torras (René Pollock) já registradas em `artigos.js`
+- História: um artigo por etapa da linha do tempo (6 artigos: Etiópia, mundo árabe, Europa, Brasil, Minas, café especial), movendo e ampliando o texto dos acordeões. Total passa de 24 para 30 páginas; slugs a definir ao escrever
+- Acordeões e modal de Saiba mais removidos (artigos `arabica-x-robusta`, `processamento`, `torras` e `moagem-por-metodo` cobrem tudo). Antes dependia de `arabica-x-robusta` (escrito), `processamento`, `torras` e `moagem-por-metodo` (substitui o modal de moagem; ainda sem `artigo=` ligado). Depois, remover também os de História e apagar `AccordionItem.vue` e `BaseModal.vue`
 - Foto de Chemex guardada em `assets/photos/v60-serejkakovalev.jpg` (serejkakovalev / Vecteezy, https://www.vecteezy.com/members/serejkakovalev) para um possível artigo de Chemex, que não está na lista dos 23
 - Molde dos artigos de método: ficha técnica (`FichaReceita.vue`) e seções na mesma ordem em todos, com unidades padronizadas; descrito em `.claude/claude.md`. Os 4 artigos do V60 já seguem o molde; os próximos devem seguir
 - Regra: o artigo deve cobrir todos os subitens do acordeão que substitui (ex.: o V60 tinha Clássico, Pour contínuo, Pulse Pour e Método 4:6); senão o conteúdo some do site ao esconder o acordeão. Conferir os subitens antes de escrever cada artigo
