@@ -199,7 +199,8 @@ nav.main-nav a[aria-current="page"] {
 /* ---------- Hero / seções ---------- */
 
 .hero {
-  padding: 48px 0 36px;
+  /* só vertical: o padding lateral vem de .wrap */
+  padding-block: 48px 36px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -234,7 +235,7 @@ h2 {
 }
 
 section.content-block {
-  padding: 40px 0;
+  padding-block: 40px;
   border-bottom: 1px solid var(--line);
 }
 
