@@ -140,6 +140,12 @@ export const ARTIGOS = [
     secao: 'preparo',
     descricao:
       'Passo a passo do cold brew para iniciantes: concentrado, tempo de infusão, moagem e como servir.',
+    imagem: {
+      src: './img/artigos/cold-brew.jpg',
+      alt: 'Copo de vidro com cold brew e gelo sobre uma mesa de madeira ao ar livre, com grama ao fundo',
+      credito: 'whoopie whoops / Vecteezy',
+      creditoUrl: 'https://www.vecteezy.com/members/whoopiewhoops',
+    },
     relacionados: ['prensa-francesa', 'aeropress', 'moka'],
   },
   {
@@ -163,6 +169,50 @@ export const ARTIGOS = [
       creditoUrl: 'https://www.vecteezy.com/members/109660095489604631044',
     },
     relacionados: ['moka', 'aeropress', 'v60'],
+  },
+  {
+    slug: 'arabica-x-robusta',
+    titulo: 'Arábica x Robusta: diferenças, sabor e quando usar',
+    secao: 'saiba-mais',
+    descricao:
+      'Entenda as diferenças entre café arábica e robusta (conilon): sabor, corpo, cafeína, onde crescem e como escolher.',
+    imagem: {
+      src: './img/artigos/arabica-x-robusta.jpg',
+      alt: 'Cacho de frutos verdes de café, ainda não maduros, em um ramo do cafeeiro cercado por folhas',
+      credito: 'Gumfa Khransumran / Vecteezy',
+      creditoUrl: 'https://www.vecteezy.com/members/sainan2522',
+    },
+    relacionados: ['processamento', 'torras', 'espresso'],
+  },
+  {
+    slug: 'processamento',
+    titulo: 'Processamento do café: natural, lavado e honey',
+    secao: 'saiba-mais',
+    descricao:
+      'Entenda os processos natural, lavado e cereja descascado (honey) e como cada um muda o sabor do café.',
+    relacionados: ['arabica-x-robusta', 'torras', 'moagem-por-metodo'],
+  },
+  {
+    slug: 'torras',
+    titulo: 'Torra do café: clara, média e escura',
+    secao: 'saiba-mais',
+    descricao:
+      'Veja o que muda no sabor entre torra clara, média e escura, e qual escolher para cada método de preparo.',
+    imagem: {
+      src: './img/artigos/torras.jpg',
+      alt: 'Grãos de café torrados dentro do tambor de um torrador, com a pá de resfriamento aberta',
+      credito: 'René Pollock / Vecteezy',
+      creditoUrl: 'https://www.vecteezy.com/members/109660095489604631044',
+    },
+    relacionados: ['arabica-x-robusta', 'processamento', 'moagem-por-metodo'],
+  },
+  {
+    slug: 'moagem-por-metodo',
+    titulo: 'Moagem ideal para cada método de preparo',
+    secao: 'saiba-mais',
+    descricao:
+      'Tabela de moagem por método (espresso, Aeropress, moka, V60, café coado, prensa e cold brew) e como ajustar o moedor.',
+    relacionados: ['arabica-x-robusta', 'processamento', 'torras'],
   },
 ]
 
