@@ -22,7 +22,7 @@ import FichaReceita from '../components/FichaReceita.vue'
   <p>
     Base equilibrada para duas xícaras, boa para o dia a dia. Depois de acertar, você ajusta ao seu gosto.
   </p>
-  <FichaReceita cafe="20 g" agua="300 g" proporcao="1:15" temperatura="90 a 96 °C" moagem="Média (areia grossa)"
+  <FichaReceita cafe="20 g" agua="300 g" proporcao="1:15" temperatura="90 a 96 °C" moagem="Média (parecida com açúcar cristal fino)"
     tempo="2:30 a 3:30" indicado="uso diário, com equilíbrio entre acidez e corpo" />
   <p>
     Use a temperatura mais alta para torras claras e a mais baixa para torras escuras. Para uma xícara mais leve, vá
