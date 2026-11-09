@@ -17,7 +17,7 @@ O Google reprovou o site por conteúdo de baixo valor.
 - Reenvio ao AdSense só depois do conteúdo publicado (2 a 4 semanas)
 
 ## Decisões
-- Meta: 30 páginas novas (20 planejadas mais 3 variações do V60, 1 espresso extra e 6 de História), em lotes, sem data fixa (cada lote fica pronto quando ficar)
+- Meta: 29 páginas novas (20 planejadas mais 3 variações do V60 e 6 de História; o espresso doméstico foi adiado), em lotes, sem data fixa (cada lote fica pronto quando ficar)
 - Lista final (ordem de prioridade):
   - Lote A, métodos: V60 (com 3 variações), Aeropress, Prensa francesa, Moka, Espresso
   - Lote B, preparo: Coador de pano, Cold brew, Comparativo de métodos, Moagem × método, Proporção água/café
@@ -33,7 +33,7 @@ O Google reprovou o site por conteúdo de baixo valor.
   - Termos em `src/data/glossario.js` (`termo`, `definicao`, `veja_tambem` opcional), exibidos em ordem alfabética com índice A a Z no topo e data de última atualização
   - Cada termo tem âncora (`./glossario.html#bloom`) para os outros artigos linkarem
   - Sem páginas por termo (ficariam curtas demais para o AdSense); dividir em 2 ou 3 artigos por tema só se passar de ~80 a 100 termos
-- Espresso vira 2 artigos: `espresso` (geral: o que é, parâmetros, como julgar a extração) e `espresso-domestico` (máquina doméstica: moedor, prensagem, ajustes). Total passa de 23 para 24 páginas
+- Espresso: `espresso` (geral) já escrito. O artigo `espresso-domestico` (máquina doméstica) ficou adiado por decisão do autor e foi para `.claude/sugestoes-artigos.md`
 - Fotos guardadas em `assets/photos/` para artigos ainda não escritos: `espresso-pollock.jpeg` (espresso saindo do porta-filtro) e `roster-pollock.jpeg` (tambor de torrador, para Torras), ambas de René Pollock / Vecteezy (https://www.vecteezy.com/members/109660095489604631044)
 - Remoção do acordeão de Preparo (e do modal "Comparar métodos"): só depois de cobrir todos os itens. Já cobertos: V60 (com 3 variações), Aeropress, Prensa francesa, Moka, Cold brew e Café coado (`cafe-coado`, pano e Melitta num artigo só; o acordeão do coador de pano aponta para esse slug). Comparativo de métodos (`comparativo-de-metodos`) já escrito, só dos métodos tradicionais (sem espresso; as variações do espresso ficam para depois). Com isso o acordeão e o modal de Preparo podem ser removidos (tarefa 15b), depois da revisão do autor. Espresso não tem acordeão
 - Comparativo de métodos é um artigo introdutório de Preparo (`comparativo-de-metodos`): o que são os grupos de método (imersão, filtro, pressão), tabela comparando tempo, equipamento, custo, dificuldade e perfil de sabor, e "qual escolher" por perfil de quem bebe, com link para cada artigo de método. Deve ser o primeiro card do índice (ficar no início da lista em `artigos.js`) e ser linkado no texto de abertura de Preparo

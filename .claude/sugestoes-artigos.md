@@ -8,7 +8,8 @@ Como promover uma ideia: definir slug e seção, conferir se há acordeão para 
 
 | Ideia | Origem | Observação |
 | --- | --- | --- |
-| Bebidas com espresso (americano, macchiato, cappuccino, flat white, latte, mocha) | Conversa sobre espresso | Um artigo só, em vez de um por bebida (ficariam curtos). Depende dos dois artigos de espresso |
+| Espresso doméstico (`espresso-domestico`) | Adiado em 2026-11-08 | Máquina de casa, moedor, prensagem, limpeza e problemas típicos de quem começa. Precisa definir o tipo de máquina (manual, semiautomática, cápsulas ou todas) |
+| Bebidas com espresso (americano, macchiato, cappuccino, flat white, latte, mocha) | Conversa sobre espresso | Um artigo só, em vez de um por bebida (ficariam curtos). Depende dos artigos de espresso |
 | Chemex | Foto já guardada em `assets/photos/v60-serejkakovalev.jpg` (serejkakovalev / Vecteezy) | Não está nos 24; método de coado com filtro grosso e xícara limpa |
 | Aeropress: método invertido e outras receitas | Mencionado de passagem no artigo da Aeropress | Pode virar variações, como no V60 |
 | Cold brew: concentrado e infusão rápida a frio | Acordeão de cold brew | Considerar se virar artigo próprio além do já planejado |
