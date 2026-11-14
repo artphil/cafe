@@ -212,6 +212,12 @@ export const ARTIGOS = [
     secao: 'saiba-mais',
     descricao:
       'Tabela de moagem por método (espresso, Aeropress, moka, V60, café coado, prensa e cold brew) e como ajustar o moedor.',
+    imagem: {
+      src: './img/artigos/moagem-por-metodo.jpg',
+      alt: 'Close do café moído com um grão torrado inteiro apoiado sobre o pó',
+      credito: 'Prot Tachapanit / Vecteezy',
+      creditoUrl: 'https://www.vecteezy.com/members/ptachapanit768025',
+    },
     relacionados: ['arabica-x-robusta', 'processamento', 'torras'],
   },
   {
