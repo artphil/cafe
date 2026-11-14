@@ -1,0 +1,8 @@
+{
+  // Site estático: a Cloudflare publica a pasta gerada pelo `npm run build`.
+  "name": "cafealmanaque",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist"
+  }
+}
