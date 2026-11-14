@@ -14,7 +14,7 @@ import SiteFooter from '../components/SiteFooter.vue'
     </section>
 
     <section class="content-block wrap">
-      <p>Esta página explica como o site <strong>Café BH</strong> (<strong>cafealmanaque.com</strong>) coleta, usa e
+      <p>Esta página explica como o site <strong>Café Almanaque</strong> (<strong>cafealmanaque.com</strong>) coleta, usa e
         protege as informações dos visitantes.</p>
 
       <h2>1. Informações que coletamos</h2>

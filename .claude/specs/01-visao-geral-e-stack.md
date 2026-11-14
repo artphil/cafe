@@ -6,7 +6,7 @@
 Site estático sobre café (métodos de preparo, grãos, cafeterias de Belo Horizonte e temas relacionados), com espaço para monetização via Google AdSense.
 
 ## Identidade
-- [x] Nome: **Café BH**
+- [x] Nome: **Café Almanaque** (antes Café BH; a seção de cafeterias continua sobre Belo Horizonte)
 - [x] Tom de voz: casual
 - [x] Público: iniciantes e entusiastas
 - [x] Quem escreve: o autor, com apoio de IA

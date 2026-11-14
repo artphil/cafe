@@ -36,7 +36,7 @@
 - [x] Gerar `sitemap.xml` e `robots.txt` no build (endereços sem `.html`)
 - [ ] Criar e-mail no domínio e trocar o provisório `artphil.dev@gmail.com` nas páginas Contato e Privacidade (spec 09)
 - [ ] Adicionar o domínio no AdSense e no Search Console e enviar o sitemap
-- [ ] Mudança de nome do site (Café BH) nos títulos, textos e metas
+- [x] Mudança de nome do site (Café BH para Café Almanaque) nos títulos, textos, cabeçalho, rodapé e metas
 
 ## Critério de pronto
 O site abre pelo domínio próprio, com HTTPS, servido pela Cloudflare, com `/ads.txt` respondendo e as páginas pré-renderizadas; o endereço da Vercel não é mais usado como principal.

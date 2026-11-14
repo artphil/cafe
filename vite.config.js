@@ -27,7 +27,7 @@ function ambienteDeTeste() {
   }
 }
 
-// Acrescenta <link rel="canonical"> e og:url em cada página, só no build.
+// Acrescenta canonical, og:url, og:image, nome do site e ícones em cada página, só no build.
 function metasDoSite() {
   return {
     name: 'metas-do-site',
@@ -38,6 +38,13 @@ function metasDoSite() {
       return [
         { tag: 'link', attrs: { rel: 'canonical', href: url }, injectTo: 'head' },
         { tag: 'meta', attrs: { property: 'og:url', content: url }, injectTo: 'head' },
+        { tag: 'link', attrs: { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }, injectTo: 'head' },
+        { tag: 'link', attrs: { rel: 'icon', href: '/favicon.ico', sizes: '48x48' }, injectTo: 'head' },
+        { tag: 'link', attrs: { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }, injectTo: 'head' },
+        { tag: 'meta', attrs: { property: 'og:site_name', content: 'Café Almanaque' }, injectTo: 'head' },
+        { tag: 'meta', attrs: { property: 'og:type', content: 'website' }, injectTo: 'head' },
+        { tag: 'meta', attrs: { property: 'og:image', content: `${SITE_URL}/og-image.png` }, injectTo: 'head' },
+        { tag: 'meta', attrs: { name: 'twitter:card', content: 'summary_large_image' }, injectTo: 'head' },
       ]
     },
   }

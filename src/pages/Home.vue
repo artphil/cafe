@@ -23,7 +23,7 @@ import Spotlight from '../components/Spotlight.vue'
     <section class="content-block wrap">
       <h2>Café bom não precisa ser complicado</h2>
       <p>
-        O Café BH nasceu para juntar num lugar só o que ajuda a tomar um café melhor: entender o que está na xícara,
+        O Café Almanaque nasceu para juntar num lugar só o que ajuda a tomar um café melhor: entender o que está na xícara,
         preparar bem em casa e saber onde tomar um bom café em Belo Horizonte. Sem jargão e sem frescura, para quem
         está começando e para quem já tem suas manias.
       </p>

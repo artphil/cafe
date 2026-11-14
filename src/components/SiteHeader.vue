@@ -10,10 +10,10 @@ defineProps({
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="./index.html">
-        <span class="brand-mark">CB</span>
+        <img class="brand-simbolo" src="/favicon.svg" alt="" width="46" height="46" />
         <span>
-          <span class="brand-name">Café BH</span>
-          <span class="brand-tag">guia de café · BH</span>
+          <span class="brand-name">Café Almanaque</span>
+          <span class="brand-tag">guia de café</span>
         </span>
       </a>
       <nav class="main-nav" aria-label="Navegação principal">

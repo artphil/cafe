@@ -1,5 +1,5 @@
 /* =========================================================
-   CAFÉ BH — folha de estilo base
+   CAFÉ ALMANAQUE — folha de estilo base
    Conceito: etiqueta de saca de café / rótulo de torrefação.
    Papel kraft, tinta carimbo, selo circular de torra como
    elemento de assinatura visual.
@@ -133,6 +133,11 @@ img {
   color: var(--ink);
 }
 
+.brand-simbolo {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+}
 .brand-mark {
   width: 46px;
   height: 46px;

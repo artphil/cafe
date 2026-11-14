@@ -9,7 +9,7 @@ import SiteFooter from '../components/SiteFooter.vue'
   <main>
     <section class="hero wrap">
       <p class="eyebrow">Contato</p>
-      <h1>Fale com o Café BH</h1>
+      <h1>Fale com o Café Almanaque</h1>
       <p class="lede">
         Achou um erro, tem uma dúvida ou quer indicar uma cafeteria? Manda um e-mail.
       </p>

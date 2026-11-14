@@ -9,7 +9,7 @@ import SiteFooter from '../components/SiteFooter.vue'
   <main>
     <section class="hero wrap">
       <p class="eyebrow">Sobre</p>
-      <h1>Sobre o Café BH</h1>
+      <h1>Sobre o Café Almanaque</h1>
       <p class="lede">
         Um guia prático para conhecer melhor o café, feito por quem gosta de café.
       </p>
@@ -18,7 +18,7 @@ import SiteFooter from '../components/SiteFooter.vue'
     <section class="content-block wrap">
       <h2>Quem faz</h2>
       <p>
-        O Café BH é um projeto pessoal do <strong>Artphil</strong>. A ideia foi juntar num lugar só o que a gente vai
+        O Café Almanaque é um projeto pessoal do <strong>Artphil</strong>. A ideia foi juntar num lugar só o que a gente vai
         aprendendo sobre café: de onde ele vem, como preparar melhor em casa e onde tomar um bom café em Belo
         Horizonte.
       </p>

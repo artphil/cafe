@@ -12,7 +12,7 @@ function html(a) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>${escapar(a.titulo)} — Café BH</title>
+    <title>${escapar(a.titulo)} — Café Almanaque</title>
     <meta name="description" content="${escapar(a.descricao)}" />
 
     <!-- Google block init -->
