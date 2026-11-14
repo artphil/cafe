@@ -1,5 +1,5 @@
 <template>
-  <div class="ad-slot" :class="slotClass">
+  <div v-if="ativo" class="ad-slot" :class="slotClass">
     <ins ref="adRef" class="adsbygoogle" style="display:block" :data-ad-client="client" :data-ad-slot="slot"
       :data-ad-format="format" :data-full-width-responsive="fullWidthResponsive ? 'true' : 'false'"></ins>
   </div>
@@ -37,7 +37,11 @@ const props = defineProps({
 
 const adRef = ref(null)
 
+// Em ambiente de teste (VITE_AMBIENTE=teste) o espaço de anúncio não aparece
+const ativo = import.meta.env.VITE_AMBIENTE !== 'teste'
+
 onMounted(() => {
+  if (!ativo) return
   try {
     (window.adsbygoogle = window.adsbygoogle || []).push({})
   } catch (e) {

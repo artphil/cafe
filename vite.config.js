@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 import { artigosHtml, entradasArtigos } from './scripts/vite-plugin-artigos.js'
@@ -6,6 +6,26 @@ import { artigosHtml, entradasArtigos } from './scripts/vite-plugin-artigos.js'
 // Endereço oficial do site. A Cloudflare serve as páginas sem ".html" (/v60) e
 // redireciona o endereço com ".html" para elas, então o canônico segue esse formato.
 const SITE_URL = 'https://cafealmanaque.com'
+
+// Ambiente de teste (ex.: a branch develop na Vercel): defina VITE_AMBIENTE=teste.
+// Nele o site não carrega AdSense nem Analytics, não mostra os espaços de anúncio,
+// pede `noindex` e o robots.txt bloqueia tudo.
+const AMBIENTE_TESTE = loadEnv('production', process.cwd(), 'VITE_').VITE_AMBIENTE === 'teste'
+
+function ambienteDeTeste() {
+  return {
+    name: 'ambiente-de-teste',
+    transformIndexHtml: {
+      order: 'pre', // antes de o Vite trocar os %VITE_...% pelas variáveis
+      handler(html) {
+        if (!AMBIENTE_TESTE) return html
+        return html
+          .replace(/<!-- Google block init -->[\s\S]*?<!-- Google block end -->\s*/, '')
+          .replace('</head>', '    <meta name="robots" content="noindex, nofollow" />\n  </head>')
+      },
+    },
+  }
+}
 
 // Acrescenta <link rel="canonical"> e og:url em cada página, só no build.
 function metasDoSite() {
@@ -46,16 +66,18 @@ function sitemapERobots() {
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
         urls.map((u) => `  <url><loc>${u}</loc></url>`).join('\n') +
         '\n</urlset>\n'
-      this.emitFile({ type: 'asset', fileName: 'sitemap.xml', source: sitemap })
+      if (!AMBIENTE_TESTE) this.emitFile({ type: 'asset', fileName: 'sitemap.xml', source: sitemap })
 
-      const robots = `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`
+      const robots = AMBIENTE_TESTE
+        ? 'User-agent: *\nDisallow: /\n'
+        : `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`
       this.emitFile({ type: 'asset', fileName: 'robots.txt', source: robots })
     },
   }
 }
 
 export default defineConfig({
-  plugins: [vue(), artigosHtml(__dirname), metasDoSite(), sitemapERobots()],
+  plugins: [vue(), artigosHtml(__dirname), ambienteDeTeste(), metasDoSite(), sitemapERobots()],
 
   // Importante para GitHub Pages: se o site ficar em
   // https://seu-usuario.github.io/nome-do-repositorio/

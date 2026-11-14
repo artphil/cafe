@@ -91,3 +91,10 @@ Todo artigo de método (V60, Aeropress, prensa francesa etc.) segue a mesma orde
 Só o artigo-base de um método tem as seções extras "O que é ..." (antes da receita) e "Variações da receita" (no fim). O "Leia também" já vem do componente, então não repetir links no fim.
 
 Padrão de escrita: gramas com espaço ("20 g"), água sempre em gramas (a receita pede balança), proporção "1:15", temperatura "90 a 96 °C", tempo "2:30 a 3:30". Dose de referência das variações do V60: 20 g de café e 300 g de água (1:15), para duas xícaras; os demais métodos usam a dose que fizer sentido para eles, sempre na ficha.
+
+## Ambientes
+
+- **Produção** (branch `main`): Cloudflare, em `cafealmanaque.com`. Carrega AdSense e Analytics.
+- **Teste** (branch `develop`): Vercel. Cadastre lá a variável de build `VITE_AMBIENTE=teste` (em Production e Preview). Com ela, o build omite o AdSense e o Analytics, esconde os espaços de anúncio, acrescenta `noindex` e gera um `robots.txt` que bloqueia tudo (sem sitemap).
+- O interruptor fica em `vite.config.js` (plugin `ambienteDeTeste`) e em `src/components/AdSlot.vue`.
+- Para testar localmente: `VITE_AMBIENTE=teste npm run build` e conferir que `dist/` não tem `adsbygoogle` nem `googletagmanager`.

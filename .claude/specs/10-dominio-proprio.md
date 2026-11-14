@@ -26,7 +26,8 @@
 - [x] Primeiro deploy conferido: páginas, texto no HTML, cafeterias com lista, `/ads.txt` e IDs do AdSense e Analytics preenchidos
 - [x] Domínio `cafealmanaque.com` ligado, com HTTPS e "Always Use HTTPS"; `www` redireciona (301) para o domínio sem `www`
 - [x] `workers.dev` e prévias desligados no `wrangler.jsonc` (`workers_dev` e `preview_urls` falsos)
-- [ ] Redirecionar `cafebh.vercel.app` para o domínio novo ou desativar a Vercel
+- [x] Interruptor `VITE_AMBIENTE=teste` implementado (sem AdSense, Analytics e anúncios, com `noindex`)
+- [ ] Vercel como ambiente de teste da branch `develop`: Production Branch = `develop` e variável `VITE_AMBIENTE=teste`
 - [ ] Remover o script `deploy` (`gh-pages`) e a dependência `ghpages` do `package.json`, que não são mais usados
 
 ### Domínio e referências
