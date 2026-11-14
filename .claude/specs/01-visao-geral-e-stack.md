@@ -20,4 +20,4 @@ Site estático sobre café (métodos de preparo, grãos, cafeterias de Belo Hori
 | Banco de dados | Nenhum, conteúdo evergreen nas páginas |
 | Dados de cafeterias | Google Sheets via `fetch()` (ver spec 03) |
 | Manutenção | Mínima, só a planilha |
-| Hospedagem original | GitHub Pages (hoje em `cafebh.vercel.app`, ver spec 10) |
+| Hospedagem original | GitHub Pages, depois Vercel (`cafebh.vercel.app`); hoje Cloudflare Workers em `cafealmanaque.com` (ver spec 10) |

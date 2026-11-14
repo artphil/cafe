@@ -10,11 +10,11 @@ import SiteFooter from '../components/SiteFooter.vue'
     <section class="hero wrap">
       <p class="eyebrow">Privacidade</p>
       <h1>Política de Privacidade</h1>
-      <p class="lede">Última atualização: 6 de novembro de 2026</p>
+      <p class="lede">Última atualização: 13 de novembro de 2026</p>
     </section>
 
     <section class="content-block wrap">
-      <p>Esta página explica como o site <strong>Café BH</strong> (<strong>cafebh.vercel.app</strong>) coleta, usa e
+      <p>Esta página explica como o site <strong>Café BH</strong> (<strong>cafealmanaque.com</strong>) coleta, usa e
         protege as informações dos visitantes.</p>
 
       <h2>1. Informações que coletamos</h2>
