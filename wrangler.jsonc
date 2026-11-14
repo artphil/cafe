@@ -4,5 +4,9 @@
   "compatibility_date": "2026-11-01",
   "assets": {
     "directory": "./dist"
-  }
+  },
+  // O site é servido só por cafealmanaque.com; os endereços de teste ficam
+  // desligados para não gerar conteúdo duplicado no Google.
+  "workers_dev": false,
+  "preview_urls": false
 }

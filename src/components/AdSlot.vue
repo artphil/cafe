@@ -56,4 +56,9 @@ onMounted(() => {
   margin: 1.5rem 0;
   overflow: hidden;
 }
+/* Dentro do flex, o <ins> ficava com largura 0 e o AdSense falhava
+   ("No slot size for availableWidth=0"). */
+.ad-slot ins {
+  width: 100%;
+}
 </style>
