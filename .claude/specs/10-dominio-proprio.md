@@ -1,6 +1,6 @@
-# Spec 10: Domínio próprio e migração para Cloudflare Pages
+# Spec 10: Domínio próprio e migração para a Cloudflare
 
-**Status:** novo
+**Status:** em andamento
 
 ## Problema
 `cafebh.vercel.app` é subdomínio gratuito, visto com desconfiança pelo AdSense. Junto com o domínio próprio, o site sai da Vercel e vai para o Cloudflare Pages.
@@ -19,21 +19,23 @@
 
 ## Tarefas
 
-### Migração para o Cloudflare Pages
-- [ ] Criar o projeto no Cloudflare e conectar o repositório
-- [ ] Configurar build: comando `npm run build`, pasta de saída `dist`, versão do Node fixada (variável `NODE_VERSION` ou arquivo `.nvmrc`)
-- [ ] Cadastrar as variáveis `VITE_*` no painel (produção e preview)
-- [ ] Primeiro deploy em `*.pages.dev`: conferir que as páginas abrem, o texto está no HTML (`curl`), a página de cafeterias traz a lista, `/ads.txt` responde e o console não mostra erro de hidratação
-- [ ] Apontar o domínio próprio para o projeto (domínio personalizado + HTTPS)
-- [ ] Redirecionar `cafebh.vercel.app` para o domínio novo (ou registrar que será desativado) e confirmar que o `.pages.dev` não compete com o domínio principal (redirect ou `noindex`)
-- [ ] Remover ou deixar de usar o script `deploy` (`gh-pages`) do `package.json`, se não for mais necessário
+### Migração para a Cloudflare (feita em 2026-11-13, via Workers com assets estáticos, não Pages)
+- [x] Projeto `cafealmanaque` criado na Cloudflare e ligado ao repositório `artphil/cafe` (deploy a cada push na `main`)
+- [x] Build `npm run build`, deploy `npx wrangler deploy`, `wrangler.jsonc` com `assets.directory = ./dist` e `.node-version` (22)
+- [x] Variáveis de build `VITE_*` cadastradas no painel (sobrou a `VITE_FORM_ID`, sem uso, que pode ser removida)
+- [x] Primeiro deploy conferido: páginas, texto no HTML, cafeterias com lista, `/ads.txt` e IDs do AdSense e Analytics preenchidos
+- [x] Domínio `cafealmanaque.com` ligado, com HTTPS e "Always Use HTTPS"; `www` redireciona (301) para o domínio sem `www`
+- [x] `workers.dev` e prévias desligados no `wrangler.jsonc` (`workers_dev` e `preview_urls` falsos)
+- [ ] Redirecionar `cafebh.vercel.app` para o domínio novo ou desativar a Vercel
+- [ ] Remover o script `deploy` (`gh-pages`) e a dependência `ghpages` do `package.json`, que não são mais usados
 
 ### Domínio e referências
-- [ ] Registrar domínio (ex.: `.com.br`)
-- [ ] Atualizar política de privacidade, `ads.txt`, `base` do Vite e metas com o novo domínio
+- [x] Registrar domínio (`cafealmanaque.com`, na Cloudflare)
+- [x] Atualizar política de privacidade e metas com o novo domínio (canonical e `og:url` gerados no build). O `ads.txt` não cita domínio, não precisou mudar
+- [x] Gerar `sitemap.xml` e `robots.txt` no build (endereços sem `.html`)
 - [ ] Criar e-mail no domínio e trocar o provisório `artphil.dev@gmail.com` nas páginas Contato e Privacidade (spec 09)
-- [ ] Adicionar o domínio no AdSense e no Search Console
-- [ ] Enviar sitemap
+- [ ] Adicionar o domínio no AdSense e no Search Console e enviar o sitemap
+- [ ] Mudança de nome do site (Café BH) nos títulos, textos e metas
 
 ## Critério de pronto
-O site abre pelo domínio próprio, com HTTPS, servido pelo Cloudflare Pages, com `/ads.txt` respondendo e as páginas pré-renderizadas; o endereço da Vercel não é mais usado como principal.
+O site abre pelo domínio próprio, com HTTPS, servido pela Cloudflare, com `/ads.txt` respondendo e as páginas pré-renderizadas; o endereço da Vercel não é mais usado como principal.

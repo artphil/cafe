@@ -23,8 +23,39 @@ function metasDoSite() {
   }
 }
 
+// Gera sitemap.xml e robots.txt a partir das páginas HTML do build, com os mesmos
+// endereços (sem ".html") usados no canonical. Ignora o build SSR do pré-render.
+function sitemapERobots() {
+  let ssr = false
+  return {
+    name: 'sitemap-e-robots',
+    apply: 'build',
+    configResolved(config) {
+      ssr = !!config.build.ssr
+    },
+    generateBundle(_, bundle) {
+      if (ssr) return
+      const urls = Object.keys(bundle)
+        .filter((arquivo) => arquivo.endsWith('.html'))
+        .map((arquivo) => arquivo.replace(/\.html$/, ''))
+        .map((nome) => (nome === 'index' ? `${SITE_URL}/` : `${SITE_URL}/${nome}`))
+        .sort((a, b) => (a.endsWith('.com/') ? -1 : b.endsWith('.com/') ? 1 : a.localeCompare(b)))
+
+      const sitemap =
+        '<?xml version="1.0" encoding="UTF-8"?>\n' +
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+        urls.map((u) => `  <url><loc>${u}</loc></url>`).join('\n') +
+        '\n</urlset>\n'
+      this.emitFile({ type: 'asset', fileName: 'sitemap.xml', source: sitemap })
+
+      const robots = `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`
+      this.emitFile({ type: 'asset', fileName: 'robots.txt', source: robots })
+    },
+  }
+}
+
 export default defineConfig({
-  plugins: [vue(), artigosHtml(__dirname), metasDoSite()],
+  plugins: [vue(), artigosHtml(__dirname), metasDoSite(), sitemapERobots()],
 
   // Importante para GitHub Pages: se o site ficar em
   // https://seu-usuario.github.io/nome-do-repositorio/
