@@ -1,6 +1,6 @@
 # Spec 10: Domínio próprio e migração para a Cloudflare
 
-**Status:** em andamento
+**Status:** em andamento (migração concluída; falta a Vercel como ambiente de teste, o e-mail no domínio e o resultado da revisão do AdSense)
 
 ## Problema
 `cafebh.vercel.app` é subdomínio gratuito, visto com desconfiança pelo AdSense. Junto com o domínio próprio, o site sai da Vercel e vai para o Cloudflare Pages.
@@ -36,8 +36,22 @@
 - [x] Atualizar política de privacidade e metas com o novo domínio (canonical e `og:url` gerados no build). O `ads.txt` não cita domínio, não precisou mudar
 - [x] Gerar `sitemap.xml` e `robots.txt` no build (endereços sem `.html`)
 - [ ] Criar e-mail no domínio e trocar o provisório `artphil.dev@gmail.com` nas páginas Contato e Privacidade (spec 09)
-- [ ] Adicionar o domínio no AdSense e no Search Console e enviar o sitemap
+- [x] Search Console: propriedade `https://cafealmanaque.com/` criada (verificada automaticamente pela tag do Analytics) e `sitemap.xml` enviado em 2026-11-14 (29 páginas)
+- [x] AdSense: `cafealmanaque.com` cadastrado em Sites, propriedade verificada, revisão solicitada e `ads.txt` autorizado (status de aprovação: Preparando, em 2026-11-14)
+- [x] Sitemap corrigido: a primeira versão saiu vazia (lia o bundle antes de os HTMLs existirem); agora lê as páginas de entrada do build e o build falha se a lista vier vazia
 - [x] Mudança de nome do site (Café BH para Café Almanaque) nos títulos, textos, cabeçalho, rodapé e metas
+
+## Aguardando a revisão do AdSense (a partir de 2026-11-14)
+O status em Sites fica "Preparando" até o Google concluir; costuma levar de alguns dias a 2 semanas. Não pedir a revisão de novo (não acelera).
+
+Enquanto espera:
+- [ ] Conferir o resultado em Sites do AdSense e no e-mail da conta (Pronto ou Requer atenção, com o motivo)
+- [ ] Acompanhar o Search Console (Páginas e Desempenho) a partir de 1 a 2 dias; se a home não indexar sozinha, usar "Inspeção de URL" e "Solicitar indexação"
+- [ ] Evitar mudanças grandes de estrutura (renomear páginas, reorganizar o menu); manter `www` e `http` redirecionando para `https://cafealmanaque.com`
+- [ ] Manter `VITE_AMBIENTE=teste` só na Vercel, nunca na Cloudflare
+- [ ] Continuar o conteúdo sem risco: lote D e glossário (spec 07), outras regiões produtoras, fotos que faltam (café coado, comparativo, processamento)
+
+Se vier reprovação, registrar aqui a mensagem exata do AdSense e o plano de correção antes de pedir nova revisão.
 
 ## Critério de pronto
 O site abre pelo domínio próprio, com HTTPS, servido pela Cloudflare, com `/ads.txt` respondendo e as páginas pré-renderizadas; o endereço da Vercel não é mais usado como principal.
