@@ -50,23 +50,27 @@ function metasDoSite() {
   }
 }
 
-// Gera sitemap.xml e robots.txt a partir das páginas HTML do build, com os mesmos
-// endereços (sem ".html") usados no canonical. Ignora o build SSR do pré-render.
+// Gera sitemap.xml e robots.txt a partir das páginas de entrada do build (as mesmas
+// listadas em `input` mais abaixo), com os endereços sem ".html" usados no canonical.
+// Ignora o build SSR do pré-render.
 function sitemapERobots() {
   let ssr = false
+  let paginas = []
   return {
     name: 'sitemap-e-robots',
     apply: 'build',
     configResolved(config) {
       ssr = !!config.build.ssr
+      const input = config.build.rollupOptions.input
+      paginas = input && typeof input === 'object' ? Object.keys(input) : []
     },
-    generateBundle(_, bundle) {
+    generateBundle() {
       if (ssr) return
-      const urls = Object.keys(bundle)
-        .filter((arquivo) => arquivo.endsWith('.html'))
-        .map((arquivo) => arquivo.replace(/\.html$/, ''))
-        .map((nome) => (nome === 'index' ? `${SITE_URL}/` : `${SITE_URL}/${nome}`))
+      const urls = paginas
+        .map((nome) => (nome === 'main' ? `${SITE_URL}/` : `${SITE_URL}/${nome}`))
         .sort((a, b) => (a.endsWith('.com/') ? -1 : b.endsWith('.com/') ? 1 : a.localeCompare(b)))
+
+      if (urls.length === 0) this.error('sitemap: nenhuma página de entrada encontrada')
 
       const sitemap =
         '<?xml version="1.0" encoding="UTF-8"?>\n' +
