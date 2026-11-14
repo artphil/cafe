@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && node scripts/prerender.mjs",
-    "deploy": "gh-pages -d dist",
-    "preview": "vite preview"
+    "deploy": "bash scripts/publicar.sh",
+    "preview": "vite preview",
+    "publicar": "bash scripts/publicar.sh"
   },
   "dependencies": {
     "artphil-design-system": "^2.0.0",
@@ -15,7 +16,6 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.0",
-    "ghpages": "^0.0.10",
     "vite": "^5.4.0"
   }
 }

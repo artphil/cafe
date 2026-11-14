@@ -28,7 +28,8 @@
 - [x] `workers.dev` e prévias desligados no `wrangler.jsonc` (`workers_dev` e `preview_urls` falsos)
 - [x] Interruptor `VITE_AMBIENTE=teste` implementado (sem AdSense, Analytics e anúncios, com `noindex`)
 - [ ] Vercel como ambiente de teste da branch `develop`: Production Branch = `develop` e variável `VITE_AMBIENTE=teste`
-- [ ] Remover o script `deploy` (`gh-pages`) e a dependência `ghpages` do `package.json`, que não são mais usados
+- [x] Script `deploy` do `gh-pages` substituído por `npm run deploy` (e `npm run publicar`), que publicam a `develop` na `main` (`scripts/publicar.sh`)
+- [x] Dependência `ghpages` removida (`package.json` e `package-lock.json`)
 
 ### Domínio e referências
 - [x] Registrar domínio (`cafealmanaque.com`, na Cloudflare)

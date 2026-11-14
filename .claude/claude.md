@@ -40,19 +40,18 @@ Precisa ter o [Node.js](https://nodejs.org) instalado (versão 18 ou mais recent
 ```bash
 npm install       # instala Vite, Vue e as dependências
 npm run dev       # roda localmente em http://localhost:5173 (com recarregamento automático)
-npm run build     # gera a versão final na pasta dist/ (isso é o que vai pro GitHub Pages)
+npm run build     # gera a versão final na pasta dist/ (é o que a Cloudflare publica)
 npm run preview   # visualiza a pasta dist/ localmente, pra conferir antes de publicar
 ```
 
-Sempre que editar um `.vue`, `.js` ou `.css`, rode `npm run build` de novo antes de publicar — é a pasta **`dist/`** (gerada pelo build) que deve subir pro GitHub Pages, não a pasta `src/`.
+Sempre que editar um `.vue`, `.js` ou `.css`, vale rodar `npm run build` para conferir antes de publicar. A pasta **`dist/`** é gerada no build e não é versionada: a Cloudflare a gera sozinha a cada push na `main`.
 
-## Publicar no GitHub Pages
+## Publicar
 
-1. Em `vite.config.js`, ajuste a linha `base:`:
-   - Se o repositório se chama, por exemplo, `grao-cafe`, o site fica em `usuario.github.io/grao-cafe/` → troque `base: './'` por `base: '/grao-cafe/'`
-2. Rode `npm run build` — isso gera a pasta `dist/` com os 5 HTMLs finais, prontos, sem Vue "aparente" (é HTML/CSS/JS puro no resultado)
-3. Suba o conteúdo de `dist/` pro repositório (direto, ou via GitHub Actions automatizando o build a cada push — posso montar esse workflow se quiser)
-4. Ative o GitHub Pages apontando pra pasta/branch onde `dist/` foi publicada
+- **Branches:** trabalhe na `develop`; a `main` é a produção. O site em produção é `https://cafealmanaque.com`, na Cloudflare (Workers com assets estáticos, configurado em `wrangler.jsonc`), com deploy automático a cada push na `main`.
+- **Comando único:** de dentro da `develop`, sem alterações pendentes e com tudo enviado (`git push`), rode `npm run deploy` (ou `npm run publicar`). O script `scripts/publicar.sh` faz o merge fast-forward da `develop` na `main`, envia e volta para a `develop`, pedindo confirmação.
+- **Antes de publicar:** confira que as variáveis de build da Cloudflare não têm `VITE_AMBIENTE=teste` (ela é só do ambiente de teste, ver "Ambientes").
+- `base: './'` em `vite.config.js` deixa os links relativos, então o site funciona na raiz de qualquer domínio.
 
 ## Cafeterias, formulário, AdSense e Analytics
 

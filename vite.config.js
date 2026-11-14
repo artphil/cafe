@@ -86,9 +86,7 @@ function sitemapERobots() {
 export default defineConfig({
   plugins: [vue(), artigosHtml(__dirname), ambienteDeTeste(), metasDoSite(), sitemapERobots()],
 
-  // Importante para GitHub Pages: se o site ficar em
-  // https://seu-usuario.github.io/nome-do-repositorio/
-  // troque './' por '/nome-do-repositorio/'
+  // Links e arquivos relativos: o site funciona na raiz de qualquer domínio.
   base: './',
 
   // Permite abrir o `npm run dev` por um túnel (cloudflared, localtunnel);
