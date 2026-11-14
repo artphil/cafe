@@ -1,6 +1,6 @@
 # Spec 10: Domínio próprio e migração para a Cloudflare
 
-**Status:** em andamento (migração concluída; falta a Vercel como ambiente de teste, o e-mail no domínio e o resultado da revisão do AdSense)
+**Status:** em andamento (migração e ambiente de teste concluídos; faltam o e-mail no domínio e o resultado da revisão do AdSense)
 
 ## Problema
 `cafebh.vercel.app` é subdomínio gratuito, visto com desconfiança pelo AdSense. Junto com o domínio próprio, o site sai da Vercel e vai para o Cloudflare Pages.
@@ -27,7 +27,8 @@
 - [x] Domínio `cafealmanaque.com` ligado, com HTTPS e "Always Use HTTPS"; `www` redireciona (301) para o domínio sem `www`
 - [x] `workers.dev` e prévias desligados no `wrangler.jsonc` (`workers_dev` e `preview_urls` falsos)
 - [x] Interruptor `VITE_AMBIENTE=teste` implementado (sem AdSense, Analytics e anúncios, com `noindex`)
-- [ ] Vercel como ambiente de teste da branch `develop`: Production Branch = `develop` e variável `VITE_AMBIENTE=teste`
+- [x] Vercel como ambiente de teste da branch `develop`, em `cafealmanaque.vercel.app` (antes `cafebh.vercel.app`, que redireciona): conferido em 2026-11-14, com `VITE_AMBIENTE=teste` (sem AdSense, Analytics, anúncios e sitemap; com `noindex` e `robots.txt` bloqueando tudo)
+- [x] `vercel.json` com `cleanUrls: true`, para a Vercel servir `/v60` como a Cloudflare (sem `.html`)
 - [x] Script `deploy` do `gh-pages` substituído por `npm run deploy` (e `npm run publicar`), que publicam a `develop` na `main` (`scripts/publicar.sh`)
 - [x] Dependência `ghpages` removida (`package.json` e `package-lock.json`)
 
