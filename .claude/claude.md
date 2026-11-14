@@ -68,13 +68,20 @@ Edite diretamente os arquivos em `src/pages/*.vue`, substituindo os textos `[con
 
 ## Criar um artigo
 
-1. Acrescente um item em `src/data/artigos.js` (slug, titulo, secao, descricao e, se houver, `imagem` com arquivo em `public/img/artigos/`).
-2. Crie `src/artigos/<slug>.vue` com o texto dentro de `<template>`.
-3. Reinicie `npm run dev` (a lista é lida na inicialização) e rode `npm run build` para gerar e pré-renderizar a página.
+Use o comando (cria o texto com o molde e o item em `src/data/artigos.js`):
 
-O card do artigo aparece sozinho no índice da seção (`IndiceArtigos.vue`, nas páginas Preparo e Saiba mais) e em "Leia também" dos outros artigos.
+```bash
+npm run novo-artigo -- <slug> <seção> "<Título>" [--metodo]
+```
 
-O HTML da página não existe como arquivo: `scripts/vite-plugin-artigos.js` o gera no build e o serve no dev.
+Seções: `historia`, `preparo`, `saiba-mais`. Com `--metodo`, vem o molde de método de preparo (ficha de receita e seções padrão). Depois:
+
+1. Escreva o texto em `src/artigos/<slug>.vue` e troque todos os `[PREENCHER]` (também a `descricao` em `src/data/artigos.js`). O `npm run deploy` recusa publicar com `[PREENCHER]` em `src/`; o build só avisa.
+2. Foto (opcional): `public/img/artigos/<slug>.jpg`, e descomente o bloco `imagem` no item (com `alt`, `credito` e `creditoUrl`).
+3. Reinicie `npm run dev` (a lista é lida na inicialização) e abra `/<slug>.html`.
+4. Commit na `develop`, confira na Vercel e publique com `npm run deploy`.
+
+O card do artigo aparece sozinho no índice da seção (`IndiceArtigos.vue`) e em "Leia também" dos outros artigos, e a página entra no sitemap. O HTML da página não existe como arquivo: `scripts/vite-plugin-artigos.js` o gera no build e o serve no dev.
 
 ## Molde dos artigos de método de preparo
 

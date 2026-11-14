@@ -16,6 +16,12 @@ if [ -n "$(git status --porcelain)" ]; then
   exit 1
 fi
 
+if grep -rn "\[PREENCHER" src/ >/dev/null 2>&1; then
+  echo "Há trechos [PREENCHER] sem preencher, que iriam para o ar:"
+  grep -rn "\[PREENCHER" src/ | cut -c1-120
+  exit 1
+fi
+
 git fetch origin --quiet
 
 if [ "$(git rev-parse develop)" != "$(git rev-parse origin/develop)" ]; then

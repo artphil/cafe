@@ -70,5 +70,30 @@ Cada tarefa cabe numa sessão. As de discussão vêm primeiro porque destravam a
 - [ ] 16. **Auditar** anúncios e conteúdo: decidir se o anúncio do rodapé fica nas páginas institucionais, e checar que toda página tem texto próprio e nenhum placeholder. Pronto quando: script ou checklist registrado mostra todas as páginas com ~600+ palavras (ou sem anúncio, se institucional)
 - [ ] 17. **Reenviar** para análise do AdSense, de 2 a 4 semanas após publicar, e decidir antes se a spec 10 (domínio próprio) vem primeiro. Pronto quando: pedido enviado e data registrada
 
+## Calendário editorial (um artigo por semana, às sextas)
+Ritmo definido em 2026-11-14. Cada sexta, publicar com `npm run deploy` (de dentro da `develop`). As datas de Natal e Ano Novo podem ser adiantadas para a quinta ou puladas, empurrando o resto uma semana.
+
+| Sexta | Artigo | Seção | Comando para criar | Feito |
+| --- | --- | --- | --- | --- |
+| 2026-11-20 | Armazenamento do café | Saiba mais | `npm run novo-artigo -- armazenamento-do-cafe saiba-mais "Como armazenar o café"` | [ ] |
+| 2026-11-27 | Água ideal | Preparo | `npm run novo-artigo -- agua-ideal preparo "Água ideal para fazer café"` | [ ] |
+| 2026-12-04 | Equipamentos para iniciantes | Preparo | `npm run novo-artigo -- equipamentos-para-iniciantes preparo "Equipamentos para quem está começando"` | [ ] |
+| 2026-12-11 | Glossário (cresce aos poucos) | Saiba mais | estrutura própria em `src/data/glossario.js` (ver decisão do glossário); o comando cria só o esqueleto | [ ] |
+| 2026-12-18 | Outras regiões produtoras | Saiba mais | `npm run novo-artigo -- outras-regioes-produtoras saiba-mais "Regiões produtoras de café no Brasil"` | [ ] |
+| 2026-12-25 | Cantinho do café em casa | Saiba mais | `npm run novo-artigo -- cantinho-do-cafe saiba-mais "Como montar um cantinho do café em casa"` | [ ] |
+| 2027-01-01 | Receitas com café | Preparo | `npm run novo-artigo -- receitas-com-cafe preparo "Receitas com café"` | [ ] |
+
+Depois destes, os temas guardados em `.claude/sugestoes-artigos.md` (espresso doméstico, bebidas com espresso, Chemex, Aeropress invertido, café e saúde, roteiros de cafeterias).
+
+### Rotina semanal
+1. Criar o esqueleto com `npm run novo-artigo -- <slug> <seção> "<título>"` (com `--metodo` para métodos de preparo).
+2. Escrever o texto (~500 a 700 palavras) e trocar todos os `[PREENCHER]`, inclusive a descrição em `src/data/artigos.js`.
+3. Foto (com crédito, link do autor e `alt`) em `public/img/artigos/<slug>.jpg`, com 1600 px e abaixo de ~250 KB.
+4. Revisar os fatos (números, datas, nomes) e linkar de 2 a 3 outros artigos no texto.
+5. Commit na `develop`, conferir na Vercel (`cafealmanaque.vercel.app`) e rodar `npm run deploy`.
+6. Depois de publicado: Search Console, Inspeção de URL, "Solicitar indexação" do endereço novo (`https://cafealmanaque.com/<slug>`). O sitemap já se atualiza sozinho.
+
+O `npm run deploy` recusa publicar se houver `[PREENCHER]` em `src/`; o build só avisa, para a `develop` poder guardar rascunhos.
+
 ## Critério de pronto
 Nenhuma página com texto placeholder; cada página com conteúdo próprio e útil.

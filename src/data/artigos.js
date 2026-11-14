@@ -268,6 +268,15 @@ export const ARTIGOS = [
       'O que é a terceira onda, o que muda no processo do café especial e os perfis de sabor de cada região de Minas.',
     relacionados: ['cafe-em-minas-gerais', 'torras', 'processamento'],
   },
+  {
+    slug: 'armazenamento-do-cafe',
+    titulo: 'Como armazenar o café',
+    secao: 'saiba-mais',
+    descricao:
+      'Como guardar café para manter aroma e sabor: o que estraga o café, grão inteiro ou moído, geladeira, freezer e por quanto tempo ele dura.',
+    // imagem: { src: './img/artigos/armazenamento-do-cafe.jpg', alt: '', credito: '', creditoUrl: '' },
+    relacionados: ['torras', 'moagem-por-metodo', 'arabica-x-robusta'],
+  },
 ]
 
 export function relacionadosDe(artigo, todos = ARTIGOS) {

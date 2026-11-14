@@ -1,6 +1,6 @@
 // Gera uma página HTML por item de src/data/artigos.js, sem criar arquivos
 // na raiz: o HTML é virtual (build) ou servido na hora (dev).
-import { existsSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { ARTIGOS } from '../src/data/artigos.js'
 
@@ -63,6 +63,10 @@ export function artigosHtml(raiz) {
         vistos.add(a.slug)
         if (existsSync(resolve(raiz, `${a.slug}.html`))) {
           throw new Error(`[artigos] "${a.slug}" já existe como página (${a.slug}.html na raiz)`)
+        }
+        const corpo = resolve(raiz, `src/artigos/${a.slug}.vue`)
+        if (existsSync(corpo) && readFileSync(corpo, 'utf8').includes('[PREENCHER')) {
+          this.warn(`[artigos] "${a.slug}" ainda tem trechos [PREENCHER] no texto`)
         }
         if (!existsSync(resolve(raiz, `src/artigos/${a.slug}.vue`))) {
           throw new Error(`[artigos] falta o corpo: src/artigos/${a.slug}.vue`)

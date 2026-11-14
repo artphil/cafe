@@ -8,7 +8,7 @@
     "build": "vite build && node scripts/prerender.mjs",
     "deploy": "bash scripts/publicar.sh",
     "preview": "vite preview",
-    "publicar": "bash scripts/publicar.sh"
+    "novo-artigo": "node scripts/novo-artigo.mjs"
   },
   "dependencies": {
     "artphil-design-system": "^2.0.0",
