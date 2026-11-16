@@ -34,6 +34,12 @@ export const ARTIGOS = [
     secao: 'preparo',
     descricao:
       'Compare V60, café coado, Aeropress, prensa francesa, moka e cold brew em proporção, moagem, tempo, sabor e dificuldade.',
+    imagem: {
+      src: './img/artigos/comparativo-de-metodos.jpg',
+      alt: 'Xícara branca com café preto sobre um pires com colher, em uma mesa de madeira; a superfície do café reflete um céu estrelado',
+      credito: 'Vasuta Thitayarak / Vecteezy',
+      creditoUrl: 'https://www.vecteezy.com/members/pongmoji-stocker',
+    },
     relacionados: ['v60', 'cafe-coado', 'aeropress'],
   },
   {
@@ -154,6 +160,12 @@ export const ARTIGOS = [
     secao: 'preparo',
     descricao:
       'Como fazer café coado no pano ou no filtro de papel: receita, cuidados com o coador e ajustes para o seu gosto.',
+    imagem: {
+      src: './img/artigos/cafe-coado.jpg',
+      alt: 'Coador de plástico transparente com filtro de papel sobre uma jarra de vidro com café, ao lado de uma chaleira de bico fino e grãos de café torrados espalhados',
+      credito: 'Narong Khueankaew / Vecteezy',
+      creditoUrl: 'https://www.vecteezy.com/members/maxskyohm27626627',
+    },
     relacionados: ['v60', 'prensa-francesa', 'cold-brew'],
   },
   {
@@ -190,6 +202,12 @@ export const ARTIGOS = [
     secao: 'saiba-mais',
     descricao:
       'Entenda os processos natural, lavado e cereja descascado (honey) e como cada um muda o sabor do café.',
+    imagem: {
+      src: './img/artigos/processamento.jpg',
+      alt: 'Mão segurando um ramo de cafeeiro com cerejas de café em diferentes pontos de maturação, de amarelas a vermelhas',
+      credito: 'Bigc Studio / Vecteezy',
+      creditoUrl: 'https://www.vecteezy.com/members/bigcxlotus',
+    },
     relacionados: ['arabica-x-robusta', 'torras', 'moagem-por-metodo'],
   },
   {
@@ -274,7 +292,12 @@ export const ARTIGOS = [
     secao: 'saiba-mais',
     descricao:
       'Como guardar café para manter aroma e sabor: o que estraga o café, grão inteiro ou moído, geladeira, freezer e por quanto tempo ele dura.',
-    // imagem: { src: './img/artigos/armazenamento-do-cafe.jpg', alt: '', credito: '', creditoUrl: '' },
+    imagem: {
+      src: './img/artigos/armazenamento-do-cafe.jpg',
+      alt: 'Pote de cerâmica branco tombado, com a tampa ao lado, derramando grãos de café torrados sobre uma esteira trançada',
+      credito: 'Voraorn Ratanakorn / Vecteezy',
+      creditoUrl: 'https://www.vecteezy.com/members/v_ratanakorn836775',
+    },
     relacionados: ['torras', 'moagem-por-metodo', 'arabica-x-robusta'],
   },
 ]
