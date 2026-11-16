@@ -1,6 +1,6 @@
 # Spec 10: Domínio próprio e migração para a Cloudflare
 
-**Status:** em andamento (migração e ambiente de teste concluídos; faltam o e-mail no domínio e o resultado da revisão do AdSense)
+**Status:** em andamento (migração e ambiente de teste concluídos; falta o resultado da revisão do AdSense)
 
 ## Problema
 `cafebh.vercel.app` é subdomínio gratuito, visto com desconfiança pelo AdSense. Junto com o domínio próprio, o site sai da Vercel e vai para o Cloudflare Pages.
@@ -36,7 +36,7 @@
 - [x] Registrar domínio (`cafealmanaque.com`, na Cloudflare)
 - [x] Atualizar política de privacidade e metas com o novo domínio (canonical e `og:url` gerados no build). O `ads.txt` não cita domínio, não precisou mudar
 - [x] Gerar `sitemap.xml` e `robots.txt` no build (endereços sem `.html`)
-- [ ] Criar e-mail no domínio e trocar o provisório `artphil.dev@gmail.com` nas páginas Contato e Privacidade (spec 09)
+- [x] E-mail `contato@cafealmanaque.com` (Email Routing da Cloudflare, com MX e SPF configurados) no lugar do provisório nas páginas Contato e Privacidade (spec 09)
 - [x] Search Console: propriedade `https://cafealmanaque.com/` criada (verificada automaticamente pela tag do Analytics) e `sitemap.xml` enviado em 2026-11-14 (29 páginas)
 - [x] AdSense: `cafealmanaque.com` cadastrado em Sites, propriedade verificada, revisão solicitada e `ads.txt` autorizado (status de aprovação: Preparando, em 2026-11-14)
 - [x] Sitemap corrigido: a primeira versão saiu vazia (lia o bundle antes de os HTMLs existirem); agora lê as páginas de entrada do build e o build falha se a lista vier vazia

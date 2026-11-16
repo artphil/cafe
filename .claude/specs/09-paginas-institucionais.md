@@ -4,7 +4,7 @@
 
 ## Decisões
 - Formato: páginas Vue com header/rodapé do site (inclusive a Privacidade, que sai de `public/`)
-- E-mail de contato provisório: `artphil.dev@gmail.com`; trocar pelo e-mail do domínio quando a spec 10 sair
+- E-mail de contato: `contato@cafealmanaque.com` (antes provisório `artphil.dev@gmail.com`, trocado em 2026-11-15)
 - Sobre menciona de forma direta o apoio de IA, com revisão do autor
 - Sem Termos de uso (site sem cadastro)
 - Cookies: usar a mensagem de consentimento do próprio AdSense, sem banner próprio

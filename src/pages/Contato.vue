@@ -18,7 +18,7 @@ import SiteFooter from '../components/SiteFooter.vue'
     <section class="content-block wrap">
       <h2>E-mail</h2>
       <p>
-        <a href="mailto:artphil.dev@gmail.com">artphil.dev@gmail.com</a>
+        <a href="mailto:contato@cafealmanaque.com">contato@cafealmanaque.com</a>
       </p>
 
       <h2>Para que usar</h2>

@@ -59,7 +59,7 @@ import SiteFooter from '../components/SiteFooter.vue'
 
       <h2>7. Contato</h2>
       <p>Em caso de dúvidas sobre esta política ou para exercer seus direitos, escreva para
-        <a href="mailto:artphil.dev@gmail.com">artphil.dev@gmail.com</a>. Você também pode usar a página de
+        <a href="mailto:contato@cafealmanaque.com">contato@cafealmanaque.com</a>. Você também pode usar a página de
         <a href="./contato.html">Contato</a>.</p>
     </section>
   </main>
