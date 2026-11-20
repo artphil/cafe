@@ -300,6 +300,20 @@ export const ARTIGOS = [
     },
     relacionados: ['torras', 'moagem-por-metodo', 'arabica-x-robusta'],
   },
+  {
+    slug: 'agua-ideal',
+    titulo: 'Água ideal para fazer café',
+    secao: 'preparo',
+    descricao:
+      'A água é quase toda a xícara. Veja o que importa nela (cloro, minerais, dureza), que água usar em casa e como testar a melhor para o seu café.',
+    imagem: {
+      src: './img/artigos/agua-ideal.jpg',
+      alt: 'Água sendo servida de uma garrafa de vidro em um copo transparente, sobre uma mesa de madeira, com folhagem desfocada e o sol ao fundo',
+      credito: 'Witsanu Singkaew / Vecteezy',
+      creditoUrl: 'https://www.vecteezy.com/members/w_lenu_nu541255',
+    },
+    relacionados: ['moagem-por-metodo', 'armazenamento-do-cafe', 'cafe-coado'],
+  },
 ]
 
 export function relacionadosDe(artigo, todos = ARTIGOS) {
