@@ -74,8 +74,8 @@ onMounted(() => {
 <template>
   <p class="cafe-state">
     <template v-if="origem === 'carregando'">Carregando cafeterias…</template>
-    <template v-else-if="origem === 'planilha'">{{ lista.length }} cafeterias carregadas da planilha.</template>
-    <template v-else>Mostrando dados de exemplo (planilha indisponível).</template>
+    <template v-else-if="origem === 'planilha'">{{ lista.length }} cafeterias recomendadas.</template>
+    <template v-else>Mostrando dados de exemplo (fonte indisponível).</template>
   </p>
 
   <div class="cafe-grid">
