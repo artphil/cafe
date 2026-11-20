@@ -404,7 +404,7 @@ section.content-block {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-top: 10px;
+  margin: 10px 0;
 }
 
 .tag {
@@ -424,6 +424,10 @@ section.content-block {
 .tag.roast {
   border-color: var(--roast-deep);
   color: var(--roast-deep);
+}
+.tag.tipo {
+  background: var(--ink);
+  color: var(--cream);
 }
 
 /* ---------- Selo de torra (assinatura visual) ---------- */
@@ -510,6 +514,15 @@ section.content-block {
   font-family: var(--font-mono);
   font-size: 0.85rem;
   color: var(--roast-deep);
+}
+
+.cafe-legenda {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: rgba(38, 21, 11, 0.75);
+}
+.cafe-legenda p {
+  margin: 0 0 4px;
 }
 
 /* ---------- Formulário embutido ---------- */

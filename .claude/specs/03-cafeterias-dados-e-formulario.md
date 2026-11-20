@@ -24,19 +24,25 @@ Nomes das colunas em minúsculas, sem acento, exatamente como abaixo (o `CafeGri
 | `instagram` | um dos dois | perfil; substitui `insta` |
 | `descricao` | sim | 1-2 frases factuais (ambiente, o que servem) |
 | `destaque` | sugerida | opinião curta do autor ("peça o…", "vá para…"); dá conteúdo original |
-| `categoria` | sim | tags separadas por vírgula: `especialidade`, `torra própria`, `boa pra trabalhar`, `pet friendly` |
-| `preco` | opcional | `$`, `$$` ou `$$$` |
+| `tipo` | sim | uma escolha: Especialidade, Tradicional, Colonial, Padaria/Confeitaria, Bistrô/Brunch (selo principal do card) |
+| `tags` | sim | termos da legenda da aba, separados por vírgula, em 4 grupos: experiência, comida, comodidade, ambiente. O card mostra até 4, nessa ordem de grupos |
+| `preco` | opcional | `$` (até R$ 20 por pessoa, 1 café + 1 acompanhamento), `$$` (R$ 20 a 40) ou `$$$` (acima de R$ 40) |
 | `visitado` | interna | `sim` / `não`: o autor conhece pessoalmente (critério de curadoria) |
-| `atualizado_em` | interna | data da última checagem dos dados |
-| `status` | interna | `publicada` / `pendente` / `oculta` |
+| `atualizado_em` | interna | data da última checagem dos dados (não aparece no site) |
+| `status` | interna | `rascunho` / `visitado` / `publicada` / `fechada` |
+| `nota_cafe`, `nota_diferencial`, `nota_atendimento`, `nota_preco_valor` | interna | 1 a 3 (1 abaixo do esperado, 2 bom, 3 destaque); total e `elegivel` (Sim se total ≥ 9 e nenhuma nota 1) ficam em colunas sem cabeçalho ao lado. Nunca saem pelo endpoint |
+
+**Aba mestre: `curadoria`.** A aba `cafeterias` antiga não é mais lida pelo site (pode ser apagada). O endpoint (Apps Script, código em `scripts/apps-script/lista-cafeterias.gs`) devolve só as linhas `publicada` e só as colunas públicas: nome, endereco, bairro, maps_url, site, instagram, descricao, destaque, tipo, tags e preco.
 
 Fora do modelo de propósito: horário de funcionamento (desatualiza rápido; o leitor vai ao site ou Instagram), telefone, foto e cardápio.
 
 ## Exibição no site (`CafeGrid.vue`)
-- Mostra: `nome`, `endereco · bairro`, `preco` e `categoria` como tags, `descricao`, `destaque` e links (Site, Instagram, Mapa)
-- Não mostra as colunas internas (`visitado`, `atualizado_em`, `status`)
-- Só exibe linhas com `status` `publicada`; linha sem `status` também aparece
-- Texto de exemplo na `categoria` (começando por `[`) é ignorado
+- Mostra: `nome`, `endereco · bairro`, `tipo` (selo escuro), `preco`, até 4 `tags`, `descricao`, `destaque` e links (Site, Instagram, Mapa)
+- Na página, uma vez: contador e as legendas de preço e de tipo
+- Não mostra notas, elegibilidade, `visitado` nem `status`
+- Só exibe linhas `publicada` (feito no Apps Script); linha sem `status` também aparece
+- Texto de exemplo nas `tags` (começando por `[`) é ignorado
+- Legendas (significado de cada `tipo`, faixas de `preco`) e grupos de `tags` ficam **no código** (`TIPOS`, `PRECOS` e `GRUPOS_TAGS` em `CafeGrid.vue`), não na planilha. A legenda da aba `curadoria` é só anotação: ao mudar um termo ou uma definição, atualizar os dois lados
 
 ## Formulário de sugestão
 - Google Forms ligado a uma aba separada de respostas (`pendente`); a revisão manual copia para a aba publicada (a única lida pelo site)
