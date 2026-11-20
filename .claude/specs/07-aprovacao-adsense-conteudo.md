@@ -83,6 +83,12 @@ Ritmo definido em 2026-11-14. Cada sexta, publicar com `npm run deploy` (de dent
 | 2026-12-25 | Cantinho do café em casa | Saiba mais | `npm run novo-artigo -- cantinho-do-cafe saiba-mais "Como montar um cantinho do café em casa"` | [ ] |
 | 2027-01-01 | Receitas com café | Preparo | `npm run novo-artigo -- receitas-com-cafe preparo "Receitas com café"` | [ ] |
 
+### Próximo bloco da página Preparo: receitas (a fazer)
+A página Preparo hoje tem dois blocos, "Métodos de preparo" (`grupo: 'metodo'`) e "Guias para melhorar o café" (`grupo: 'guia'`). O terceiro será **"Receitas com café"**, ainda sem artigos. Quando existir o primeiro (a partir de "Receitas com café", 2027-01-01, ou de artigos de bebidas do backlog):
+1. Aceitar `grupo: 'receita'` em `src/data/artigos.js` (comentário do topo) e no `scripts/novo-artigo.mjs` (hoje só decide entre `metodo` e `guia`; precisaria de uma opção para receita).
+2. Acrescentar um terceiro `<IndiceArtigos secao="preparo" grupo="receita" titulo="Receitas com café" />` em `src/pages/Preparo.vue`. O bloco some sozinho enquanto não houver artigos, então pode ser acrescentado antes.
+3. Atualizar o `.claude/claude.md` (seção de criação de artigo).
+
 Depois destes, os temas guardados em `.claude/sugestoes-artigos.md` (espresso doméstico, bebidas com espresso, Chemex, Aeropress invertido, café e saúde, roteiros de cafeterias).
 
 ### Rotina semanal
