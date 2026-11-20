@@ -9,11 +9,14 @@ defineProps({
 <template>
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="./index.html">
+      <!-- Telas largas mostram a logo completa; no celular, símbolo mais o nome em texto.
+           O nome continua no HTML (oculto só visualmente na versão com logo). -->
+      <a class="brand" href="./index.html" aria-label="Café Almanaque, início">
+        <img class="brand-logo" src="/img/marca/logo-cafe-almanaque.svg" alt="" width="149" height="80" />
         <img class="brand-simbolo" src="/favicon.svg" alt="" width="46" height="46" />
         <span>
           <span class="brand-name">Café Almanaque</span>
-          <span class="brand-tag">guia de café</span>
+          <span class="brand-tag">O seu guia de café</span>
         </span>
       </a>
       <nav class="main-nav" aria-label="Navegação principal">

@@ -1,6 +1,6 @@
 # Spec 11: Refinamento visual (mockup da home)
 
-**Status:** planejado (a aplicar na `develop` depois do deploy de 2026-11-20)
+**Status:** implementado na `develop` em 2026-11-20 (faltam os testes na Vercel, o PageSpeed e a decisão de publicar)
 
 ## Origem
 Mockup da home em artefato do claude.ai (https://claude.ai/artifact/A94VcYSMjJFSBBV8kBHFWC). É só visual: o texto, os links, os endereços e a estrutura do menu continuam como estão. Os links do mockup são `#...` (protótipo); no site real seguem `./pagina.html`.
@@ -20,12 +20,12 @@ Mockup da home em artefato do claude.ai (https://claude.ai/artifact/A94VcYSMjJFS
 - **Anúncios:** posições e quantidade inalteradas (um depois do hero, um no rodapé); nada acima do cabeçalho.
 
 ## Tarefas
-- [ ] 1. Cabeçalho: logo SVG em telas largas e símbolo mais texto no celular, com a legenda "O seu guia de café" (`SiteHeader.vue` e `style.css`)
-- [ ] 2. Rodapé escuro (fundo `--ink`, texto `--paper`), com o mesmo menu, o anúncio com borda tracejada clara e "by Artphil" (`SiteFooter.vue` e `style.css`)
-- [ ] 3. Botões com altura mínima de 40 px, contorno de foco visível (`:focus-visible`) e transições só quando o usuário não pede movimento reduzido
-- [ ] 4. Tipografia: `text-wrap: balance` nos títulos e tamanho do `h1` com `clamp`
-- [ ] 5. Card de destaque da home: "Ler o artigo" à esquerda e "Sortear outro" à direita, com a mesma altura de toque
-- [ ] 6. Conferir contraste (WCAG AA) de links e textos nas duas cores de fundo
+- [x] 1. Cabeçalho: logo SVG em telas largas (≥ 721 px, 149 × 80) e símbolo mais texto no celular, com a legenda "O seu guia de café" (`SiteHeader.vue` e `style.css`). Conferido no navegador local em 1024 px e 375 px
+- [x] 2. Rodapé: já era escuro (`--ink` com `--paper`) e com o mesmo menu; só troquei o estilo inline do nome por uma classe (`.footer-brand`). A borda tracejada do anúncio do mockup **não** foi aplicada: lá é um marcador de protótipo, e no site real apareceria como caixa vazia quando o anúncio não carrega
+- [x] 3. Botões do destaque com altura mínima de 40 px (medido: 40 px). O contorno de foco (`:focus-visible`) e o movimento reduzido já existiam
+- [x] 4. Tipografia: `text-wrap: balance` em `h1`, `h2` e `h3` (o `h1` já usava `clamp`)
+- [x] 5. Card de destaque da home: "Ler o artigo" à esquerda e "Sortear outro" à direita, os dois com 40 px de altura
+- [x] 6. Contraste (WCAG AA) conferido: texto em creme 15,5:1, link marrom em creme 6,9:1 e em papel 5,9:1, rodapé 13,3:1 (nota a 75% de opacidade 7,9:1), foco 6,7:1. Todos acima de 4,5:1
 - [ ] 7. Testar na Vercel (`develop`), no computador e no celular
 - [ ] 8. PageSpeed Insights (celular) na Vercel e comparar com a produção atual: nota igual ou melhor, sem aumento de CLS
 - [ ] 9. Só então publicar com `npm run deploy`
@@ -37,6 +37,7 @@ Mockup da home em artefato do claude.ai (https://claude.ai/artifact/A94VcYSMjJFS
 
 ## Critério de pronto
 - Aparência igual à do mockup na home, nas duas larguras (celular e computador), e coerente nas demais páginas, que usam o mesmo cabeçalho e rodapé.
+- Nota: com 80 px de logo mais a legenda, o menu quebra para uma segunda linha em telas largas (a soma passa de 840 px, como no mockup). Se incomodar: tirar a legenda no computador ou reduzir o tamanho da logo
 - Nenhum link quebrado, nenhum erro novo no console, nome do site presente como texto.
 - PageSpeed (celular) igual ou melhor que a produção, e CLS sem piora.
 
