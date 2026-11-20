@@ -20,7 +20,7 @@ src/
     SiteHeader.vue     → cabeçalho + navegação (usado nas 5 páginas)
     SiteFooter.vue      → rodapé + anúncio fixo (usado nas 5 páginas)
     AdSlot.vue           → bloco de anúncio in-content
-    IndiceArtigos.vue     → cards dos artigos de uma seção
+    IndiceArtigos.vue     → cards dos artigos de uma seção (com `grupo`, só os de um grupo)
     ArtigoImagem.vue, LeiaTambem.vue, FichaReceita.vue, CompartilharArtigo.vue → peças dos artigos
     Spotlight.vue            → destaque aleatório da home
     CafeGrid.vue               → grid de cafeterias (busca a planilha)
@@ -74,7 +74,7 @@ Use o comando (cria o texto com o molde e o item em `src/data/artigos.js`):
 npm run novo-artigo -- <slug> <seção> "<Título>" [--metodo]
 ```
 
-Seções: `historia`, `preparo`, `saiba-mais`. Com `--metodo`, vem o molde de método de preparo (ficha de receita e seções padrão). Depois:
+Seções: `historia`, `preparo`, `saiba-mais`. Com `--metodo`, vem o molde de método de preparo (ficha de receita e seções padrão). Na seção `preparo`, o item recebe `grupo: 'metodo'` (com `--metodo`) ou `grupo: 'guia'` (sem); a página Preparo mostra um bloco "Métodos de preparo" e outro "Guias para melhorar o café". Depois:
 
 1. Escreva o texto em `src/artigos/<slug>.vue` e troque todos os `[PREENCHER]` (também a `descricao` em `src/data/artigos.js`). O `npm run deploy` recusa publicar com `[PREENCHER]` em `src/`; o build só avisa.
 2. Foto (opcional): `public/img/artigos/<slug>.jpg`, e descomente o bloco `imagem` no item (com `alt`, `credito` e `creditoUrl`).

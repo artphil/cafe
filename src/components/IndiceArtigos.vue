@@ -3,13 +3,15 @@ import { computed } from 'vue'
 import { ARTIGOS } from '../data/artigos.js'
 
 // Cards com os artigos de uma seção ('preparo' | 'saiba-mais'), lidos de
-// src/data/artigos.js. Some sozinho enquanto a seção não tiver artigos.
+// src/data/artigos.js. Com `grupo` ('metodo' | 'guia'), mostra só esse grupo da seção.
+// Some sozinho enquanto não houver artigos.
 const props = defineProps({
   secao: { type: String, required: true },
   titulo: { type: String, required: true },
+  grupo: { type: String, default: '' },
 })
 
-const artigos = computed(() => ARTIGOS.filter((a) => a.secao === props.secao))
+const artigos = computed(() => ARTIGOS.filter((a) => a.secao === props.secao && (!props.grupo || a.grupo === props.grupo)))
 </script>
 
 <template>

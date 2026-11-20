@@ -19,7 +19,8 @@ import IndiceArtigos from '../components/IndiceArtigos.vue'
 
     <AdSlot slot="9213419261" format="auto" fullWidthResponsive />
 
-    <IndiceArtigos secao="preparo" titulo="Guias completos" />
+    <IndiceArtigos secao="preparo" grupo="metodo" titulo="Métodos de preparo" />
+    <IndiceArtigos secao="preparo" grupo="guia" titulo="Guias para melhorar o café" />
   </main>
 
   <SiteFooter />

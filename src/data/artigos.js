@@ -15,6 +15,8 @@
 //   titulo    → h1 e <title>
 //   secao     → 'historia' | 'preparo' | 'saiba-mais' (define o menu destacado e o índice)
 //   descricao → 1 a 2 frases; vira o lede, a meta description e o card do índice
+//   grupo     → só na seção 'preparo': 'metodo' (método de preparo) ou 'guia' (guia para
+//               melhorar o café, como água e equipamentos); a página Preparo mostra um bloco de cada
 //   imagem    → { src, alt, credito, creditoUrl?, legenda? } (opcional). Arquivo em
 //               `public/img/artigos/`, com src `./img/artigos/<slug>.jpg`;
 //               credito = "própria" ou "Autor / Banco"; creditoUrl = link do autor
@@ -32,6 +34,7 @@ export const ARTIGOS = [
     slug: 'comparativo-de-metodos',
     titulo: 'Comparativo de métodos de preparo: qual escolher',
     secao: 'preparo',
+    grupo: 'metodo',
     descricao:
       'Compare V60, café coado, Aeropress, prensa francesa, moka e cold brew em proporção, moagem, tempo, sabor e dificuldade.',
     imagem: {
@@ -46,6 +49,7 @@ export const ARTIGOS = [
     slug: 'v60',
     titulo: 'Como fazer café no V60',
     secao: 'preparo',
+    grupo: 'metodo',
     descricao:
       'Passo a passo do V60 para iniciantes: equipamento, proporção, moagem, tempo e como corrigir café amargo ou aguado.',
     imagem: {
@@ -60,6 +64,7 @@ export const ARTIGOS = [
     slug: 'v60-pour-continuo',
     titulo: 'V60 com pour contínuo: café mais doce',
     secao: 'preparo',
+    grupo: 'metodo',
     descricao:
       'Como fazer o pour contínuo no V60: receita, controle do fluxo e ajustes para um café mais doce e encorpado.',
     imagem: {
@@ -74,6 +79,7 @@ export const ARTIGOS = [
     slug: 'v60-pulse-pour',
     titulo: 'V60 com pulse pour: mais acidez e notas frutadas',
     secao: 'preparo',
+    grupo: 'metodo',
     descricao:
       'Como fazer o pulse pour no V60: receita em etapas, intervalos e ajustes para destacar acidez e notas frutadas.',
     imagem: {
@@ -88,6 +94,7 @@ export const ARTIGOS = [
     slug: 'v60-metodo-4-6',
     titulo: 'Método 4:6 no V60 (Tetsu Kasuya)',
     secao: 'preparo',
+    grupo: 'metodo',
     descricao:
       'Como usar o método 4:6 no V60: receita de partida e como ajustar doçura, acidez e corpo com duas decisões.',
     imagem: {
@@ -102,6 +109,7 @@ export const ARTIGOS = [
     slug: 'aeropress',
     titulo: 'Como fazer café na Aeropress',
     secao: 'preparo',
+    grupo: 'metodo',
     descricao:
       'Passo a passo da Aeropress para iniciantes: receita, equipamento, ajustes de gosto e erros comuns.',
     imagem: {
@@ -116,6 +124,7 @@ export const ARTIGOS = [
     slug: 'prensa-francesa',
     titulo: 'Como fazer café na prensa francesa',
     secao: 'preparo',
+    grupo: 'metodo',
     descricao:
       'Passo a passo da prensa francesa para iniciantes: receita, moagem, tempo de infusão e como evitar borra e amargor.',
     imagem: {
@@ -130,6 +139,7 @@ export const ARTIGOS = [
     slug: 'moka',
     titulo: 'Como fazer café na moka (cafeteira italiana)',
     secao: 'preparo',
+    grupo: 'metodo',
     descricao:
       'Passo a passo da moka para iniciantes: como encher, o ponto do fogo, quando retirar e como evitar café amargo.',
     imagem: {
@@ -144,6 +154,7 @@ export const ARTIGOS = [
     slug: 'cold-brew',
     titulo: 'Como fazer cold brew',
     secao: 'preparo',
+    grupo: 'metodo',
     descricao:
       'Passo a passo do cold brew para iniciantes: concentrado, tempo de infusão, moagem e como servir.',
     imagem: {
@@ -158,6 +169,7 @@ export const ARTIGOS = [
     slug: 'cafe-coado',
     titulo: 'Café coado: pano e papel (Melitta)',
     secao: 'preparo',
+    grupo: 'metodo',
     descricao:
       'Como fazer café coado no pano ou no filtro de papel: receita, cuidados com o coador e ajustes para o seu gosto.',
     imagem: {
@@ -172,6 +184,7 @@ export const ARTIGOS = [
     slug: 'espresso',
     titulo: 'Espresso: o que é e como ajustar a extração',
     secao: 'preparo',
+    grupo: 'metodo',
     descricao:
       'Guia geral do espresso: dose, rendimento, tempo e moagem, como saber se a extração está certa e variações como ristretto e lungo.',
     imagem: {
@@ -304,6 +317,7 @@ export const ARTIGOS = [
     slug: 'agua-ideal',
     titulo: 'Água ideal para fazer café',
     secao: 'preparo',
+    grupo: 'guia',
     descricao:
       'A água é quase toda a xícara. Veja o que importa nela (cloro, minerais, dureza), que água usar em casa e como testar a melhor para o seu café.',
     imagem: {

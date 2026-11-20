@@ -2,7 +2,8 @@
 // e o item em src/data/artigos.js. Uso:
 //   npm run novo-artigo -- <slug> <secao> "<Título>" [--metodo]
 // Seções: historia | preparo | saiba-mais. Com --metodo, usa o molde de método de
-// preparo (ficha de receita e seções padrão do claude.md).
+// preparo (ficha de receita e seções padrão do claude.md). Na seção preparo, o item
+// entra no grupo 'metodo' (com --metodo) ou 'guia' (sem).
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
@@ -87,7 +88,7 @@ const js = (t) => `'${t.replace(/\\/g, '\\\\').replace(/'/g, "\\'")}'`
 const item = `  {
     slug: ${js(slug)},
     titulo: ${js(titulo)},
-    secao: ${js(secao)},
+    secao: ${js(secao)},${secao === 'preparo' ? `\n    grupo: '${metodo ? 'metodo' : 'guia'}',` : ''}
     descricao: '[PREENCHER: 1 a 2 frases para o card, o lede e a meta description]',
     // imagem: { src: './img/artigos/${slug}.jpg', alt: '', credito: '', creditoUrl: '' },
     // relacionados: ['outro-slug'],
